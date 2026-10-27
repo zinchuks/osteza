@@ -70,6 +70,6 @@ Much of what defines the site is stored in MySQL (the `db_data` Docker volume), 
 
 ## Multilingual
 
-The site is multilingual via Polylang (free), with five languages configured: `es` (Castellano), `en`, `uk`, `ru`, `pl`. The WordPress admin locale is Ukrainian (`WPLANG=uk`; core translations are in `wp-content/languages/`). Any user-facing string in custom theme/plugin code must be translatable (`__()`, `_e()`, etc. with a text domain) and content must be considered per language — pages, menus, and Polylang-registered strings exist once per language.
+The site is multilingual via Polylang (free), with five languages configured: `es` (Español), `en`, `uk`, `ru`, `pl`. The WordPress admin locale is Ukrainian (`WPLANG=uk`; core translations are in `wp-content/languages/`). Any user-facing string in custom theme/plugin code must be translatable (`__()`, `_e()`, etc. with a text domain) and content must be considered per language — pages, menus, and Polylang-registered strings exist once per language.
 
 The README and project communication are in Ukrainian.
