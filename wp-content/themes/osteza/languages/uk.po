@@ -3931,3 +3931,15 @@ msgstr "Забагато невдалих спроб. Спробуйте ще р
 #: ../../mu-plugins/osteza-security.php
 msgid "El usuario o la contraseña no son correctos."
 msgstr "Неправильне ім’я користувача або пароль."
+
+#. translators: %s: service name.
+#: inc/seo.php
+#, php-format
+msgid "%s en la Costa Blanca"
+msgstr "%s на Коста-Бланці"
+
+#. translators: %s: town name.
+#: inc/seo.php
+#, php-format
+msgid "Montaje de cocinas y mudanzas en %s"
+msgstr "Монтаж кухонь і переїзди: %s"

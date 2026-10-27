@@ -3785,3 +3785,15 @@ msgstr ""
 #: ../../mu-plugins/osteza-security.php
 msgid "El usuario o la contraseña no son correctos."
 msgstr ""
+
+#. translators: %s: service name.
+#: inc/seo.php
+#, php-format
+msgid "%s en la Costa Blanca"
+msgstr ""
+
+#. translators: %s: town name.
+#: inc/seo.php
+#, php-format
+msgid "Montaje de cocinas y mudanzas en %s"
+msgstr ""

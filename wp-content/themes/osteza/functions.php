@@ -105,6 +105,18 @@ add_action(
 	}
 );
 
+// The text and heading fonts of the page's script load with the stylesheet, not after it.
+add_action(
+	'wp_head',
+	function () {
+		$script = in_array( osteza_current_language()['code'], array( 'uk', 'ru' ), true ) ? 'cyrillic' : 'latin';
+		foreach ( array( 'onest', 'unbounded' ) as $font ) {
+			echo '<link rel="preload" href="' . esc_url( get_template_directory_uri() . "/assets/fonts/$font-$script.woff2" ) . '" as="font" type="font/woff2" crossorigin>' . "\n";
+		}
+	},
+	1
+);
+
 // The design ships its own complete stylesheet; core block styles are not used on the front page.
 add_action(
 	'wp_enqueue_scripts',

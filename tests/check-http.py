@@ -1,5 +1,5 @@
 """Focused HTTP checks after launch-related code changes. Never prints response bodies."""
-import json,urllib.request,urllib.error
+import json,re,urllib.request,urllib.error
 from html.parser import HTMLParser
 class Head(HTMLParser):
  def __init__(self): super().__init__();self.meta={};self.canonical=[];self.langs=[];self.jsonld=[];self.in_json=False
@@ -29,6 +29,11 @@ for path in ['/','/en/','/uk/','/ru/','/pl/','/blog/page/2/','/proyectos/']:
  assert 'noindex' in p.meta.get('robots',''),(path,'local indexing unexpectedly enabled')
  if path in ['/','/en/','/uk/','/ru/','/pl/']:assert 'x-default' in p.langs,(path,'x-default missing')
  print('PASS metadata:',path)
+for path,types in [('/servicios/montaje-de-cocinas/',['HomeAndConstructionBusiness','Service','FAQPage']),('/uk/zony/benidorm/',['HomeAndConstructionBusiness','FAQPage'])]:
+ status,html=get(path);assert status==200,(path,status)
+ assert all('"%s"'%t in html for t in types),(path,'structured data missing')
+ assert re.search(r'<title>[^<]*(Costa Blanca|Бенідорм)[^<]*\| OSTEZA</title>',html),(path,'title without place or brand')
+ print('PASS local business, service and FAQ data:',path)
 assert get('/osteza-test-page-does-not-exist/')[0]==404
 print('PASS missing page returns HTTP 404')
 

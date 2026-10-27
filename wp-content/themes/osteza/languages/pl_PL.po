@@ -3949,3 +3949,15 @@ msgstr "Zbyt wiele nieudanych prób. Spróbuj ponownie za %d min."
 #: ../../mu-plugins/osteza-security.php
 msgid "El usuario o la contraseña no son correctos."
 msgstr "Nieprawidłowa nazwa użytkownika lub hasło."
+
+#. translators: %s: service name.
+#: inc/seo.php
+#, php-format
+msgid "%s en la Costa Blanca"
+msgstr "%s na Costa Blanca"
+
+#. translators: %s: town name.
+#: inc/seo.php
+#, php-format
+msgid "Montaje de cocinas y mudanzas en %s"
+msgstr "Montaż kuchni i przeprowadzki: %s"
