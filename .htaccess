@@ -1,3 +1,21 @@
+# OSTEZA: keep local configuration and maintenance files outside public access.
+# This section stays outside the WordPress-generated rules.
+Options -Indexes
+<IfModule mod_authz_core.c>
+<FilesMatch "(?i)(^\.|\.(?:env|sql|log|bak|ini|ya?ml|md|sh|py)$)">
+Require all denied
+</FilesMatch>
+<Files "wp-config.php">
+Require all denied
+</Files>
+</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule (^|/)\.(?!well-known(?:/|$)) - [F,L]
+RewriteRule ^(?:scripts|tests|docs)(?:/|$) - [F,L]
+RewriteRule ^wp-content/uploads/.*\.(?:php[0-9]?|phtml|phar)(?:[./]|$) - [F,L,NC]
+</IfModule>
+
 
 # BEGIN WordPress
 # Директиви (рядки) між `BEGIN WordPress` і `END WordPress`

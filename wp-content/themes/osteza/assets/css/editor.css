@@ -1,0 +1,16 @@
+/*
+ * Editor canvas (loaded with add_editor_style, so every selector is scoped to the
+ * editor content): sections full width, as on the site.
+ */
+body{background:#FAF7F2}
+.is-root-container{padding:0!important}
+.wp-block.osteza-block{max-width:none!important;margin-top:0!important;margin-bottom:0!important}
+.osteza-block{position:relative}
+.osteza-block.is-selected,.osteza-block:hover{outline:2px solid #1F4E5F;outline-offset:-2px}
+
+/* The preview is not interactive: clicks select the block. */
+.osteza-ssr{pointer-events:none;min-height:60px}
+.osteza-ssr .rv,.osteza-prose .rv{animation:none!important;opacity:1!important;transform:none!important}
+
+/* Free text sections: the inner blocks take the article styles. */
+.osteza-prose .prose .wp-block{max-width:none}

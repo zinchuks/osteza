@@ -1,13 +1,20 @@
 <?php
 /**
- * Home page.
+ * Home page: the blocks of the page set as front page (Settings → Reading), in the
+ * current language; the default home sections while there is none or it is empty.
  */
 
 get_header();
 
-foreach ( array( 'hero', 'services', 'approach', 'paths', 'process', 'team', 'zones', 'blog', 'faq' ) as $section ) {
-	get_template_part( 'template-parts/home/' . $section );
+$front = (int) get_option( 'page_on_front' );
+if ( $front && function_exists( 'pll_get_post' ) ) {
+	$front = (int) pll_get_post( $front );
 }
-get_template_part( 'template-parts/contact' );
+if ( $front && 'page' === get_option( 'show_on_front' ) ) {
+	$GLOBALS['post'] = get_post( $front ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride -- the page whose blocks are rendered.
+	setup_postdata( $GLOBALS['post'] );
+}
+osteza_the_sections( 'home' );
+wp_reset_postdata();
 
 get_footer();

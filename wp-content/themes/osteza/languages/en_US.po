@@ -1,0 +1,3941 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: osteza\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-16 11:28+0200\n"
+"Language: en_US\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:13
+msgid "Error 404"
+msgstr "Error 404"
+
+#: 404.php:14
+msgid "Esta página no existe <span>(o ya no está aquí).</span>"
+msgstr "This page doesn't exist <span>(or isn't here any more).</span>"
+
+#: 404.php:15
+msgid ""
+"Puede que el enlace esté mal escrito o que hayamos movido el contenido. Te "
+"ayudamos a encontrar lo que buscabas."
+msgstr ""
+"The link may be mistyped or we may have moved the content. We'll help you "
+"find what you were looking for."
+
+#: 404.php:16
+msgid "Buscar en OSTEZA"
+msgstr "Search OSTEZA"
+
+#: 404.php:16
+msgid "Busca un servicio, artículo o zona"
+msgstr "Search for a service, article or area"
+
+#: 404.php:16
+msgid "Buscar"
+msgstr "Search"
+
+#: 404.php:17
+msgid "Ir al inicio"
+msgstr "Go to home"
+
+#: 404.php:17
+msgid "Contactar"
+msgstr "Contact"
+
+#: 404.php:25
+msgid "Quizá buscabas"
+msgstr "Perhaps you were looking for"
+
+#: archive-osteza_project.php:13
+msgid "Fotos propias de antes y después"
+msgstr "Our own before and after photos"
+
+#: archive-osteza_project.php:14
+msgid "Localidad y tipo de vivienda"
+msgstr "Town and type of property"
+
+#: archive-osteza_project.php:15
+msgid "Punto de partida y alcance acordado"
+msgstr "Starting point and agreed scope"
+
+#: archive-osteza_project.php:16
+msgid "Materiales y forma de ejecución"
+msgstr "Materials and way of working"
+
+#: archive-osteza_project.php:17
+msgid "Duración, solo si está documentada"
+msgstr "Duration, only if documented"
+
+#: archive-osteza_project.php:25 inc/blocks.php:136
+#: single-osteza_project.php:38 single.php:37
+#: template-parts/blog/archive.php:33
+msgid "Migas de pan"
+msgstr "Breadcrumb"
+
+#: archive-osteza_project.php:25 inc/blocks.php:129
+#: single-osteza_project.php:38 single.php:37
+#: template-parts/blog/archive.php:33
+msgid "Inicio"
+msgstr "Home"
+
+#: archive-osteza_project.php:25 archive-osteza_project.php:28 footer.php:31
+#: inc/blocks.php:691 inc/data.php:466 inc/projects.php:15
+#: single-osteza_project.php:38
+msgid "Proyectos"
+msgstr "Projects"
+
+#: archive-osteza_project.php:29
+msgid "Trabajo real, <span>contado con detalle.</span>"
+msgstr "Real work, <span>told in detail.</span>"
+
+#: archive-osteza_project.php:30
+msgid ""
+"Cada proyecto muestra fotos propias, el punto de partida, lo que acordamos y "
+"el resultado. Nada de imágenes de catálogo."
+msgstr ""
+"Each project shows our own photos, the starting point, what we agreed and "
+"the result. No catalogue images."
+
+#: archive-osteza_project.php:42
+msgid "Estamos documentando nuestros primeros proyectos."
+msgstr "We're documenting our first projects."
+
+#: archive-osteza_project.php:43
+msgid ""
+"Preferimos esperar a tener fotos reales antes que enseñarte imágenes que no "
+"son nuestras. Mientras tanto, cuéntanos tu proyecto."
+msgstr ""
+"We'd rather wait until we have real photos than show you images that aren't "
+"ours. In the meantime, tell us about your project."
+
+#: archive-osteza_project.php:44 blocks/page-head.php:16 footer.php:16
+#: header.php:68 header.php:106 inc/blocks.php:184 inc/blocks.php:429
+#: inc/blocks.php:524 inc/blocks.php:650 inc/blocks.php:734 inc/blog.php:198
+#: single.php:71 template-parts/cta.php:13
+msgid "Solicitar presupuesto"
+msgstr "Request a quote"
+
+#: archive-osteza_project.php:44
+msgid "Ver servicios"
+msgstr "See services"
+
+#: archive-osteza_project.php:47
+msgid "Cada proyecto incluirá"
+msgstr "Each project will include"
+
+#: archive-osteza_project.php:56
+msgid "Filtrar por servicio"
+msgstr "Filter by service"
+
+#: archive-osteza_project.php:56 template-parts/blog/archive.php:53
+msgid "Todos"
+msgstr "All"
+
+#: archive-osteza_project.php:57
+msgid "Listado de proyectos"
+msgstr "Project list"
+
+#: archive-osteza_project.php:59
+msgid ""
+"Vista de plantilla: así se mostrará el archivo cuando haya proyectos "
+"publicados."
+msgstr ""
+"Template view: this is how the archive will look once projects are published."
+
+#: archive-osteza_project.php:68
+msgid "Plantilla"
+msgstr "Template"
+
+#: archive-osteza_project.php:84
+msgid "¿Quieres que tu casa sea el próximo proyecto?"
+msgstr "Want your home to be the next project?"
+
+#: archive-osteza_project.php:85 single.php:115
+msgid "Cuéntanos qué necesitas y preparamos el siguiente paso contigo."
+msgstr "Tell us what you need and we'll prepare the next step with you."
+
+#: blocks/catalog-group.php:9
+msgid "Elige un grupo de servicios en la barra lateral."
+msgstr "Choose a service group in the sidebar."
+
+#. translators: %s: service name (screen-reader text).
+#: blocks/catalog-group.php:29 blocks/related.php:25 blocks/services.php:37
+msgid "Ver servicio"
+msgstr "See service"
+
+#: blocks/catalog-group.php:29 blocks/services.php:37
+#, php-format
+msgid "de %s"
+msgstr "for %s"
+
+#: blocks/catalog-head.php:18
+msgid "Buscar un servicio"
+msgstr "Search for a service"
+
+#: blocks/catalog-head.php:34 inc/data.php:26 inc/data.php:30
+msgid "Grupos de servicios"
+msgstr "Service groups"
+
+#. translators: %s: what the visitor searched for.
+#: blocks/catalog-head.php:40
+#, php-format
+msgid "No encontramos «%s»."
+msgstr "We couldn't find “%s”."
+
+#: blocks/contact-head.php:6 single.php:15 template-parts/contact.php:14
+msgid "(abre una pestaña nueva)"
+msgstr "(opens in a new tab)"
+
+#: blocks/contact-head.php:21 inc/customizer.php:14 inc/icons.php:91
+#: template-parts/contact.php:35
+msgid "Email"
+msgstr "Email"
+
+#: blocks/cta.php:14 blocks/page-head.php:16 inc/blocks.php:185
+#: inc/blocks.php:440 inc/blocks.php:525 inc/blocks.php:651
+#: template-parts/cta.php:13
+msgid "Hablar por WhatsApp"
+msgstr "Chat on WhatsApp"
+
+#: blocks/hero.php:24
+msgid "Accesos rápidos a servicios"
+msgstr "Quick links to services"
+
+#: blocks/related.php:25 template-parts/blog/archive.php:80
+msgid "Leer artículo"
+msgstr "Read article"
+
+#: blocks/service-hero.php:25
+msgid "Resumen del servicio"
+msgstr "Service summary"
+
+#: blocks/service-hero.php:38
+msgid "En esta página"
+msgstr "On this page"
+
+#: blocks/services.php:18
+msgid "Servicios anteriores"
+msgstr "Previous services"
+
+#: blocks/services.php:19
+msgid "Servicios siguientes"
+msgstr "Next services"
+
+#: blocks/services.php:24 footer.php:24 header.php:53 header.php:95
+#: inc/blocks.php:223 inc/blocks.php:472 inc/layouts.php:338
+#: inc/projects.php:139
+msgid "Servicios"
+msgstr "Services"
+
+#: blocks/zone-hero.php:25
+msgid "Resumen de la zona"
+msgstr "Area summary"
+
+#: footer.php:7 header.php:8
+msgid "Instagram de OSTEZA (abre una pestaña nueva)"
+msgstr "OSTEZA on Instagram (opens in a new tab)"
+
+#: footer.php:8 header.php:9
+msgid "Facebook de OSTEZA (abre una pestaña nueva)"
+msgstr "OSTEZA on Facebook (opens in a new tab)"
+
+#: footer.php:30 inc/blocks.php:329 inc/blocks.php:731 inc/data.php:468
+msgid "Sobre nosotros"
+msgstr "About us"
+
+#: footer.php:32 inc/blocks.php:364 inc/data.php:469 single.php:37
+#: template-parts/blog/archive.php:35 template-parts/blog/archive.php:37
+#: template-parts/blog/archive.php:42
+msgid "Blog"
+msgstr "Blog"
+
+#: footer.php:33 footer.php:41 inc/blocks.php:414 inc/blocks.php:547
+#: inc/blocks.php:705 inc/customizer.php:100 inc/customizer.php:121
+#: inc/customizer.php:122 inc/data.php:470 template-parts/contact.php:9
+msgid "Contacto"
+msgstr "Contact"
+
+#: footer.php:35 inc/blocks.php:351 inc/blocks.php:624 inc/data.php:467
+msgid "Zonas"
+msgstr "Areas"
+
+#: footer.php:39 inc/layouts.php:321
+msgid "Todas las zonas"
+msgstr "All areas"
+
+#: footer.php:51 header.php:102
+msgid "Idioma"
+msgstr "Language"
+
+#: footer.php:52
+msgid "Legal"
+msgstr "Legal"
+
+#: footer.php:52
+msgid "Preferencias de cookies"
+msgstr "Cookie preferences"
+
+#: footer.php:63
+msgid "Redes sociales"
+msgstr "Social media"
+
+#: footer.php:67
+msgid "Volver arriba"
+msgstr "Back to top"
+
+#: footer.php:68
+msgid "Contacto rápido"
+msgstr "Quick contact"
+
+#: footer.php:70 template-parts/chat.php:11
+msgid "Chat en línea"
+msgstr "Live chat"
+
+#: footer.php:73
+msgid "Llamar"
+msgstr "Call"
+
+#. translators: message prepared for WhatsApp/Telegram. Keep the {placeholders}.
+#: functions.php:52
+msgid ""
+"Hola, OSTEZA. Me llamo {name}.\n"
+"Servicio: {service}\n"
+"Localidad: {town}\n"
+"Teléfono: {phone}\n"
+"\n"
+"{desc}"
+msgstr ""
+"Hello, OSTEZA. My name is {name}.\n"
+"Service: {service}\n"
+"Town: {town}\n"
+"Phone: {phone}\n"
+"\n"
+"{desc}"
+
+#: functions.php:54 inc/chat.php:816
+msgid "Escribe tu nombre."
+msgstr "Enter your name."
+
+#: functions.php:55 inc/chat.php:822
+msgid "Revisa el teléfono: necesitamos al menos 9 dígitos."
+msgstr "Check the phone number: we need at least 9 digits."
+
+#: functions.php:56 inc/chat.php:819
+msgid "Indica tu localidad."
+msgstr "Enter your town."
+
+#: functions.php:57
+msgid "Elige un servicio."
+msgstr "Choose a service."
+
+#: functions.php:58 inc/chat.php:828
+msgid "Cuéntanos un poco más (mínimo 10 caracteres)."
+msgstr "Tell us a little more (at least 10 characters)."
+
+#: functions.php:61 inc/blocks.php:765 template-parts/chat.php:21
+#: template-parts/contact.php:51
+msgid "Nombre"
+msgstr "Name"
+
+#: functions.php:62 inc/customizer.php:11 inc/icons.php:90
+#: template-parts/chat.php:22 template-parts/contact.php:32
+#: template-parts/contact.php:52
+msgid "Teléfono"
+msgstr "Phone"
+
+#: functions.php:63 inc/projects.php:59 single-osteza_project.php:15
+#: template-parts/contact.php:53
+msgid "Localidad"
+msgstr "Town"
+
+#: functions.php:64 single-osteza_project.php:17 template-parts/contact.php:54
+msgid "Servicio"
+msgstr "Service"
+
+#: functions.php:65 template-parts/contact.php:56
+msgid "Mensaje"
+msgstr "Message"
+
+#. translators: {n} is the number of invalid form fields.
+#: functions.php:68
+msgid "Revisa {n} campo(s):"
+msgstr "Check {n} field(s):"
+
+#: functions.php:69 template-parts/contact.php:76
+msgid "Copiar mensaje"
+msgstr "Copy message"
+
+#: functions.php:70
+msgid "Mensaje copiado ✓"
+msgstr "Message copied ✓"
+
+#: functions.php:71
+msgid "Enlace copiado ✓"
+msgstr "Link copied ✓"
+
+#: functions.php:75
+msgid ""
+"¡Hola! Soy el asistente virtual de OSTEZA. Cuéntame qué necesitas: montaje, "
+"mudanza, un profesional… y te oriento. Cuando quieras, deja tus datos y el "
+"equipo te contacta por WhatsApp, Telegram o teléfono."
+msgstr ""
+"Hi! I'm OSTEZA's virtual assistant. Tell me what you need: assembly, a move, "
+"a professional… and I'll point you in the right direction. Whenever you "
+"like, leave your details and the team will contact you on WhatsApp, Telegram "
+"or by phone."
+
+#: functions.php:76
+msgid "No se ha podido enviar. Inténtalo de nuevo o escríbenos por WhatsApp."
+msgstr "Couldn't send. Try again or message us on WhatsApp."
+
+#: functions.php:77 template-parts/chat.php:41
+msgid "Enviar solicitud"
+msgstr "Send request"
+
+#: functions.php:78
+msgid "Enviando…"
+msgstr "Sending…"
+
+#: functions.php:79
+msgid "Quitar la foto"
+msgstr "Remove the photo"
+
+#: functions.php:80
+msgid "Buscando…"
+msgstr "Locating…"
+
+#: functions.php:81
+msgid "Ubicación añadida ✓"
+msgstr "Location added ✓"
+
+#: functions.php:82
+msgid "No se pudo obtener. Escribe la dirección."
+msgstr "Couldn't get it. Type the address."
+
+#: header.php:34
+msgid "Saltar al contenido"
+msgstr "Skip to content"
+
+#: header.php:41
+msgid "WhatsApp y redes sociales"
+msgstr "WhatsApp and social media"
+
+#: header.php:42
+msgid "Escribir por WhatsApp"
+msgstr "Write on WhatsApp"
+
+#: header.php:51
+msgid "OSTEZA, ir al inicio"
+msgstr "OSTEZA, go to home"
+
+#: header.php:52 header.php:94
+msgid "Principal"
+msgstr "Main"
+
+#. translators: %s: current language name.
+#: header.php:61
+#, php-format
+msgid "Idioma: %s. Cambiar idioma"
+msgstr "Language: %s. Change language"
+
+#: header.php:69
+msgid "Abrir menú"
+msgstr "Open menu"
+
+#: header.php:89
+msgid "Menú"
+msgstr "Menu"
+
+#: header.php:92
+msgid "Cerrar menú"
+msgstr "Close menu"
+
+#: header.php:107 template-parts/contact.php:40
+msgid "Síguenos"
+msgstr "Follow us"
+
+#: inc/blocks.php:153
+msgid "Antetítulo"
+msgstr "Kicker"
+
+#: inc/blocks.php:156 inc/blocks.php:206 inc/blocks.php:240 inc/blocks.php:261
+#: inc/blocks.php:314 inc/blocks.php:334 inc/blocks.php:563 inc/blocks.php:592
+#: inc/blocks.php:683
+msgid "Título"
+msgstr "Title"
+
+#: inc/blocks.php:159
+msgid "Introducción"
+msgstr "Introduction"
+
+#: inc/blocks.php:162
+msgid "Ancla (id de la sección)"
+msgstr "Anchor (section id)"
+
+#: inc/blocks.php:176
+msgid "Portada: cabecera"
+msgstr "Home: header"
+
+#: inc/blocks.php:179
+msgid "Imagen de fondo"
+msgstr "Background image"
+
+#: inc/blocks.php:180
+msgid "Oscurecer el fondo (0–100 %)"
+msgstr "Darken the background (0–100 %)"
+
+#: inc/blocks.php:181
+msgid "Costa Blanca · Montaje de cocinas y muebles"
+msgstr "Costa Blanca · Kitchen and furniture assembly"
+
+#: inc/blocks.php:182
+msgid "Tu cocina nueva, <span>montada como debe ser.</span>"
+msgstr "Your new kitchen, <span>assembled the way it should be.</span>"
+
+#: inc/blocks.php:183
+msgid ""
+"Montaje de cocinas y muebles en la Costa Blanca: nivelado, alineado y bien "
+"anclado. Y si la casa pide más, también reformas y acabados."
+msgstr ""
+"Kitchen and furniture assembly on the Costa Blanca: level, aligned and "
+"securely anchored. And if your home needs more, renovations and finishes too."
+
+#: inc/blocks.php:184 inc/blocks.php:439 inc/blocks.php:524 inc/blocks.php:650
+#: inc/blocks.php:734
+msgid "Botón principal"
+msgstr "Main button"
+
+#: inc/blocks.php:185 inc/blocks.php:525 inc/blocks.php:651
+msgid "Botón de WhatsApp"
+msgstr "WhatsApp button"
+
+#: inc/blocks.php:186
+msgid "Título de los accesos rápidos"
+msgstr "Quick links title"
+
+#: inc/blocks.php:186
+msgid "¿Qué necesitas hoy?"
+msgstr "What do you need today?"
+
+#: inc/blocks.php:188
+msgid "Accesos rápidos"
+msgstr "Quick links"
+
+#: inc/blocks.php:190 inc/blocks.php:207 inc/blocks.php:240 inc/blocks.php:262
+#: inc/blocks.php:314 inc/blocks.php:334 inc/blocks.php:428 inc/blocks.php:438
+#: inc/blocks.php:482 inc/blocks.php:538 inc/blocks.php:563 inc/blocks.php:592
+#: inc/blocks.php:610 inc/blocks.php:683 inc/blocks.php:693 inc/blocks.php:767
+msgid "Texto"
+msgstr "Text"
+
+#: inc/blocks.php:191 inc/blocks.php:403
+msgid "Página"
+msgstr "Page"
+
+#: inc/blocks.php:194
+msgid "Montar mi cocina"
+msgstr "Assemble my kitchen"
+
+#: inc/blocks.php:195
+msgid "Montar muebles o armarios"
+msgstr "Assemble furniture or wardrobes"
+
+#: inc/blocks.php:196
+msgid "Mudanza por España y Europa"
+msgstr ""
+
+#: inc/blocks.php:197
+msgid "Reforma integral"
+msgstr "Full renovation"
+
+#: inc/blocks.php:198
+msgid "Baño o cocina"
+msgstr "Bathroom or kitchen"
+
+#: inc/blocks.php:201
+msgid "Último acceso (al formulario)"
+msgstr "Last link (to the form)"
+
+#: inc/blocks.php:201
+msgid "Otro trabajo: cuéntanoslo"
+msgstr "Another job: tell us about it"
+
+#: inc/blocks.php:203
+msgid "Ventajas"
+msgstr "Benefits"
+
+#: inc/blocks.php:205 inc/blocks.php:240 inc/blocks.php:481 inc/blocks.php:563
+#: inc/blocks.php:607 inc/blog.php:227 inc/data.php:104
+msgid "Icono"
+msgstr "Icon"
+
+#: inc/blocks.php:210
+msgid "Cualquier marca"
+msgstr "Any brand"
+
+#: inc/blocks.php:210
+msgid "IKEA, Leroy Merlin o fabricante: montamos tu cocina."
+msgstr "IKEA, Leroy Merlin or manufacturer: we assemble your kitchen."
+
+#: inc/blocks.php:211
+msgid "Precio cerrado por escrito"
+msgstr "Fixed price in writing"
+
+#: inc/blocks.php:211
+msgid "Con el plano y unas fotos sabes el precio antes."
+msgstr "With the plan and a few photos you know the price in advance."
+
+#: inc/blocks.php:212
+msgid "Un solo contacto"
+msgstr "A single contact"
+
+#: inc/blocks.php:212
+msgid "Te informamos durante todo el trabajo."
+msgstr "We keep you informed throughout the job."
+
+#: inc/blocks.php:219
+msgid "Carrusel de servicios"
+msgstr "Services carousel"
+
+#: inc/blocks.php:221
+msgid ""
+"Las tarjetas son las páginas de servicio con «Mostrar en la portada» "
+"marcado, en su orden."
+msgstr ""
+"The cards are the service pages with “Show on home page” ticked, in their "
+"order."
+
+#: inc/blocks.php:224
+msgid "Primero, montaje. Y todo lo que lo rodea."
+msgstr "Assembly first. And everything around it."
+
+#: inc/blocks.php:225
+msgid "Enlace al catálogo"
+msgstr "Link to the catalogue"
+
+#: inc/blocks.php:225
+msgid "Ver todos los servicios"
+msgstr "See all services"
+
+#: inc/blocks.php:230
+msgid "Forma de trabajar"
+msgstr "Way of working"
+
+#: inc/blocks.php:233
+msgid "Nuestra forma de trabajar"
+msgstr "The way we work"
+
+#: inc/blocks.php:234
+msgid "Primero escuchamos. Después, todo por escrito."
+msgstr "We listen first. Then everything in writing."
+
+#: inc/blocks.php:235
+msgid ""
+"Un trabajo sale bien cuando todos saben qué se va a hacer, cómo y cuándo. "
+"Por eso dedicamos tiempo al principio: entender bien el trabajo evita "
+"sorpresas al final."
+msgstr ""
+"A job goes well when everyone knows what will be done, how and when. That's "
+"why we take time at the start: understanding the job properly avoids "
+"surprises at the end."
+
+#: inc/blocks.php:236 inc/blocks.php:340
+msgid "Texto del enlace"
+msgstr "Link text"
+
+#: inc/blocks.php:236 inc/blocks.php:309 inc/layouts.php:451
+msgid "Cómo trabajamos"
+msgstr "How we work"
+
+#: inc/blocks.php:237
+msgid "Página del enlace"
+msgstr "Link page"
+
+#: inc/blocks.php:239 inc/blocks.php:333 inc/blocks.php:683
+msgid "Puntos"
+msgstr "Points"
+
+#: inc/blocks.php:242
+msgid "Entender el trabajo"
+msgstr "Understanding the job"
+
+#: inc/blocks.php:242
+msgid "Escuchamos qué necesitas y, si hace falta, vemos el espacio."
+msgstr "We listen to what you need and, if necessary, see the space."
+
+#: inc/blocks.php:243
+msgid "Definir el alcance"
+msgstr "Defining the scope"
+
+#: inc/blocks.php:243
+msgid "Qué incluye, qué no y con qué materiales. Por escrito."
+msgstr "What's included, what isn't and with which materials. In writing."
+
+#: inc/blocks.php:244
+msgid "Comunicación clara"
+msgstr "Clear communication"
+
+#: inc/blocks.php:244
+msgid "Una persona de contacto que te informa de cada avance."
+msgstr "One contact person who keeps you updated at every step."
+
+#: inc/blocks.php:251
+msgid "Dos caminos"
+msgstr "Two paths"
+
+#: inc/blocks.php:254
+msgid "¿Por dónde empezamos?"
+msgstr "Where do we start?"
+
+#: inc/blocks.php:255
+msgid "Grande o pequeño, cada trabajo cuenta."
+msgstr "Big or small, every job counts."
+
+#: inc/blocks.php:257 inc/blocks.php:603
+msgid "Tarjetas"
+msgstr "Cards"
+
+#: inc/blocks.php:259 inc/blocks.php:606
+msgid "Estilo"
+msgstr "Style"
+
+#: inc/blocks.php:259
+msgid "Oscura"
+msgstr "Dark"
+
+#: inc/blocks.php:259
+msgid "Clara"
+msgstr "Light"
+
+#: inc/blocks.php:260
+msgid "Ilustración"
+msgstr "Illustration"
+
+#: inc/blocks.php:263
+msgid "Puntos (uno por línea)"
+msgstr "Points (one per line)"
+
+#: inc/blocks.php:264 inc/blocks.php:354 inc/blocks.php:429 inc/blocks.php:591
+#: inc/blocks.php:629
+msgid "Botón"
+msgstr "Button"
+
+#: inc/blocks.php:265
+msgid "Destino del botón (vacío: formulario)"
+msgstr "Button target (empty: form)"
+
+#: inc/blocks.php:271
+msgid "He comprado una cocina o muebles"
+msgstr "I've bought a kitchen or furniture"
+
+#: inc/blocks.php:272
+msgid "Nos envías el plano y unas fotos, y te damos precio y fecha de montaje."
+msgstr ""
+"Send us the plan and a few photos, and we'll give you a price and an "
+"assembly date."
+
+#: inc/blocks.php:273
+msgid "Cocinas por módulos de cualquier marca"
+msgstr "Modular kitchens of any brand"
+
+#: inc/blocks.php:273
+msgid "Encimeras, fregadero y electrodomésticos integrados"
+msgstr "Worktops, sink and built-in appliances"
+
+#: inc/blocks.php:273
+msgid "Armarios, camas, estanterías y TV"
+msgstr "Wardrobes, beds, shelves and TV"
+
+#: inc/blocks.php:274
+msgid "Pedir precio de montaje"
+msgstr "Get an assembly price"
+
+#: inc/blocks.php:280
+msgid "Quiero renovar mi vivienda"
+msgstr "I want to renovate my home"
+
+#: inc/blocks.php:281
+msgid "Reformas parciales o integrales de pisos, apartamentos y villas."
+msgstr "Partial or full renovations of flats, apartments and villas."
+
+#: inc/blocks.php:282
+msgid "Preparar la cocina antes de montarla"
+msgstr "Preparing the kitchen before assembly"
+
+#: inc/blocks.php:282
+msgid "Baños, pintura y suelos"
+msgstr "Bathrooms, painting and floors"
+
+#: inc/blocks.php:282
+msgid "Un alcance definido desde el principio"
+msgstr "A scope defined from the start"
+
+#: inc/blocks.php:283 inc/layouts.php:69
+msgid "Hablar de mi reforma"
+msgstr "Talk about my renovation"
+
+#: inc/blocks.php:292
+msgid "Pasos / principios"
+msgstr "Steps / principles"
+
+#: inc/blocks.php:297 inc/blocks.php:499
+msgid "Diseño"
+msgstr "Layout"
+
+#: inc/blocks.php:301
+msgid "Tarjetas (portada)"
+msgstr "Cards (home)"
+
+#: inc/blocks.php:302
+msgid "Línea de tiempo oscura (servicio)"
+msgstr "Dark timeline (service)"
+
+#: inc/blocks.php:303
+msgid "Números (contacto)"
+msgstr "Numbers (contact)"
+
+#: inc/blocks.php:304
+msgid "Principios oscuros (sobre nosotros)"
+msgstr "Dark principles (about us)"
+
+#: inc/blocks.php:310
+msgid "Cuatro pasos. Sin sorpresas."
+msgstr "Four steps. No surprises."
+
+#: inc/blocks.php:311
+msgid ""
+"Para algunos trabajos necesitaremos visitar la vivienda o pedirte fotos y "
+"medidas antes de darte un presupuesto final."
+msgstr ""
+"For some jobs we'll need to visit the property or ask for photos and "
+"measurements before giving you a final quote."
+
+#: inc/blocks.php:311 inc/blocks.php:355 inc/blocks.php:560 inc/blocks.php:577
+#: inc/blocks.php:639 inc/blocks.php:682 inc/blocks.php:719 inc/blocks.php:761
+msgid "Nota"
+msgstr "Note"
+
+#: inc/blocks.php:313
+msgid "Pasos"
+msgstr "Steps"
+
+#: inc/blocks.php:316
+msgid "Cuéntanos tu idea"
+msgstr "Tell us your idea"
+
+#: inc/blocks.php:316
+msgid ""
+"Por el formulario, WhatsApp, Telegram o teléfono. Con fotos, si las tienes."
+msgstr ""
+"Via the form, WhatsApp, Telegram or phone. With photos, if you have them."
+
+#: inc/blocks.php:317
+msgid "Definimos el alcance"
+msgstr "We define the scope"
+
+#: inc/blocks.php:317
+msgid ""
+"Aclaramos contigo qué hay que hacer y, si hace falta, visitamos la vivienda."
+msgstr ""
+"We clarify with you what needs doing and, if necessary, visit the property."
+
+#: inc/blocks.php:318
+msgid "Preparamos el presupuesto"
+msgstr "We prepare the quote"
+
+#: inc/blocks.php:318
+msgid "Detallado y por escrito, para que sepas exactamente qué incluye."
+msgstr "Detailed and in writing, so you know exactly what's included."
+
+#: inc/blocks.php:319
+msgid "Realizamos el trabajo"
+msgstr "We do the job"
+
+#: inc/blocks.php:319
+msgid "Con una persona de contacto y una revisión final contigo."
+msgstr "With one contact person and a final check with you."
+
+#: inc/blocks.php:326
+msgid "Equipo (resumen)"
+msgstr "Team (summary)"
+
+#: inc/blocks.php:330
+msgid "Las personas detrás de OSTEZA."
+msgstr "The people behind OSTEZA."
+
+#: inc/blocks.php:331
+msgid ""
+"[Presentación real del equipo: quiénes sois y por qué empezasteis OSTEZA. "
+"Dos o tres frases, en primera persona.]"
+msgstr ""
+"[A real introduction to the team: who you are and why you started OSTEZA. "
+"Two or three sentences, in the first person.]"
+
+#: inc/blocks.php:336
+msgid "Oficio en obra"
+msgstr "Hands-on trade"
+
+#: inc/blocks.php:336
+msgid ""
+"Experiencia práctica en montaje de cocinas y muebles, reformas y acabados."
+msgstr ""
+"Practical experience in kitchen and furniture assembly, renovations and "
+"finishes."
+
+#: inc/blocks.php:337
+msgid "Coordinación cercana"
+msgstr "Close coordination"
+
+#: inc/blocks.php:337
+msgid "Alguien que organiza el trabajo y te mantiene informado."
+msgstr "Someone who organises the work and keeps you informed."
+
+#: inc/blocks.php:340 inc/blocks.php:735
+msgid "Conocer al equipo"
+msgstr "Meet the team"
+
+#: inc/blocks.php:341
+msgid "Foto del equipo"
+msgstr "Team photo"
+
+#: inc/blocks.php:342 inc/blocks.php:737
+msgid "Texto sin foto"
+msgstr "Text without photo"
+
+#: inc/blocks.php:342
+msgid "Espacio reservado para una fotografía real del equipo de OSTEZA."
+msgstr "Space reserved for a real photo of the OSTEZA team."
+
+#: inc/blocks.php:347
+msgid "Zonas (lista)"
+msgstr "Areas (list)"
+
+#: inc/blocks.php:349
+msgid "Las localidades son las páginas con la plantilla «Zona»."
+msgstr "The towns are the pages using the “Zone” template."
+
+#: inc/blocks.php:352
+msgid "Trabajamos en la Costa Blanca."
+msgstr "We work on the Costa Blanca."
+
+#: inc/blocks.php:353
+msgid "Si tu localidad no aparece, pregúntanos."
+msgstr "If your town isn't listed, ask us."
+
+#: inc/blocks.php:354
+msgid "Consultar disponibilidad en mi zona"
+msgstr "Check availability in my area"
+
+#: inc/blocks.php:355 inc/blocks.php:719
+msgid "[Lista provisional: publicar solo las localidades confirmadas]"
+msgstr "[Provisional list: publish only confirmed towns]"
+
+#: inc/blocks.php:360 template-parts/blog/archive.php:23
+msgid "Últimos artículos"
+msgstr "Latest articles"
+
+#: inc/blocks.php:362
+msgid "El artículo destacado (fijado) va primero; después, los más recientes."
+msgstr "The featured (sticky) article goes first; then the most recent ones."
+
+#: inc/blocks.php:365 template-parts/blog/archive.php:43
+msgid "Ideas y consejos para tu hogar."
+msgstr "Ideas and tips for your home."
+
+#: inc/blocks.php:366
+msgid "Enlace al blog"
+msgstr "Link to the blog"
+
+#: inc/blocks.php:366
+msgid "Ir al blog"
+msgstr "Go to the blog"
+
+#: inc/blocks.php:367
+msgid "Número de artículos"
+msgstr "Number of articles"
+
+#: inc/blocks.php:374 inc/blocks.php:379
+msgid "Preguntas frecuentes"
+msgstr "Frequently asked questions"
+
+#: inc/blocks.php:378
+msgid "Fondo"
+msgstr "Background"
+
+#: inc/blocks.php:378
+msgid "Crema"
+msgstr "Cream"
+
+#: inc/blocks.php:378 inc/blog.php:30 inc/data.php:92
+msgid "Blanco"
+msgstr "White"
+
+#: inc/blocks.php:380
+msgid "Lo que suelen preguntarnos."
+msgstr "What people usually ask us."
+
+#: inc/blocks.php:381
+msgid "Texto bajo el título"
+msgstr "Text under the title"
+
+#: inc/blocks.php:381
+msgid "¿No encuentras tu respuesta? <a href=\"{contacto}\">Escríbenos</a>."
+msgstr "Can't find your answer? <a href=\"{contacto}\">Write to us</a>."
+
+#: inc/blocks.php:383 inc/blocks.php:546 inc/layouts.php:278
+#: inc/layouts.php:375
+msgid "Preguntas"
+msgstr "Questions"
+
+#: inc/blocks.php:385 inc/blog.php:15
+msgid "Pregunta"
+msgstr "Question"
+
+#: inc/blocks.php:386
+msgid "Respuesta"
+msgstr "Answer"
+
+#: inc/blocks.php:389
+msgid "¿Montáis cocinas de cualquier marca?"
+msgstr "Do you assemble kitchens of any brand?"
+
+#: inc/blocks.php:389
+msgid ""
+"Sí: cocinas de IKEA, Leroy Merlin y otras tiendas o de fabricante, por "
+"módulos. Puedes comprarla tú y nosotros la montamos. [CONFIRMAR MARCAS Y "
+"CASOS QUE NO ACEPTÁIS]"
+msgstr ""
+"Yes: modular kitchens from IKEA, Leroy Merlin and other shops or "
+"manufacturers. You can buy it yourself and we assemble it. [CONFIRM BRANDS "
+"AND CASES YOU DON'T ACCEPT]"
+
+#: inc/blocks.php:390
+msgid "¿Qué incluye el montaje de una cocina?"
+msgstr "What does kitchen assembly include?"
+
+#: inc/blocks.php:390
+msgid ""
+"Módulos altos y bajos, frentes, tiradores, zócalos y el ajuste final de "
+"puertas y cajones. Encimeras, fregadero y electrodomésticos integrados se "
+"acuerdan según tu cocina. [CONFIRMAR QUÉ CONEXIONES HACÉIS]"
+msgstr ""
+"Wall and base units, fronts, handles, plinths and final adjustment of doors "
+"and drawers. Worktops, sink and built-in appliances are agreed depending on "
+"your kitchen. [CONFIRM WHICH CONNECTIONS YOU MAKE]"
+
+#: inc/blocks.php:391
+msgid "¿Puedo enviar fotos o el plano de la cocina?"
+msgstr "Can I send photos or the kitchen plan?"
+
+#: inc/blocks.php:391
+msgid ""
+"Sí. El plano de la tienda, la lista de módulos y unas fotos del espacio nos "
+"bastan para darte un precio. Puedes enviarlos por WhatsApp o Telegram."
+msgstr ""
+"Yes. The shop's plan, the list of units and a few photos of the space are "
+"enough for us to give you a price. You can send them via WhatsApp or "
+"Telegram."
+
+#: inc/blocks.php:392
+msgid "¿Montáis también otros muebles?"
+msgstr "Do you assemble other furniture too?"
+
+#: inc/blocks.php:392
+msgid ""
+"Sí: armarios, vestidores, camas, cómodas, estanterías y soportes de TV, de "
+"cualquier marca. Un solo mueble también es trabajo para nosotros. [CONFIRMAR "
+"SI HAY UN MÍNIMO]"
+msgstr ""
+"Yes: wardrobes, walk-in closets, beds, chests of drawers, shelves and TV "
+"mounts, of any brand. A single piece of furniture is a job for us too. "
+"[CONFIRM IF THERE IS A MINIMUM]"
+
+#: inc/blocks.php:393
+msgid "¿Podéis traer los muebles y montarlos?"
+msgstr "Can you bring the furniture and assemble it?"
+
+#: inc/blocks.php:393
+msgid ""
+"Sí. Recogemos los muebles o la cocina en la tienda o en tu casa anterior, "
+"los transportamos y los montamos. También hacemos mudanzas completas y "
+"retiramos los muebles y electrodomésticos viejos, desde Benidorm a toda "
+"España y Europa."
+msgstr ""
+"Yes. We collect the furniture or kitchen from the shop or your previous "
+"home, transport it and assemble it. We also do complete moves and remove old "
+"furniture and appliances, from Benidorm to all of Spain and Europe."
+
+#: inc/blocks.php:394
+msgid "¿Hacéis también reformas?"
+msgstr "Do you also do renovations?"
+
+#: inc/blocks.php:394
+msgid ""
+"Sí. Además del montaje hacemos reformas integrales y parciales, baños y "
+"cocinas, pintura y suelos, por ejemplo para preparar el espacio antes de "
+"montar la cocina nueva."
+msgstr ""
+"Yes. Besides assembly we do full and partial renovations, bathrooms and "
+"kitchens, painting and floors, for example to prepare the space before "
+"assembling the new kitchen."
+
+#: inc/blocks.php:395
+msgid "¿En qué zonas trabajáis?"
+msgstr "Which areas do you cover?"
+
+#: inc/blocks.php:395
+msgid ""
+"En [LOCALIDADES CONFIRMADAS] de la Costa Blanca. Si la tuya no aparece, "
+"consúltanos."
+msgstr "[CONFIRMED TOWNS] on the Costa Blanca. If yours isn't listed, ask us."
+
+#: inc/blocks.php:398
+msgid "Título de los enlaces"
+msgstr "Links title"
+
+#: inc/blocks.php:400
+msgid "Enlaces bajo el título"
+msgstr "Links under the title"
+
+#: inc/blocks.php:402
+msgid "Texto (vacío: título de la página)"
+msgstr "Text (empty: page title)"
+
+#: inc/blocks.php:410
+msgid "Formulario de contacto"
+msgstr "Contact form"
+
+#: inc/blocks.php:412
+msgid ""
+"Los datos de contacto se editan en Apariencia → Personalizar → OSTEZA — "
+"Contacto. Las opciones del campo «Servicio» son los servicios de la portada."
+msgstr ""
+"Contact details are edited in Appearance → Customize → OSTEZA — Contact. The "
+"options of the “Service” field are the home page services."
+
+#: inc/blocks.php:415 inc/layouts.php:168 template-parts/contact.php:10
+msgid "Cuéntanos qué necesitas."
+msgstr "Tell us what you need."
+
+#: inc/blocks.php:416 template-parts/contact.php:11
+msgid ""
+"Rellena el formulario o escríbenos directamente. Te respondemos por el canal "
+"que prefieras."
+msgstr ""
+"Fill in the form or write to us directly. We'll reply on the channel you "
+"prefer."
+
+#: inc/blocks.php:417
+msgid "Mostrar los datos de contacto"
+msgstr "Show contact details"
+
+#: inc/blocks.php:418
+msgid "Servicio preseleccionado (vacío: el de la página)"
+msgstr "Preselected service (empty: the page's own)"
+
+#: inc/blocks.php:419
+msgid "Localidad prerrellenada"
+msgstr "Prefilled town"
+
+#: inc/blocks.php:424
+msgid "Llamada a la acción"
+msgstr "Call to action"
+
+#: inc/blocks.php:427
+msgid "¿Hablamos de tu proyecto?"
+msgstr "Shall we talk about your project?"
+
+#: inc/blocks.php:428
+msgid "Trabajamos en [LOCALIDADES CONFIRMADAS] de la Costa Blanca."
+msgstr "We work in [CONFIRMED TOWNS] on the Costa Blanca."
+
+#: inc/blocks.php:434
+msgid "Recuadro «¿No encuentras…?»"
+msgstr "“Can't find…?” box"
+
+#: inc/blocks.php:437
+msgid "¿No encuentras lo que buscas?"
+msgstr "Can't find what you're looking for?"
+
+#: inc/blocks.php:438
+msgid ""
+"Cuéntanos el trabajo. Si no es algo que hagamos bien, te lo diremos con "
+"claridad."
+msgstr ""
+"Tell us about the job. If it's not something we do well, we'll tell you "
+"clearly."
+
+#: inc/blocks.php:439
+msgid "Contar mi caso"
+msgstr "Tell us my case"
+
+#: inc/blocks.php:440
+msgid "Botón secundario"
+msgstr "Secondary button"
+
+#: inc/blocks.php:445
+msgid "Cabecera de página"
+msgstr "Page header"
+
+#: inc/blocks.php:451
+msgid "Mostrar botones de contacto"
+msgstr "Show contact buttons"
+
+#: inc/blocks.php:456
+msgid "Texto libre"
+msgstr "Free text"
+
+#: inc/blocks.php:458
+msgid "Sección con párrafos, títulos y listas normales de WordPress dentro."
+msgstr "Section with regular WordPress paragraphs, headings and lists inside."
+
+#: inc/blocks.php:469
+msgid "Catálogo: cabecera y buscador"
+msgstr "Catalogue: header and search"
+
+#: inc/blocks.php:473
+msgid "Montamos tu cocina <span>y todo lo demás.</span>"
+msgstr "We assemble your kitchen <span>and everything else.</span>"
+
+#: inc/blocks.php:474
+msgid ""
+"Montaje de cocinas y muebles en la Costa Blanca, mudanzas y transporte, y "
+"también reformas y acabados cuando hacen falta. Con el mismo cuidado y una "
+"persona de contacto."
+msgstr ""
+"Kitchen and furniture assembly on the Costa Blanca, moving and transport, "
+"and renovations and finishes when needed. With the same care and one contact "
+"person."
+
+#: inc/blocks.php:475
+msgid "Texto del buscador"
+msgstr "Search box text"
+
+#: inc/blocks.php:475
+msgid "Busca un servicio: cocina, armario, mudanza…"
+msgstr "Search for a service: kitchen, wardrobe, move…"
+
+#: inc/blocks.php:476
+msgid "Título del selector"
+msgstr "Selector title"
+
+#: inc/blocks.php:476
+msgid "¿Qué quieres hacer?"
+msgstr "What do you want to do?"
+
+#: inc/blocks.php:478
+msgid "Opciones del selector"
+msgstr "Selector options"
+
+#: inc/blocks.php:480 inc/blocks.php:496 inc/data.php:221
+msgid "Grupo"
+msgstr "Group"
+
+#: inc/blocks.php:483
+msgid "Subtexto"
+msgstr "Subtext"
+
+#: inc/blocks.php:486
+msgid "Sin resultados: texto"
+msgstr "No results: text"
+
+#: inc/blocks.php:486
+msgid "Cuéntanos qué necesitas y te diremos con claridad si podemos hacerlo."
+msgstr "Tell us what you need and we'll tell you clearly whether we can do it."
+
+#: inc/blocks.php:487
+msgid "Sin resultados: botón"
+msgstr "No results: button"
+
+#: inc/blocks.php:487
+msgid "Preguntar por mi trabajo"
+msgstr "Ask about my job"
+
+#: inc/blocks.php:492
+msgid "Catálogo: grupo de servicios"
+msgstr "Catalogue: service group"
+
+#: inc/blocks.php:494
+msgid ""
+"Muestra los servicios del grupo elegido. El título y la introducción son los "
+"del grupo (Páginas → Grupos de servicios)."
+msgstr ""
+"Shows the services of the chosen group. The title and intro are the group's "
+"(Pages → Service groups)."
+
+#: inc/blocks.php:503
+msgid "Filas"
+msgstr "Rows"
+
+#: inc/blocks.php:504
+msgid "Tarjetas oscuras"
+msgstr "Dark cards"
+
+#: inc/blocks.php:505
+msgid "Lista con botón"
+msgstr "List with button"
+
+#: inc/blocks.php:509
+msgid "Número"
+msgstr "Number"
+
+#: inc/blocks.php:510
+msgid "Texto del enlace o botón"
+msgstr "Link or button text"
+
+#: inc/blocks.php:511
+msgid "Destino (vacío: formulario)"
+msgstr "Target (empty: form)"
+
+#: inc/blocks.php:518
+msgid "Servicio: cabecera"
+msgstr "Service: header"
+
+#: inc/blocks.php:520
+msgid ""
+"El antetítulo y la miga de pan muestran el grupo del servicio (caja «Tarjeta "
+"del servicio»)."
+msgstr ""
+"The kicker and breadcrumb show the service's group (“Service card” box)."
+
+#: inc/blocks.php:526 inc/blocks.php:652
+msgid "Título del resumen"
+msgstr "Summary title"
+
+#: inc/blocks.php:526
+msgid "En resumen"
+msgstr "In short"
+
+#: inc/blocks.php:528 inc/blocks.php:654
+msgid "Resumen"
+msgstr "Summary"
+
+#: inc/blocks.php:530 inc/blocks.php:656
+msgid "Concepto"
+msgstr "Item"
+
+#: inc/blocks.php:531 inc/blocks.php:657
+msgid "Valor"
+msgstr "Value"
+
+#: inc/blocks.php:534
+msgid "Enlace del resumen"
+msgstr "Summary link"
+
+#: inc/blocks.php:534
+msgid "Consultar mi caso"
+msgstr "Ask about my case"
+
+#: inc/blocks.php:536
+msgid "Índice de la página"
+msgstr "Page index"
+
+#: inc/blocks.php:539
+msgid "Ancla de la sección"
+msgstr "Section anchor"
+
+#: inc/blocks.php:542 inc/blocks.php:554 inc/blocks.php:558
+msgid "Qué incluye"
+msgstr "What's included"
+
+#: inc/blocks.php:543
+msgid "Incluido y no incluido"
+msgstr "Included and not included"
+
+#: inc/blocks.php:544 inc/layouts.php:260
+msgid "Proceso"
+msgstr "Process"
+
+#: inc/blocks.php:545 inc/blocks.php:584 inc/blocks.php:588
+msgid "Precio y plazo"
+msgstr "Price and timing"
+
+#: inc/blocks.php:562
+msgid "Elementos"
+msgstr "Items"
+
+#: inc/blocks.php:569
+msgid "Incluido / no incluido"
+msgstr "Included / not included"
+
+#: inc/blocks.php:573
+msgid "Título de lo incluido"
+msgstr "Included title"
+
+#: inc/blocks.php:573
+msgid "Normalmente incluido"
+msgstr "Usually included"
+
+#: inc/blocks.php:574
+msgid "Incluido (uno por línea)"
+msgstr "Included (one per line)"
+
+#: inc/blocks.php:575
+msgid "Título de lo opcional"
+msgstr "Optional title"
+
+#: inc/blocks.php:575
+msgid "Solo si lo acordamos"
+msgstr "Only if agreed"
+
+#: inc/blocks.php:576
+msgid "Opcional (uno por línea)"
+msgstr "Optional (one per line)"
+
+#: inc/blocks.php:577
+msgid "Todo queda reflejado por escrito en el presupuesto antes de empezar."
+msgstr "Everything is set out in writing in the quote before we start."
+
+#: inc/blocks.php:578
+msgid "Título de los tipos"
+msgstr "Types title"
+
+#: inc/blocks.php:578
+msgid "Trabajamos en"
+msgstr "We work in"
+
+#: inc/blocks.php:579
+msgid "Tipos (uno por línea)"
+msgstr "Types (one per line)"
+
+#: inc/blocks.php:589
+msgid "¿Cuánto cuesta y cuánto dura?"
+msgstr "How much does it cost and how long does it take?"
+
+#: inc/blocks.php:591
+msgid "Pedir mi presupuesto"
+msgstr "Get my quote"
+
+#: inc/blocks.php:592
+msgid "Factores"
+msgstr "Factors"
+
+#: inc/blocks.php:597
+msgid "Relacionados"
+msgstr "Related"
+
+#: inc/blocks.php:600
+msgid "También te puede interesar"
+msgstr "You may also be interested in"
+
+#: inc/blocks.php:601
+msgid "Servicios relacionados."
+msgstr "Related services."
+
+#: inc/blocks.php:605
+msgid "Página o artículo"
+msgstr "Page or article"
+
+#: inc/blocks.php:606
+msgid "Blanca"
+msgstr "White"
+
+#: inc/blocks.php:606 inc/blocks.php:769 inc/data.php:93
+msgid "Piedra"
+msgstr "Stone"
+
+#: inc/blocks.php:606 inc/blocks.php:769 inc/data.php:90
+msgid "Verde petróleo"
+msgstr "Petrol green"
+
+#: inc/blocks.php:608
+msgid "Etiqueta superior"
+msgstr "Top label"
+
+#: inc/blocks.php:609
+msgid "Título (vacío: el de la página)"
+msgstr "Title (empty: the page's)"
+
+#: inc/blocks.php:613
+msgid "Nota de proyectos"
+msgstr "Projects note"
+
+#: inc/blocks.php:614
+msgid "Enlace de la nota"
+msgstr "Note link"
+
+#: inc/blocks.php:614
+msgid "Ver proyectos"
+msgstr "See projects"
+
+#: inc/blocks.php:621
+msgid "Zonas: cabecera con mapa"
+msgstr "Areas: header with map"
+
+#: inc/blocks.php:625
+msgid "Dónde trabajamos en la <span>Costa Blanca.</span>"
+msgstr "Where we work on the <span>Costa Blanca.</span>"
+
+#: inc/blocks.php:626
+msgid ""
+"Trabajamos de forma habitual en estas localidades de la provincia de "
+"Alicante. Elige la tuya para ver qué hacemos allí, o consúltanos si no "
+"aparece."
+msgstr ""
+"We regularly work in these towns in the province of Alicante. Choose yours "
+"to see what we do there, or ask us if it isn't listed."
+
+#: inc/blocks.php:627
+msgid "Zona seleccionada al cargar"
+msgstr "Area selected on load"
+
+#: inc/blocks.php:628
+msgid "Etiqueta de la selección"
+msgstr "Selection label"
+
+#: inc/blocks.php:628
+msgid "Seleccionada"
+msgstr "Selected"
+
+#: inc/blocks.php:629
+msgid "Ver la zona"
+msgstr "See the area"
+
+#: inc/blocks.php:630 inc/blocks.php:721
+msgid "Pie del mapa"
+msgstr "Map caption"
+
+#: inc/blocks.php:630 inc/blocks.php:721
+msgid "Esquema, no a escala."
+msgstr "Diagram, not to scale."
+
+#: inc/blocks.php:635
+msgid "Zonas: tarjetas"
+msgstr "Areas: cards"
+
+#: inc/blocks.php:638
+msgid "Localidades"
+msgstr "Towns"
+
+#: inc/blocks.php:639
+msgid "Publicamos solo las zonas donde trabajamos de forma habitual."
+msgstr "We only list the areas where we regularly work."
+
+#: inc/blocks.php:644
+msgid "Zona: cabecera"
+msgstr "Area: header"
+
+#: inc/blocks.php:660
+msgid "Título de zonas cercanas"
+msgstr "Nearby areas title"
+
+#: inc/blocks.php:660
+msgid "Cerca"
+msgstr "Nearby"
+
+#: inc/blocks.php:661
+msgid "Zonas cercanas"
+msgstr "Nearby areas"
+
+#: inc/blocks.php:661 inc/layouts.php:147
+msgid "Zona"
+msgstr "Area"
+
+#: inc/blocks.php:666
+msgid "Zona: servicios"
+msgstr "Area: services"
+
+#: inc/blocks.php:668
+msgid "Muestra los servicios de la portada."
+msgstr "Shows the home page services."
+
+#: inc/blocks.php:676
+msgid "Puntos a tener en cuenta"
+msgstr "Points to keep in mind"
+
+#: inc/blocks.php:680
+msgid "Lo que tenemos en cuenta aquí."
+msgstr "What we take into account here."
+
+#: inc/blocks.php:681
+msgid ""
+"Cada zona tiene sus particularidades. Estas son algunas que revisamos antes "
+"de dar un presupuesto."
+msgstr ""
+"Every area has its own particularities. These are some we check before "
+"giving a quote."
+
+#: inc/blocks.php:688
+msgid "Aviso de proyectos"
+msgstr "Projects notice"
+
+#: inc/blocks.php:692
+msgid "Trabajos en la zona."
+msgstr "Work in the area."
+
+#: inc/blocks.php:694
+msgid "Enlace"
+msgstr "Link"
+
+#: inc/blocks.php:694
+msgid "Ver todos los proyectos"
+msgstr "See all projects"
+
+#: inc/blocks.php:701
+msgid "Contacto: cabecera con canales"
+msgstr "Contact: header with channels"
+
+#: inc/blocks.php:703
+msgid "Los datos se editan en Apariencia → Personalizar → OSTEZA — Contacto."
+msgstr "Details are edited in Appearance → Customize → OSTEZA — Contact."
+
+#: inc/blocks.php:706
+msgid "Hablemos de <span>tu proyecto.</span>"
+msgstr "Let's talk about <span>your project.</span>"
+
+#: inc/blocks.php:707
+msgid ""
+"Elige el canal que te resulte más cómodo. Para un presupuesto, cuantos más "
+"detalles nos des (fotos, medidas, plazo), mejor podremos orientarte."
+msgstr ""
+"Choose the channel that suits you best. For a quote, the more details you "
+"give us (photos, measurements, timing), the better we can advise you."
+
+#: inc/blocks.php:708
+msgid "Texto de WhatsApp"
+msgstr "WhatsApp text"
+
+#: inc/blocks.php:708
+msgid "Escríbenos y envía fotos"
+msgstr "Write to us and send photos"
+
+#: inc/blocks.php:713
+msgid "Zona de trabajo con mapa"
+msgstr "Work area with map"
+
+#: inc/blocks.php:716
+msgid "Zona de trabajo"
+msgstr "Work area"
+
+#: inc/blocks.php:717
+msgid "Dónde trabajamos."
+msgstr "Where we work."
+
+#: inc/blocks.php:718
+msgid ""
+"Trabajamos de forma habitual en estas localidades de la Costa Blanca. Si la "
+"tuya no aparece, escríbenos y lo consultamos."
+msgstr ""
+"We regularly work in these towns on the Costa Blanca. If yours isn't listed, "
+"write to us and we'll check."
+
+#: inc/blocks.php:720
+msgid "Título del horario"
+msgstr "Opening hours title"
+
+#: inc/blocks.php:720
+msgid "Horario de atención"
+msgstr "Opening hours"
+
+#: inc/blocks.php:728
+msgid "Sobre nosotros: cabecera"
+msgstr "About us: header"
+
+#: inc/blocks.php:732
+msgid "Oficio, orden <span>y palabra.</span>"
+msgstr "Craft, order <span>and our word.</span>"
+
+#: inc/blocks.php:733
+msgid ""
+"Somos un equipo de montaje de cocinas y muebles en la Costa Blanca, que "
+"también hace mudanzas, reformas y acabados. Creemos que un trabajo en casa "
+"debería ser predecible: saber qué se va a hacer, quién lo hace y cuándo."
+msgstr ""
+"We are a kitchen and furniture assembly team on the Costa Blanca that also "
+"does moves, renovations and finishes. We believe work in your home should be "
+"predictable: knowing what will be done, who will do it and when."
+
+#: inc/blocks.php:735
+msgid "Botón secundario (al equipo)"
+msgstr "Secondary button (to the team)"
+
+#: inc/blocks.php:736 inc/blocks.php:768
+msgid "Foto"
+msgstr "Photo"
+
+#: inc/blocks.php:737
+msgid "Espacio para una fotografía real del equipo, en obra y con luz natural."
+msgstr "Space for a real photo of the team, on site and in natural light."
+
+#: inc/blocks.php:742
+msgid "Historia"
+msgstr "Story"
+
+#: inc/blocks.php:745
+msgid "Por qué existimos"
+msgstr "Why we exist"
+
+#: inc/blocks.php:746
+msgid "Una forma más clara de trabajar en casa."
+msgstr "A clearer way to do work in your home."
+
+#: inc/blocks.php:747
+msgid "Frase destacada"
+msgstr "Highlighted sentence"
+
+#: inc/blocks.php:747
+msgid ""
+"Muchas personas en la Costa Blanca han vivido una obra o un montaje con "
+"sorpresas: presupuestos poco claros, plazos que se alargan y nadie a quien "
+"llamar. OSTEZA nace para trabajar de otra manera."
+msgstr ""
+"Many people on the Costa Blanca have been through building work or an "
+"assembly job full of surprises: unclear quotes, deadlines that drag on and "
+"nobody to call. OSTEZA was born to work differently."
+
+#: inc/blocks.php:748
+msgid "Párrafos (separados por una línea en blanco)"
+msgstr "Paragraphs (separated by a blank line)"
+
+#: inc/blocks.php:748
+msgid ""
+"[HISTORIA REAL: quién fundó OSTEZA, cuándo y por qué. Dos o tres párrafos en "
+"primera persona, con detalles concretos y verificables.]"
+msgstr ""
+"[REAL STORY: who founded OSTEZA, when and why. Two or three paragraphs in "
+"the first person, with concrete, verifiable details.]"
+
+#: inc/blocks.php:748
+msgid ""
+"Empezamos por lo que mejor sabemos hacer: montar cocinas y muebles. A partir "
+"de ahí, mudanzas, reformas y acabados interiores. Ampliaremos servicios solo "
+"cuando podamos prestarlos con el mismo estándar."
+msgstr ""
+"We started with what we do best: assembling kitchens and furniture. From "
+"there, moves, renovations and interior finishes. We'll only add services "
+"when we can deliver them to the same standard."
+
+#: inc/blocks.php:749
+msgid "Cita"
+msgstr "Quote"
+
+#: inc/blocks.php:749
+msgid ""
+"«[Frase real del fundador o del equipo sobre cómo entendéis el trabajo.]»"
+msgstr ""
+"“[A real quote from the founder or the team about how you see the work.]”"
+
+#: inc/blocks.php:750
+msgid "Autor de la cita"
+msgstr "Quote author"
+
+#: inc/blocks.php:750
+msgid "— [Nombre], [rol]"
+msgstr "— [Name], [role]"
+
+#: inc/blocks.php:755
+msgid "Equipo"
+msgstr "Team"
+
+#: inc/blocks.php:759
+msgid "El equipo"
+msgstr "The team"
+
+#: inc/blocks.php:760
+msgid "Oficio en obra y coordinación cercana."
+msgstr "Hands-on trade and close coordination."
+
+#: inc/blocks.php:761
+msgid ""
+"Presentamos solo a personas reales del equipo, con su consentimiento. Esta "
+"es la plantilla para cada perfil."
+msgstr ""
+"We only feature real team members, with their consent. This is the template "
+"for each profile."
+
+#: inc/blocks.php:763
+msgid "Personas"
+msgstr "People"
+
+#: inc/blocks.php:766
+msgid "Rol"
+msgstr "Role"
+
+#: inc/blocks.php:769
+msgid "Fondo sin foto"
+msgstr "Background without photo"
+
+#: inc/blocks.php:769 inc/blog.php:29 inc/data.php:91
+msgid "Arena"
+msgstr "Sand"
+
+#: inc/blocks.php:772 inc/blocks.php:773 inc/blocks.php:774
+msgid "[Nombre]"
+msgstr "[Name]"
+
+#: inc/blocks.php:772
+msgid "[Rol · p. ej. coordinación]"
+msgstr "[Role · e.g. coordination]"
+
+#: inc/blocks.php:772 inc/blocks.php:773 inc/blocks.php:774
+msgid "[Dos líneas sobre su experiencia real y qué hace en OSTEZA.]"
+msgstr "[Two lines about their real experience and what they do at OSTEZA.]"
+
+#: inc/blocks.php:773
+msgid "[Rol · p. ej. montaje de cocinas]"
+msgstr "[Role · e.g. kitchen assembly]"
+
+#: inc/blocks.php:774
+msgid "[Rol · p. ej. mudanzas y transporte]"
+msgstr "[Role · e.g. moving and transport]"
+
+#: inc/blocks.php:781
+msgid "Siempre / nunca"
+msgstr "Always / never"
+
+#: inc/blocks.php:784
+msgid "Antetítulo izquierdo"
+msgstr "Left kicker"
+
+#: inc/blocks.php:784
+msgid "Lo que puedes esperar"
+msgstr "What you can expect"
+
+#: inc/blocks.php:785
+msgid "Título izquierdo"
+msgstr "Left title"
+
+#: inc/blocks.php:785
+msgid "Siempre"
+msgstr "Always"
+
+#: inc/blocks.php:786
+msgid "Lista izquierda (uno por línea)"
+msgstr "Left list (one per line)"
+
+#: inc/blocks.php:786
+msgid "Presupuesto detallado y por escrito"
+msgstr "A detailed quote in writing"
+
+#: inc/blocks.php:786
+msgid "Una persona de contacto durante todo el trabajo"
+msgstr "One contact person throughout the job"
+
+#: inc/blocks.php:786
+msgid "Protección de tu vivienda y limpieza al terminar"
+msgstr "Protection of your home and cleaning up at the end"
+
+#: inc/blocks.php:786
+msgid "Revisión final contigo antes de cerrar"
+msgstr "A final check with you before closing"
+
+#: inc/blocks.php:787
+msgid "Antetítulo derecho"
+msgstr "Right kicker"
+
+#: inc/blocks.php:787
+msgid "Lo que no hacemos"
+msgstr "What we don't do"
+
+#: inc/blocks.php:788
+msgid "Título derecho"
+msgstr "Right title"
+
+#: inc/blocks.php:788
+msgid "Nunca"
+msgstr "Never"
+
+#: inc/blocks.php:789
+msgid "Lista derecha (uno por línea)"
+msgstr "Right list (one per line)"
+
+#: inc/blocks.php:789
+msgid "Empezar sin un acuerdo por escrito"
+msgstr "Start without a written agreement"
+
+#: inc/blocks.php:789
+msgid "Prometer plazos que no podemos cumplir"
+msgstr "Promise deadlines we can't meet"
+
+#: inc/blocks.php:789
+msgid "Aceptar trabajos que no sabemos hacer bien"
+msgstr "Accept jobs we can't do well"
+
+#: inc/blocks.php:789
+msgid "Cambiar el alcance sin hablarlo contigo"
+msgstr "Change the scope without discussing it with you"
+
+#: inc/blocks.php:897
+msgid "borrador"
+msgstr "draft"
+
+#: inc/blocks.php:958
+msgid "Añadir"
+msgstr "Add"
+
+#: inc/blocks.php:959
+msgid "Eliminar"
+msgstr "Remove"
+
+#: inc/blocks.php:960
+msgid "Subir"
+msgstr "Move up"
+
+#: inc/blocks.php:961
+msgid "Bajar"
+msgstr "Move down"
+
+#: inc/blocks.php:962
+msgid "— Ninguno —"
+msgstr "— None —"
+
+#: inc/blocks.php:963
+msgid "Elegir imagen"
+msgstr "Choose image"
+
+#: inc/blocks.php:964
+msgid "Quitar imagen"
+msgstr "Remove image"
+
+#: inc/blocks.php:965
+msgid "Elemento"
+msgstr "Item"
+
+#: inc/blocks.php:966
+msgid "Contenido"
+msgstr "Content"
+
+#: inc/blocks.php:967
+msgid "Escribe aquí el texto de la sección."
+msgstr "Write the section text here."
+
+#: inc/blocks.php:968
+msgid ""
+"Texto con formato: <span>…</span> resalta en color, <strong> en negrita, <a "
+"href=\"…\"> enlace; {contacto} es el formulario y {privacidad} la política "
+"de privacidad."
+msgstr ""
+"Formatted text: <span>…</span> highlights in colour, <strong> bold, <a "
+"href=\"…\"> link; {contacto} is the form and {privacidad} the privacy policy."
+
+#: inc/blocks.php:969
+msgid "Un elemento por línea."
+msgstr "One item per line."
+
+#: inc/blog.php:13
+msgid "Calendario"
+msgstr "Calendar"
+
+#: inc/blog.php:14 inc/icons.php:84
+msgid "Documento"
+msgstr "Document"
+
+#: inc/blog.php:16 inc/icons.php:10
+msgid "Cocina"
+msgstr "Kitchen"
+
+#: inc/blog.php:17 inc/icons.php:23
+msgid "Baño"
+msgstr "Bathroom"
+
+#: inc/blog.php:18 inc/icons.php:27
+msgid "Suelo"
+msgstr "Floor"
+
+#: inc/blog.php:19 inc/icons.php:24
+msgid "Pintura"
+msgstr "Painting"
+
+#: inc/blog.php:20 inc/icons.php:12
+msgid "Armario"
+msgstr "Wardrobe"
+
+#: inc/blog.php:21
+msgid "Mar"
+msgstr "Sea"
+
+#: inc/blog.php:22
+msgid "Furgoneta"
+msgstr "Van"
+
+#: inc/blog.php:27
+msgid "Grafito"
+msgstr "Graphite"
+
+#: inc/blog.php:28
+msgid "Azul petróleo"
+msgstr "Petrol blue"
+
+#: inc/blog.php:31
+msgid "Azul claro"
+msgstr "Light blue"
+
+#: inc/blog.php:76
+msgid "Borrador"
+msgstr "Draft"
+
+#: inc/blog.php:188
+msgid "¿Quieres que lo revisemos contigo?"
+msgstr "Want us to go through it with you?"
+
+#: inc/blog.php:189
+msgid ""
+"Te ayudamos a definir el alcance de tu reforma y a preparar un presupuesto "
+"claro."
+msgstr ""
+"We'll help you define the scope of your renovation and prepare a clear quote."
+
+#: inc/blog.php:210
+msgid "Portada del artículo"
+msgstr "Article cover"
+
+#: inc/blog.php:219
+msgid "Texto (dos líneas cortas)"
+msgstr "Text (two short lines)"
+
+#: inc/blog.php:221
+msgid "Color"
+msgstr "Colour"
+
+#: inc/blog.php:222
+msgid "Automático"
+msgstr "Automatic"
+
+#: inc/blog.php:233
+msgid "Contenido de ejemplo (se marca como «Borrador» en la web)"
+msgstr "Sample content (marked as “Draft” on the site)"
+
+#: inc/chat.php:61
+msgid "Llamada"
+msgstr "Call"
+
+#: inc/chat.php:76
+msgid "Chats"
+msgstr "Chats"
+
+#: inc/chat.php:77 inc/chat.php:182
+msgid "Chat"
+msgstr "Chat"
+
+#: inc/chat.php:78 inc/chat.php:882 inc/icons.php:86
+msgid "Conversación"
+msgstr "Conversation"
+
+#: inc/chat.php:79
+msgid "Buscar chats"
+msgstr "Search chats"
+
+#: inc/chat.php:80
+msgid "Todavía no hay conversaciones."
+msgstr "No conversations yet."
+
+#: inc/chat.php:432
+msgid ""
+"No puedo ayudarte con eso por aquí. Si quieres, déjanos tus datos y te "
+"contactamos."
+msgstr ""
+"I can't help with that here. If you like, leave your details and we'll "
+"contact you."
+
+#. translators: %d: conversation number.
+#: inc/chat.php:497
+#, php-format
+msgid "Solicitud #c%d"
+msgstr "Request #c%d"
+
+#: inc/chat.php:500
+msgid "ubicación:"
+msgstr "location:"
+
+#. translators: %s: WhatsApp, Telegram or a call.
+#: inc/chat.php:501
+#, php-format
+msgid "Responder por: %s"
+msgstr "Reply via: %s"
+
+#: inc/chat.php:518
+msgid "Conversación con el asistente"
+msgstr "Conversation with the assistant"
+
+#: inc/chat.php:710
+msgid ""
+"Demasiados mensajes seguidos. Espera unos minutos o escríbenos por WhatsApp."
+msgstr ""
+"Too many messages in a row. Wait a few minutes or message us on WhatsApp."
+
+#: inc/chat.php:763
+msgid ""
+"El asistente no está disponible ahora mismo. Déjanos tus datos y te "
+"contactamos."
+msgstr ""
+"The assistant isn't available right now. Leave your details and we'll "
+"contact you."
+
+#: inc/chat.php:825
+msgid "Elige dónde te respondemos."
+msgstr "Choose where we should reply."
+
+#. translators: %s: WhatsApp number of the business.
+#: inc/chat.php:851
+#, php-format
+msgid "No hemos podido enviar tu solicitud. Escríbenos por WhatsApp: %s"
+msgstr "We couldn't send your request. Message us on WhatsApp: %s"
+
+#. translators: 1: visitor's name, 2: WhatsApp, Telegram or a call.
+#: inc/chat.php:862
+#, php-format
+msgid ""
+"¡Gracias, %1$s! Hemos recibido tu solicitud. Te contactaremos por %2$s lo "
+"antes posible."
+msgstr ""
+"Thank you, %1$s! We've received your request. We'll contact you via %2$s as "
+"soon as possible."
+
+#: inc/chat.php:895 inc/chat.php:930
+msgid "Solicitud"
+msgstr "Request"
+
+#: inc/chat.php:896 inc/chat.php:944
+msgid "no enviada a Telegram"
+msgstr "not sent to Telegram"
+
+#: inc/chat.php:902
+msgid "ubicación"
+msgstr "location"
+
+#: inc/chat.php:958 inc/chat.php:982
+msgid "Ajustes del chat"
+msgstr "Chat settings"
+
+#: inc/chat.php:959
+msgid "Ajustes"
+msgstr "Settings"
+
+#: inc/chat.php:975
+msgid "sin clave el chat no se muestra"
+msgstr "without a key the chat is not shown"
+
+#: inc/chat.php:978
+msgid "Chat de Telegram del equipo"
+msgstr "Team's Telegram chat"
+
+#: inc/chat.php:984
+msgid ""
+"Las claves se definen como constantes en wp-config.php o variables de "
+"entorno con el mismo nombre (en Docker: .env y compose.yaml)."
+msgstr ""
+"Keys are set as constants in wp-config.php or environment variables of the "
+"same name (in Docker: .env and compose.yaml)."
+
+#: inc/chat.php:992
+msgid "Detectar mi chat de Telegram"
+msgstr "Detect my Telegram chat"
+
+#: inc/chat.php:993
+msgid "Enviar mensaje de prueba"
+msgstr "Send a test message"
+
+#: inc/chat.php:995
+msgid ""
+"Para detectar el chat: escribe /start a tu bot en Telegram y pulsa "
+"«Detectar». Las solicitudes del chat llegan a ese chat de Telegram."
+msgstr ""
+"To detect the chat: send /start to your bot in Telegram and press “Detect”. "
+"Chat requests arrive in that Telegram chat."
+
+#: inc/chat.php:1002
+msgid "Falta OSTEZA_TG_TOKEN."
+msgstr "OSTEZA_TG_TOKEN is missing."
+
+#. translators: 1: Telegram name, 2: chat id.
+#: inc/chat.php:1012
+#, php-format
+msgid "Chat guardado: %1$s (%2$s)."
+msgstr "Chat saved: %1$s (%2$s)."
+
+#: inc/chat.php:1015
+msgid "No hay mensajes. Escribe /start a tu bot y vuelve a intentarlo."
+msgstr "No messages. Send /start to your bot and try again."
+
+#: inc/chat.php:1021
+msgid "OSTEZA: el chat de la web está conectado ✓"
+msgstr "OSTEZA: the website chat is connected ✓"
+
+#: inc/chat.php:1024
+msgid "Mensaje enviado."
+msgstr "Message sent."
+
+#: inc/chat.php:1024
+msgid "No se pudo enviar. Revisa el token y el chat."
+msgstr "Couldn't send. Check the token and the chat."
+
+#: inc/customizer.php:10 template-parts/contact.php:36
+msgid "Dirección"
+msgstr "Address"
+
+#: inc/customizer.php:12
+msgid "Número de WhatsApp (con prefijo)"
+msgstr "WhatsApp number (with country code)"
+
+#: inc/customizer.php:13
+msgid "Usuario de Telegram"
+msgstr "Telegram username"
+
+#: inc/customizer.php:15 template-parts/contact.php:37
+msgid "Horario"
+msgstr "Opening hours"
+
+#: inc/customizer.php:16
+msgid "URL de Instagram"
+msgstr "Instagram URL"
+
+#: inc/customizer.php:17
+msgid "URL de Facebook"
+msgstr "Facebook URL"
+
+#: inc/customizer.php:18
+msgid "Titular legal"
+msgstr "Legal owner"
+
+#: inc/customizer.php:27
+msgid "Pie: frase grande (admite <span>)"
+msgstr "Footer: large sentence (allows <span>)"
+
+#: inc/customizer.php:27
+msgid "Cuidamos tu espacio. <span>Construimos confianza.</span>"
+msgstr "We look after your space. <span>We build trust.</span>"
+
+#: inc/customizer.php:28
+msgid "Pie: texto bajo el logotipo"
+msgstr "Footer: text under the logo"
+
+#: inc/customizer.php:28
+msgid ""
+"Montaje de cocinas y muebles en la Costa Blanca, mudanzas y transporte por "
+"España y Europa. Y también reformas y acabados, con el mismo cuidado."
+msgstr ""
+"Kitchen and furniture assembly on the Costa Blanca, moving and transport "
+"across Spain and Europe. And renovations and finishes too, with the same "
+"care."
+
+#: inc/customizer.php:29
+msgid "Menú de servicios: título del recuadro"
+msgstr "Services menu: box title"
+
+#: inc/customizer.php:29
+msgid "¿No sabes qué servicio elegir?"
+msgstr "Not sure which service to choose?"
+
+#: inc/customizer.php:30
+msgid "Menú de servicios: texto del recuadro"
+msgstr "Services menu: box text"
+
+#: inc/customizer.php:30
+msgid "Descríbenos el trabajo y te orientamos."
+msgstr "Describe the job and we'll point you in the right direction."
+
+#: inc/customizer.php:31
+msgid "Menú de servicios: botón del recuadro"
+msgstr "Services menu: box button"
+
+#: inc/customizer.php:31
+msgid "Cuéntanos qué necesitas"
+msgstr "Tell us what you need"
+
+#: inc/customizer.php:86
+msgid "Textos generales"
+msgstr "General texts"
+
+#: inc/customizer.php:93
+msgid "Vacío: "
+msgstr "Empty: "
+
+#: inc/data.php:27
+msgid "Grupo de servicios"
+msgstr "Service group"
+
+#: inc/data.php:28
+msgid "Añadir grupo"
+msgstr "Add group"
+
+#: inc/data.php:29
+msgid "Editar grupo"
+msgstr "Edit group"
+
+#: inc/data.php:65 inc/data.php:71
+msgid "Orden"
+msgstr "Order"
+
+#: inc/data.php:65 inc/data.php:71
+msgid ""
+"Posición del grupo en el catálogo y en el menú. La descripción es el texto "
+"de introducción del grupo en el catálogo."
+msgstr ""
+"Position of the group in the catalogue and menu. The description is the "
+"group's intro text in the catalogue."
+
+#: inc/data.php:102
+msgid "Texto de la tarjeta"
+msgstr "Card text"
+
+#: inc/data.php:103
+msgid "Etiquetas de la tarjeta (una por línea)"
+msgstr "Card tags (one per line)"
+
+#: inc/data.php:105
+msgid "Color de la tarjeta en la portada"
+msgstr "Card colour on the home page"
+
+#: inc/data.php:106
+msgid "Imagen de la tarjeta (4:3, opcional)"
+msgstr "Card image (4:3, optional)"
+
+#: inc/data.php:107
+msgid "Mostrar en la portada, en el pie y en el formulario"
+msgstr "Show on the home page, footer and form"
+
+#: inc/data.php:108
+msgid "Ocultar en el menú de servicios"
+msgstr "Hide from the services menu"
+
+#: inc/data.php:114
+msgid "Comarca"
+msgstr "Comarca (district)"
+
+#: inc/data.php:115
+msgid "Cobertura (texto de la tarjeta)"
+msgstr "Coverage (card text)"
+
+#: inc/data.php:116
+msgid "Latitud"
+msgstr "Latitude"
+
+#: inc/data.php:117
+msgid "Longitud"
+msgstr "Longitude"
+
+#: inc/data.php:118
+msgid "Posición X en el esquema sin JavaScript (0–420)"
+msgstr "X position on the no-JavaScript diagram (0–420)"
+
+#: inc/data.php:119
+msgid "Posición Y en el esquema sin JavaScript (0–540)"
+msgstr "Y position on the no-JavaScript diagram (0–540)"
+
+#: inc/data.php:139
+msgid "Tarjeta del servicio"
+msgstr "Service card"
+
+#: inc/data.php:142
+msgid "Datos de la zona"
+msgstr "Area details"
+
+#: inc/data.php:172 inc/projects.php:177
+msgid "Elegir"
+msgstr "Choose"
+
+#: inc/data.php:172 inc/projects.php:177
+msgid "Quitar"
+msgstr "Remove"
+
+#: inc/data.php:229
+msgid ""
+"El nombre de la tarjeta es el título de la página; el orden es el «Orden» de "
+"Atributos de página."
+msgstr ""
+"The card name is the page title; the order is the “Order” in Page attributes."
+
+#: inc/data.php:237
+msgid ""
+"El nombre de la zona es el título de la página; el orden en las listas es el "
+"«Orden» de Atributos de página."
+msgstr ""
+"The area name is the page title; the order in lists is the “Order” in Page "
+"attributes."
+
+#: inc/icons.php:11
+msgid "Mueble"
+msgstr "Furniture"
+
+#: inc/icons.php:13
+msgid "Estantería y TV"
+msgstr "Shelving and TV"
+
+#: inc/icons.php:14
+msgid "Encimera"
+msgstr "Worktop"
+
+#: inc/icons.php:15
+msgid "Llave / ajustes"
+msgstr "Spanner / adjustments"
+
+#: inc/icons.php:16
+msgid "Camión"
+msgstr "Lorry"
+
+#: inc/icons.php:17
+msgid "Caja / mercancía"
+msgstr "Box / goods"
+
+#: inc/icons.php:18
+msgid "Carga"
+msgstr "Loading"
+
+#: inc/icons.php:19
+msgid "Retirada"
+msgstr "Removal"
+
+#: inc/icons.php:20 inc/icons.php:83
+msgid "Casa"
+msgstr "House"
+
+#: inc/icons.php:21
+msgid "Edificio"
+msgstr "Building"
+
+#: inc/icons.php:22
+msgid "Villa"
+msgstr "Villa"
+
+#: inc/icons.php:25
+msgid "Alisado"
+msgstr "Smoothing"
+
+#: inc/icons.php:26
+msgid "Pladur y techos"
+msgstr "Plasterboard and ceilings"
+
+#: inc/icons.php:28
+msgid "Alicatado"
+msgstr "Tiling"
+
+#: inc/icons.php:29
+msgid "Puerta"
+msgstr "Door"
+
+#: inc/icons.php:36
+msgid "Oficina"
+msgstr "Office"
+
+#: inc/icons.php:37
+msgid "Calendario / artículo"
+msgstr "Calendar / article"
+
+#: inc/icons.php:38
+msgid "Demolición"
+msgstr "Demolition"
+
+#: inc/icons.php:39
+msgid "Distribución"
+msgstr "Layout"
+
+#: inc/icons.php:40
+msgid "Instalaciones"
+msgstr "Installations"
+
+#: inc/icons.php:41
+msgid "Baño y mueble"
+msgstr "Bathroom and vanity"
+
+#: inc/icons.php:42
+msgid "Suelos y paredes"
+msgstr "Floors and walls"
+
+#: inc/icons.php:43
+msgid "Carpintería"
+msgstr "Joinery"
+
+#: inc/icons.php:44
+msgid "Revisión de pared"
+msgstr "Wall check"
+
+#: inc/icons.php:45
+msgid "Cajones"
+msgstr "Drawers"
+
+#: inc/icons.php:46
+msgid "Electrodoméstico"
+msgstr "Appliance"
+
+#: inc/icons.php:47
+msgid "Remate / revisión"
+msgstr "Trim / check"
+
+#: inc/icons.php:48
+msgid "Acuerdo / intermediación"
+msgstr "Agreement / brokerage"
+
+#: inc/icons.php:49
+msgid "Profesionales a elegir"
+msgstr "Professionals to choose from"
+
+#: inc/icons.php:50
+msgid "Gestión de obra"
+msgstr "Works management"
+
+#: inc/icons.php:51
+msgid "Casa con plano"
+msgstr "House with plan"
+
+#: inc/icons.php:85
+msgid "Documento revisado"
+msgstr "Checked document"
+
+#: inc/icons.php:87
+msgid "Ubicación"
+msgstr "Location"
+
+#: inc/icons.php:88
+msgid "Reloj"
+msgstr "Clock"
+
+#: inc/icons.php:89
+msgid "Información"
+msgstr "Information"
+
+#: inc/layouts.php:39
+msgid "¿Tu localidad no aparece?"
+msgstr "Your town isn't listed?"
+
+#: inc/layouts.php:40
+msgid "Escríbenos igualmente. Te diremos con claridad si podemos llegar."
+msgstr "Write to us anyway. We'll tell you clearly whether we can get there."
+
+#: inc/layouts.php:41
+msgid "Consultar mi zona"
+msgstr "Check my area"
+
+#: inc/layouts.php:60
+msgid "Montar mi cocina o mis muebles"
+msgstr "Assemble my kitchen or furniture"
+
+#: inc/layouts.php:60
+msgid "Cocinas por módulos, armarios, camas, TV"
+msgstr "Modular kitchens, wardrobes, beds, TV"
+
+#: inc/layouts.php:61
+msgid "Mudarme o transportar algo"
+msgstr "Move or transport something"
+
+#: inc/layouts.php:61
+msgid "Mudanzas, muebles, retirada de lo viejo"
+msgstr "Moves, furniture, removal of old items"
+
+#: inc/layouts.php:62
+msgid "Mejorar paredes y suelos"
+msgstr "Improve walls and floors"
+
+#: inc/layouts.php:62
+msgid "Pintura, pladur, suelos, alicatado"
+msgstr "Painting, plasterboard, floors, tiling"
+
+#: inc/layouts.php:63
+msgid "Renovar mi vivienda"
+msgstr "Renovate my home"
+
+#: inc/layouts.php:63
+msgid "Toda la casa o varias estancias"
+msgstr "The whole house or several rooms"
+
+#: inc/layouts.php:66
+msgid "Cómo montamos una cocina"
+msgstr "How we assemble a kitchen"
+
+#: inc/layouts.php:67
+msgid "Ver mudanzas y transporte"
+msgstr "See moving and transport"
+
+#: inc/layouts.php:141
+#, php-format
+msgid "%s en la <span>Costa Blanca</span>."
+msgstr "%s on the <span>Costa Blanca</span>."
+
+#: inc/layouts.php:142
+msgid ""
+"[Descripción del servicio en dos frases: qué hacemos, para quién y qué "
+"recibe el cliente.]"
+msgstr ""
+"[Two-sentence description of the service: what we do, for whom and what the "
+"client gets.]"
+
+#: inc/layouts.php:144
+msgid "Para quién"
+msgstr "For whom"
+
+#: inc/layouts.php:144
+msgid "[PARA QUIÉN]"
+msgstr "[FOR WHOM]"
+
+#: inc/layouts.php:145
+msgid "Qué hacemos"
+msgstr "What we do"
+
+#: inc/layouts.php:145
+msgid "[QUÉ HACEMOS]"
+msgstr "[WHAT WE DO]"
+
+#: inc/layouts.php:146
+msgid "Presupuesto"
+msgstr "Quote"
+
+#: inc/layouts.php:146
+msgid "Por escrito, con fotos y medidas o tras una visita"
+msgstr "In writing, with photos and measurements or after a visit"
+
+#: inc/layouts.php:147
+msgid "[LOCALIDADES CONFIRMADAS]"
+msgstr "[CONFIRMED TOWNS]"
+
+#: inc/layouts.php:151
+msgid "Revisión del trabajo y de las medidas"
+msgstr "Check of the job and measurements"
+
+#: inc/layouts.php:152
+msgid "Presupuesto detallado por escrito"
+msgstr "Detailed quote in writing"
+
+#: inc/layouts.php:153
+msgid "Protección de la vivienda"
+msgstr "Protection of the property"
+
+#: inc/layouts.php:154
+msgid "Limpieza al terminar"
+msgstr "Cleaning up afterwards"
+
+#: inc/layouts.php:155
+msgid "Revisión final contigo"
+msgstr "Final check with you"
+
+#: inc/layouts.php:158
+msgid "Materiales, si los compras tú"
+msgstr "Materials, if you buy them"
+
+#: inc/layouts.php:159
+msgid "Trabajos fuera del alcance acordado"
+msgstr "Work outside the agreed scope"
+
+#: inc/layouts.php:161
+msgid "Pisos"
+msgstr "Flats"
+
+#: inc/layouts.php:161
+msgid "Apartamentos"
+msgstr "Apartments"
+
+#: inc/layouts.php:161
+msgid "Villas y casas"
+msgstr "Villas and houses"
+
+#: inc/layouts.php:161
+msgid "Viviendas de alquiler"
+msgstr "Rental homes"
+
+#: inc/layouts.php:161
+msgid "Segundas residencias"
+msgstr "Holiday homes"
+
+#. translators: %s: service name.
+#: inc/layouts.php:167
+#, php-format
+msgid ""
+"<strong>Proyectos de %s:</strong> aquí aparecerán trabajos reales con fotos "
+"propias en cuanto los publiquemos."
+msgstr ""
+"<strong>%s projects:</strong> real jobs with our own photos will appear here "
+"as soon as we publish them."
+
+#. translators: %s: service name.
+#: inc/layouts.php:172
+#, php-format
+msgid "Qué incluye %s."
+msgstr "What %s includes."
+
+#: inc/layouts.php:173
+msgid ""
+"Cada trabajo es distinto. Esto es lo que solemos hacer; el alcance exacto se "
+"acuerda contigo."
+msgstr ""
+"Every job is different. This is what we usually do; the exact scope is "
+"agreed with you."
+
+#: inc/layouts.php:175
+msgid "[Trabajo incluido 1]"
+msgstr "[Included job 1]"
+
+#: inc/layouts.php:175 inc/layouts.php:176 inc/layouts.php:177
+msgid "[Descripción breve]"
+msgstr "[Short description]"
+
+#: inc/layouts.php:176
+msgid "[Trabajo incluido 2]"
+msgstr "[Included job 2]"
+
+#: inc/layouts.php:177
+msgid "[Trabajo incluido 3]"
+msgstr "[Included job 3]"
+
+#. translators: %s: service name.
+#: inc/layouts.php:182
+msgid "Cómo trabajamos."
+msgstr "How we work."
+
+#: inc/layouts.php:183
+msgid "Sabes qué se va a hacer, cuándo y cuánto cuesta antes de empezar."
+msgstr ""
+"You know what will be done, when and how much it costs before we start."
+
+#: inc/layouts.php:185
+msgid "Nos cuentas qué necesitas"
+msgstr "Tell us what you need"
+
+#: inc/layouts.php:185
+msgid "Por WhatsApp, Telegram o teléfono, con fotos y medidas si las tienes."
+msgstr ""
+"On WhatsApp, Telegram or by phone, with photos and measurements if you have "
+"them."
+
+#: inc/layouts.php:186
+msgid "Presupuesto por escrito"
+msgstr "Written quote"
+
+#: inc/layouts.php:186
+msgid ""
+"Qué incluye, qué no, precio y plazo. Si hace falta, antes visitamos la "
+"vivienda."
+msgstr ""
+"What's included, what isn't, price and timing. If needed, we visit the "
+"property first."
+
+#: inc/layouts.php:187
+msgid "Fecha"
+msgstr "Date"
+
+#: inc/layouts.php:187
+msgid "Acordamos el día de inicio y lo que necesitamos encontrar preparado."
+msgstr "We agree the start day and what we need to find ready."
+
+#: inc/layouts.php:188
+msgid "Trabajo"
+msgstr "The work"
+
+#: inc/layouts.php:188
+msgid "Con una persona de contacto que te informa del avance."
+msgstr "With one contact person who keeps you updated."
+
+#: inc/layouts.php:189
+msgid "Revisión final"
+msgstr "Final check"
+
+#: inc/layouts.php:189
+msgid "Lo revisamos contigo antes de dar el trabajo por terminado."
+msgstr "We check it with you before calling the job finished."
+
+#: inc/layouts.php:193
+msgid ""
+"Depende de cada caso, por eso no publicamos precios cerrados. Con fotos y "
+"medidas, o tras una visita, te damos un presupuesto por escrito. [CONFIRMAR: "
+"tarifas orientativas]"
+msgstr ""
+"It depends on each case, so we don't publish fixed prices. With photos and "
+"measurements, or after a visit, we give you a written quote. [CONFIRM: guide "
+"rates]"
+
+#: inc/layouts.php:195
+msgid "Tamaño"
+msgstr "Size"
+
+#: inc/layouts.php:195
+msgid "Metros, unidades o volumen del trabajo."
+msgstr "Square metres, units or volume of work."
+
+#: inc/layouts.php:196
+msgid "Estado actual"
+msgstr "Current condition"
+
+#: inc/layouts.php:196
+msgid "Lo que hay que retirar, reparar o preparar antes."
+msgstr "What needs removing, repairing or preparing first."
+
+#: inc/layouts.php:197
+msgid "Materiales"
+msgstr "Materials"
+
+#: inc/layouts.php:197
+msgid "Si los ponemos nosotros o los compras tú, y su gama."
+msgstr "Whether we supply them or you buy them, and their range."
+
+#: inc/layouts.php:198
+msgid "Acceso"
+msgstr "Access"
+
+#: inc/layouts.php:198
+msgid "Planta, ascensor, aparcamiento y normas de la comunidad."
+msgstr "Floor, lift, parking and building rules."
+
+#. translators: %s: service name.
+#: inc/layouts.php:203
+#, php-format
+msgid "Sobre %s."
+msgstr "About %s."
+
+#: inc/layouts.php:205
+msgid "¿Cuánto tarda?"
+msgstr "How long does it take?"
+
+#: inc/layouts.php:205
+msgid ""
+"Depende del alcance. Te damos un plazo estimado junto con el presupuesto."
+msgstr ""
+"It depends on the scope. We give you an estimated timeframe with the quote."
+
+#: inc/layouts.php:206
+msgid "¿Quién compra los materiales?"
+msgstr "Who buys the materials?"
+
+#: inc/layouts.php:206
+msgid ""
+"Podemos encargarnos nosotros o puedes elegirlos tú. Lo dejamos claro en el "
+"presupuesto. [CONFIRMAR]"
+msgstr ""
+"We can take care of it or you can choose them yourself. We make it clear in "
+"the quote. [CONFIRM]"
+
+#: inc/layouts.php:207
+msgid "¿Puedo enviar fotos para un precio?"
+msgstr "Can I send photos for a price?"
+
+#: inc/layouts.php:207
+msgid ""
+"Sí. Fotos y medidas aproximadas nos ayudan mucho; para algunos trabajos "
+"necesitaremos verlo en persona."
+msgstr ""
+"Yes. Photos and approximate measurements help a lot; for some jobs we'll "
+"need to see it in person."
+
+#. translators: %s: comarca; Alicante is the province.
+#: inc/layouts.php:331
+#, php-format
+msgid "%s · Alicante"
+msgstr "%s · Alicante"
+
+#: inc/layouts.php:331
+msgid "Alicante"
+msgstr "Alicante"
+
+#: inc/layouts.php:332
+#, php-format
+msgid "Montaje de cocinas y muebles <span>en %s.</span>"
+msgstr "Kitchen and furniture assembly <span>in %s.</span>"
+
+#: inc/layouts.php:333
+#, php-format
+msgid ""
+"Montamos cocinas y muebles en %s: pisos, apartamentos y villas. También "
+"mudanzas y transporte, y cuando hace falta más, reformas y acabados. Una "
+"persona de contacto y presupuesto por escrito."
+msgstr ""
+"We assemble kitchens and furniture in %s: flats, apartments and villas. Also "
+"moving and transport and, when more is needed, renovations and finishes. One "
+"contact person and a written quote."
+
+#: inc/layouts.php:334
+#, php-format
+msgid "Solicitar presupuesto en %s"
+msgstr "Request a quote in %s"
+
+#: inc/layouts.php:335
+#, php-format
+msgid "En %s"
+msgstr "In %s"
+
+#: inc/layouts.php:337
+msgid "Cobertura"
+msgstr "Coverage"
+
+#: inc/layouts.php:337
+msgid "[CONFIRMAR: todo el municipio o zonas concretas]"
+msgstr "[CONFIRM: whole municipality or specific areas]"
+
+#: inc/layouts.php:338
+msgid "Montaje de cocinas y muebles, mudanzas, reformas"
+msgstr "Kitchen and furniture assembly, moving, renovations"
+
+#: inc/layouts.php:339
+msgid "Visitas"
+msgstr "Visits"
+
+#: inc/layouts.php:339
+msgid "[CONDICIONES DE LA VISITA]"
+msgstr "[VISIT CONDITIONS]"
+
+#: inc/layouts.php:347
+#, php-format
+msgid "Servicios en %s"
+msgstr "Services in %s"
+
+#: inc/layouts.php:348
+#, php-format
+msgid "Lo que hacemos en %s."
+msgstr "What we do in %s."
+
+#: inc/layouts.php:354
+#, php-format
+msgid "Viviendas en %s"
+msgstr "Homes in %s"
+
+#: inc/layouts.php:355
+msgid "[Revisar y completar con experiencia local real.]"
+msgstr "[Review and complete with real local experience.]"
+
+#: inc/layouts.php:357
+msgid "Acceso y aparcamiento"
+msgstr "Access and parking"
+
+#: inc/layouts.php:357
+msgid ""
+"En calles estrechas o con acceso limitado, coordinamos el día del montaje "
+"con la entrega de los muebles y la retirada de embalajes."
+msgstr ""
+"On narrow streets or with limited access, we coordinate assembly day with "
+"the furniture delivery and packaging removal."
+
+#: inc/layouts.php:358
+msgid "Cerca del mar"
+msgstr "Near the sea"
+
+#: inc/layouts.php:358
+msgid ""
+"Humedad y salitre: elegimos materiales y acabados que resistan mejor el "
+"ambiente costero."
+msgstr ""
+"Humidity and salt air: we choose materials and finishes that better "
+"withstand the coastal environment."
+
+#: inc/layouts.php:359
+msgid "Comunidades y urbanizaciones"
+msgstr "Residents' associations and urbanisations"
+
+#: inc/layouts.php:359
+msgid "Revisamos horarios y normas de la comunidad antes de empezar."
+msgstr "We check the building's hours and rules before starting."
+
+#: inc/layouts.php:360
+msgid "Propietarios que no viven aquí"
+msgstr "Owners who don't live here"
+
+#: inc/layouts.php:360
+msgid ""
+"[CONFIRMAR: seguimiento a distancia con fotos de avance y gestión de llaves]"
+msgstr "[CONFIRM: remote follow-up with progress photos and key handling]"
+
+#: inc/layouts.php:367
+#, php-format
+msgid "Proyectos en %s"
+msgstr "Projects in %s"
+
+#: inc/layouts.php:368
+#, php-format
+msgid ""
+"Aquí publicaremos trabajos reales realizados en %s, con fotos propias, en "
+"cuanto los tengamos documentados."
+msgstr ""
+"We'll publish real jobs carried out in %s here, with our own photos, as soon "
+"as we have them documented."
+
+#: inc/layouts.php:376
+#, php-format
+msgid "Sobre trabajar en %s."
+msgstr "About working in %s."
+
+#: inc/layouts.php:379
+#, php-format
+msgid "¿Trabajáis en todo el municipio de %s?"
+msgstr "Do you work across the whole municipality of %s?"
+
+#: inc/layouts.php:379
+msgid "[CONFIRMAR: casco urbano, urbanizaciones y zonas cubiertas]"
+msgstr "[CONFIRM: town centre, urbanisations and areas covered]"
+
+#: inc/layouts.php:380
+#, php-format
+msgid "¿Montáis cocinas compradas en tiendas de %s?"
+msgstr "Do you assemble kitchens bought in %s shops?"
+
+#: inc/layouts.php:380
+msgid ""
+"Sí. Montamos cocinas y muebles de cualquier tienda o fabricante; si hace "
+"falta, también los recogemos y los traemos."
+msgstr ""
+"Yes. We assemble kitchens and furniture from any shop or manufacturer; if "
+"needed, we also collect and bring them."
+
+#: inc/layouts.php:381
+#, php-format
+msgid "¿Necesito licencia para reformar en %s?"
+msgstr "Do I need a permit to renovate in %s?"
+
+#: inc/layouts.php:381
+#, php-format
+msgid ""
+"Depende del alcance de la obra. Lo revisamos contigo; los requisitos "
+"concretos se consultan con el Ayuntamiento de %s. [VERIFICAR]"
+msgstr ""
+"It depends on the scope of the work. We review it with you; the specific "
+"requirements are checked with %s Town Council. [VERIFY]"
+
+#: inc/layouts.php:382
+#, php-format
+msgid "¿Podéis hacer trabajos pequeños en %s?"
+msgstr "Can you do small jobs in %s?"
+
+#: inc/layouts.php:382
+msgid ""
+"Sí: un armario, una cama o unos pocos módulos de cocina también son trabajo "
+"para nosotros. [CONFIRMAR SI HAY UN MÍNIMO]"
+msgstr ""
+"Yes: a wardrobe, a bed or a few kitchen units are a job for us too. [CONFIRM "
+"IF THERE IS A MINIMUM]"
+
+#: inc/layouts.php:384
+msgid "Zonas cercanas:"
+msgstr "Nearby areas:"
+
+#: inc/layouts.php:391
+#, php-format
+msgid "Tu proyecto en %s."
+msgstr "Your project in %s."
+
+#: inc/layouts.php:404
+msgid "Formulario"
+msgstr "Form"
+
+#: inc/layouts.php:405
+msgid "Envíanos tu solicitud."
+msgstr "Send us your request."
+
+#: inc/layouts.php:406
+msgid ""
+"Rellena cinco datos y elige cómo seguir: preparamos el mensaje y tú decides "
+"cuándo enviarlo."
+msgstr ""
+"Fill in five fields and choose how to continue: we prepare the message and "
+"you decide when to send it."
+
+#: inc/layouts.php:414
+msgid "Después de escribirnos"
+msgstr "After you write to us"
+
+#: inc/layouts.php:415
+msgid "Qué pasa a continuación."
+msgstr "What happens next."
+
+#: inc/layouts.php:416
+msgid ""
+"Sin compromiso: hasta que no aceptes un presupuesto por escrito, no hay "
+"ningún encargo."
+msgstr "No commitment: until you accept a written quote, there's no order."
+
+#: inc/layouts.php:418
+msgid "Revisamos tu mensaje"
+msgstr "We review your message"
+
+#: inc/layouts.php:418
+msgid ""
+"Leemos lo que necesitas y, si falta algo, te preguntamos por el canal que "
+"hayas elegido."
+msgstr ""
+"We read what you need and, if anything's missing, we ask on the channel you "
+"chose."
+
+#: inc/layouts.php:419
+msgid "Aclaramos el alcance"
+msgstr "We clarify the scope"
+
+#: inc/layouts.php:419
+msgid "Con fotos y medidas, o con una visita si el trabajo lo requiere."
+msgstr "With photos and measurements, or with a visit if the job requires it."
+
+#: inc/layouts.php:420
+msgid "Recibes el presupuesto"
+msgstr "You receive the quote"
+
+#: inc/layouts.php:420
+msgid "Detallado y por escrito. Tú decides si seguimos adelante."
+msgstr "Detailed and in writing. You decide whether we go ahead."
+
+#: inc/layouts.php:429
+msgid "Antes de escribirnos"
+msgstr "Before you write to us"
+
+#: inc/layouts.php:430
+msgid "Preguntas sobre el contacto."
+msgstr "Questions about getting in touch."
+
+#: inc/layouts.php:433
+msgid "¿Qué información os envío?"
+msgstr "What information should I send?"
+
+#: inc/layouts.php:433
+msgid ""
+"Qué quieres hacer, en qué localidad, medidas aproximadas, fotos del espacio "
+"y si tienes alguna fecha en mente. Para una cocina, el plano o la lista de "
+"módulos de la tienda."
+msgstr ""
+"What you want to do, in which town, approximate measurements, photos of the "
+"space and any dates you have in mind. For a kitchen, the shop's plan or list "
+"of units."
+
+#: inc/layouts.php:434
+msgid "¿El presupuesto tiene coste?"
+msgstr "Does the quote cost anything?"
+
+#: inc/layouts.php:434
+msgid "[CONFIRMAR: presupuesto y visita gratuitos o con coste, y en qué casos]"
+msgstr ""
+"[CONFIRM: whether quote and visit are free or paid, and in which cases]"
+
+#: inc/layouts.php:435
+msgid "¿En qué idiomas puedo escribiros?"
+msgstr "In which languages can I write to you?"
+
+#: inc/layouts.php:435
+msgid "[CONFIRMAR: idiomas en los que atiende el equipo]"
+msgstr "[CONFIRM: languages the team speaks]"
+
+#: inc/layouts.php:436
+msgid "¿Qué hacéis con mis datos?"
+msgstr "What do you do with my data?"
+
+#: inc/layouts.php:436
+msgid ""
+"Los usamos solo para responder a tu solicitud. Tienes todos los detalles en "
+"la <a href=\"{privacidad}\">Política de privacidad</a>."
+msgstr ""
+"We only use it to reply to your request. You'll find all the details in the "
+"<a href=\"{privacidad}\">Privacy policy</a>."
+
+#: inc/layouts.php:452
+msgid "Cuatro principios que no negociamos."
+msgstr "Four principles we don't compromise on."
+
+#: inc/layouts.php:455
+msgid "Claridad"
+msgstr "Clarity"
+
+#: inc/layouts.php:455
+msgid ""
+"Alcance, materiales y plazo por escrito antes de empezar. Si algo cambia, lo "
+"hablamos antes de hacerlo."
+msgstr ""
+"Scope, materials and timing in writing before we start. If something "
+"changes, we talk about it before doing it."
+
+#: inc/layouts.php:456
+msgid "Cuidado"
+msgstr "Care"
+
+#: inc/layouts.php:456
+msgid ""
+"Trabajamos en tu casa como si fuera la nuestra: protección, orden y limpieza "
+"al terminar cada jornada."
+msgstr ""
+"We work in your home as if it were ours: protection, order and cleaning up "
+"at the end of each day."
+
+#: inc/layouts.php:457
+msgid "Una persona de contacto"
+msgstr "One contact person"
+
+#: inc/layouts.php:457
+msgid "Siempre sabes a quién preguntar y en qué punto está tu trabajo."
+msgstr "You always know who to ask and where your job stands."
+
+#: inc/layouts.php:458
+msgid "Responsabilidad"
+msgstr "Responsibility"
+
+#: inc/layouts.php:458
+msgid ""
+"Revisamos el resultado contigo y respondemos de lo que hacemos. [CONDICIONES "
+"DE GARANTÍA POR CONFIRMAR]"
+msgstr ""
+"We check the result with you and stand by what we do. [WARRANTY TERMS TO BE "
+"CONFIRMED]"
+
+#: inc/projects.php:16
+msgid "Proyecto"
+msgstr "Project"
+
+#: inc/projects.php:17
+msgid "Añadir proyecto"
+msgstr "Add project"
+
+#: inc/projects.php:18
+msgid "Editar proyecto"
+msgstr "Edit project"
+
+#: inc/projects.php:60
+msgid "Vivienda (piso, villa, apartamento…)"
+msgstr "Property (flat, villa, apartment…)"
+
+#: inc/projects.php:61
+msgid "Duración (solo si consta)"
+msgstr "Duration (only if recorded)"
+
+#: inc/projects.php:62 single-osteza_project.php:19
+msgid "Año"
+msgstr "Year"
+
+#: inc/projects.php:63
+msgid "Texto de la portada (si no hay foto destacada)"
+msgstr "Cover text (if there's no featured image)"
+
+#: inc/projects.php:64
+msgid "01 · El punto de partida"
+msgstr "01 · The starting point"
+
+#: inc/projects.php:65
+msgid "02 · Lo que acordamos (una partida por línea)"
+msgstr "02 · What we agreed (one item per line)"
+
+#: inc/projects.php:66
+msgid "03 · Materiales y ejecución"
+msgstr "03 · Materials and execution"
+
+#: inc/projects.php:67
+msgid "04 · El resultado"
+msgstr "04 · The result"
+
+#: inc/projects.php:68
+msgid "Opinión del cliente (solo verificada y con permiso)"
+msgstr "Client review (verified only and with permission)"
+
+#: inc/projects.php:69
+msgid "Autor de la opinión: nombre o iniciales · localidad"
+msgstr "Review author: name or initials · town"
+
+#: inc/projects.php:119
+msgid "Datos del proyecto"
+msgstr "Project details"
+
+#: inc/projects.php:138
+msgid ""
+"El extracto es el resumen del proyecto y la imagen destacada es la foto de "
+"«después» y la portada de la tarjeta."
+msgstr ""
+"The excerpt is the project summary and the featured image is the “after” "
+"photo and the card cover."
+
+#: inc/projects.php:144
+msgid "Grupo (filtro del archivo)"
+msgstr "Group (archive filter)"
+
+#: inc/projects.php:150
+msgid "Color de la portada"
+msgstr "Cover colour"
+
+#: inc/projects.php:168
+msgid "Foto de «antes»"
+msgstr "“Before” photo"
+
+#: inc/projects.php:169 single-osteza_project.php:89
+msgid "Galería"
+msgstr "Gallery"
+
+#: inc/projects.php:179
+msgid "Plantilla de ejemplo (se marca como «Plantilla» en la web)"
+msgstr "Sample template (marked as “Template” on the site)"
+
+#: single-osteza_project.php:16
+msgid "Vivienda"
+msgstr "Home"
+
+#: single-osteza_project.php:18
+msgid "Duración"
+msgstr "Duration"
+
+#: single-osteza_project.php:24
+msgid "El punto de partida"
+msgstr "The starting point"
+
+#: single-osteza_project.php:25
+msgid "Lo que acordamos"
+msgstr "What we agreed"
+
+#: single-osteza_project.php:26
+msgid "Materiales y ejecución"
+msgstr "Materials and execution"
+
+#: single-osteza_project.php:27
+msgid "El resultado"
+msgstr "The result"
+
+#: single-osteza_project.php:43
+msgid "Plantilla de caso"
+msgstr "Case template"
+
+#: single-osteza_project.php:58
+msgid "Después"
+msgstr "After"
+
+#: single-osteza_project.php:58
+msgid "DESPUÉS"
+msgstr "AFTER"
+
+#: single-osteza_project.php:59
+msgid "Antes"
+msgstr "Before"
+
+#: single-osteza_project.php:59
+msgid "ANTES"
+msgstr "BEFORE"
+
+#: single-osteza_project.php:62
+msgid "Desliza para comparar antes y después"
+msgstr "Slide to compare before and after"
+
+#: single-osteza_project.php:63
+msgid "Plantilla: se sustituye por fotos propias del proyecto."
+msgstr "Template: to be replaced with the project's own photos."
+
+#: single-osteza_project.php:70
+msgid "Historia del proyecto"
+msgstr "Project story"
+
+#. translators: %d: photo number in the gallery placeholder.
+#: single-osteza_project.php:97
+#, php-format
+msgid "FOTO %d"
+msgstr "PHOTO %d"
+
+#: single-osteza_project.php:100
+msgid "Fotos propias con texto alternativo descriptivo."
+msgstr "Our own photos with descriptive alt text."
+
+#: single-osteza_project.php:106
+msgid "Opinión del cliente"
+msgstr "Client review"
+
+#: single-osteza_project.php:108
+msgid "Bloque opcional: se oculta si no hay opinión verificada"
+msgstr "Optional block: hidden if there is no verified review"
+
+#: single-osteza_project.php:116
+msgid "Servicios de este proyecto:"
+msgstr "Services in this project:"
+
+#: single-osteza_project.php:119
+msgid "Más proyectos"
+msgstr "More projects"
+
+#: single-osteza_project.php:120
+msgid "Proyecto anterior"
+msgstr "Previous project"
+
+#: single-osteza_project.php:121
+msgid "Proyecto siguiente"
+msgstr "Next project"
+
+#: single-osteza_project.php:132
+msgid "¿Un proyecto parecido en tu casa?"
+msgstr "A similar project in your home?"
+
+#: single-osteza_project.php:133
+msgid "Cuéntanos qué necesitas y te ayudamos a definir el alcance."
+msgstr "Tell us what you need and we'll help you define the scope."
+
+#: single.php:27
+msgid "Reformas integrales"
+msgstr "Full renovations"
+
+#: single.php:28
+msgid "Baños y cocinas"
+msgstr "Bathrooms and kitchens"
+
+#: single.php:29
+msgid "Pintura y acabados"
+msgstr "Painting and finishes"
+
+#: single.php:41
+msgid "Borrador · contenido de ejemplo"
+msgstr "Draft · sample content"
+
+#: single.php:47
+msgid "Equipo OSTEZA"
+msgstr "OSTEZA team"
+
+#: single.php:49
+msgid "Publicado"
+msgstr "Published"
+
+#: single.php:50
+msgid "Actualizado"
+msgstr "Updated"
+
+#. translators: %d: minutes of reading.
+#: single.php:52
+msgid "Lectura"
+msgstr "Reading time"
+
+#. translators: %d: minutes of reading.
+#: single.php:52 template-parts/blog/card.php:19
+#, php-format
+msgid "%d min"
+msgstr "%d min"
+
+#: single.php:67 single.php:76
+msgid "En este artículo"
+msgstr "In this article"
+
+#: single.php:71
+msgid "¿Preparando una reforma?"
+msgstr "Preparing a renovation?"
+
+#: single.php:71
+msgid "Te ayudamos a definir el alcance."
+msgstr "We'll help you define the scope."
+
+#: single.php:81
+msgid "Compartir"
+msgstr "Share"
+
+#: single.php:82
+msgid "Copiar enlace"
+msgstr "Copy link"
+
+#: single.php:87
+msgid "[Breve presentación real del autor y su relación con OSTEZA.]"
+msgstr ""
+"[Short real introduction of the author and their relationship with OSTEZA.]"
+
+#: single.php:94
+msgid "Sigue leyendo."
+msgstr "Keep reading."
+
+#: single.php:94
+msgid "Todos los artículos"
+msgstr "All articles"
+
+#: single.php:104
+msgid "Servicios relacionados:"
+msgstr "Related services:"
+
+#: single.php:114
+msgid "¿Listo para empezar tu reforma?"
+msgstr "Ready to start your renovation?"
+
+#: template-parts/blog/archive.php:21
+msgid "Resultados"
+msgstr "Results"
+
+#: template-parts/blog/archive.php:44
+msgid ""
+"Guías prácticas para planificar una reforma, elegir materiales y preparar tu "
+"vivienda. Sin tecnicismos innecesarios."
+msgstr ""
+"Practical guides to plan a renovation, choose materials and prepare your "
+"home. No unnecessary jargon."
+
+#: template-parts/blog/archive.php:47
+msgid "Buscar en el blog"
+msgstr "Search the blog"
+
+#: template-parts/blog/archive.php:49
+msgid "Buscar artículos"
+msgstr "Search articles"
+
+#: template-parts/blog/archive.php:52
+msgid "Filtrar por categoría"
+msgstr "Filter by category"
+
+#: template-parts/blog/archive.php:59
+msgid ""
+"Contenido de ejemplo: los artículos se publicarán cuando estén escritos y "
+"revisados."
+msgstr ""
+"Sample content: articles will be published once they're written and reviewed."
+
+#: template-parts/blog/archive.php:66
+msgid "Artículo destacado"
+msgstr "Featured article"
+
+#: template-parts/blog/archive.php:75
+msgid "Destacado"
+msgstr "Featured"
+
+#. translators: %d: minutes of reading.
+#: template-parts/blog/archive.php:79
+#, php-format
+msgid "%d min de lectura"
+msgstr "%d min read"
+
+#. translators: %s: number of articles.
+#: template-parts/blog/archive.php:90
+#, php-format
+msgid "%s artículo"
+msgid_plural "%s artículos"
+msgstr[0] "%s article"
+msgstr[1] "%s articles"
+
+#: template-parts/blog/archive.php:100
+msgid "No hay artículos que coincidan."
+msgstr "No matching articles."
+
+#: template-parts/blog/archive.php:100
+msgid "Prueba con otra categoría o con otra búsqueda."
+msgstr "Try another category or search."
+
+#: template-parts/blog/archive.php:100
+msgid "Ver todos los artículos"
+msgstr "See all articles"
+
+#: template-parts/blog/archive.php:103
+msgid "Paginación"
+msgstr "Pagination"
+
+#: template-parts/blog/archive.php:104
+msgid "Página anterior"
+msgstr "Previous page"
+
+#: template-parts/blog/archive.php:108
+msgid "Página siguiente"
+msgstr "Next page"
+
+#: template-parts/blog/archive.php:119
+msgid "¿Tienes un proyecto en mente?"
+msgstr "Got a project in mind?"
+
+#: template-parts/blog/archive.php:120
+msgid "Cuéntanos qué necesitas y te ayudamos a definir el siguiente paso."
+msgstr "Tell us what you need and we'll help you plan the next step."
+
+#: template-parts/chat.php:8
+msgid "👋 ¿Tienes alguna pregunta?"
+msgstr "👋 Got a question?"
+
+#: template-parts/chat.php:8
+msgid "Escríbenos en el chat: respondemos al momento."
+msgstr "Write to us in the chat: we reply right away."
+
+#: template-parts/chat.php:9
+msgid "Cerrar el aviso"
+msgstr "Close the note"
+
+#: template-parts/chat.php:11
+msgid "Abrir el chat"
+msgstr "Open the chat"
+
+#: template-parts/chat.php:15
+msgid "En línea · respondemos al momento"
+msgstr "Online · we reply right away"
+
+#: template-parts/chat.php:16
+msgid "Cerrar el chat"
+msgstr "Close the chat"
+
+#: template-parts/chat.php:20
+msgid "Déjanos tus datos y te contactamos"
+msgstr "Leave your details and we'll contact you"
+
+#: template-parts/chat.php:23
+msgid "Localidad o dirección"
+msgstr "Town or address"
+
+#: template-parts/chat.php:25
+msgid "Compartir mi ubicación"
+msgstr "Share my location"
+
+#: template-parts/chat.php:26
+msgid "¿Dónde te respondemos?"
+msgstr "Where should we reply?"
+
+#: template-parts/chat.php:33
+msgid "Usuario de Telegram (opcional)"
+msgstr "Telegram username (optional)"
+
+#: template-parts/chat.php:34
+msgid "¿Qué necesitas?"
+msgstr "What do you need?"
+
+#: template-parts/chat.php:36
+msgid "Añadir fotos (hasta 5)"
+msgstr "Add photos (up to 5)"
+
+#: template-parts/chat.php:42
+msgid "Volver al chat"
+msgstr "Back to the chat"
+
+#: template-parts/chat.php:46
+msgid "Hablar con una persona"
+msgstr "Talk to a person"
+
+#: template-parts/chat.php:48
+msgid "Tu mensaje"
+msgstr "Your message"
+
+#: template-parts/chat.php:49
+msgid "Escribe tu mensaje…"
+msgstr "Type your message…"
+
+#: template-parts/chat.php:50
+msgid "Enviar"
+msgstr "Send"
+
+#: template-parts/chat.php:52
+msgid ""
+"Te responde un asistente con IA. Tus datos y fotos llegan a nuestro equipo "
+"para contactarte. Al escribir aceptas la <a href=\"{privacidad}\">política "
+"de privacidad</a>."
+msgstr ""
+"You're answered by an AI assistant. Your details and photos reach our team "
+"so we can contact you. By writing you accept the <a href=\"{privacidad}"
+"\">privacy policy</a>."
+
+#: template-parts/contact.php:21
+msgid "Otro trabajo"
+msgstr "Other job"
+
+#: template-parts/contact.php:44
+msgid "Así funciona el formulario."
+msgstr "How the form works."
+
+#: template-parts/contact.php:44
+msgid ""
+"Con WhatsApp abrimos el chat con tu mensaje ya escrito; con Telegram lo "
+"copias y lo pegas. Nada se envía sin tu confirmación."
+msgstr ""
+"With WhatsApp we open the chat with your message already written; with "
+"Telegram you copy and paste it. Nothing is sent without your confirmation."
+
+#: template-parts/contact.php:48
+msgid "Tu solicitud"
+msgstr "Your request"
+
+#: template-parts/contact.php:54
+msgid "Elige una opción"
+msgstr "Choose an option"
+
+#: template-parts/contact.php:56
+msgid "Qué hay que hacer, medidas aproximadas y plazo, si lo tienes."
+msgstr ""
+"What needs doing, approximate measurements and timing, if you have one."
+
+#: template-parts/contact.php:59
+msgid "Continuar por WhatsApp"
+msgstr "Continue on WhatsApp"
+
+#: template-parts/contact.php:60
+msgid "Continuar por Telegram"
+msgstr "Continue on Telegram"
+
+#: template-parts/contact.php:64
+msgid "Tu mensaje está preparado"
+msgstr "Your message is ready"
+
+#: template-parts/contact.php:66
+msgid "No se envía hasta que pulses «Enviar» en WhatsApp."
+msgstr "It isn't sent until you press “Send” in WhatsApp."
+
+#: template-parts/contact.php:66
+msgid "Todavía no hemos recibido nada."
+msgstr "We haven't received anything yet."
+
+#: template-parts/contact.php:67
+msgid "Abrir WhatsApp"
+msgstr "Open WhatsApp"
+
+#: template-parts/contact.php:67 template-parts/contact.php:78
+msgid "Editar datos"
+msgstr "Edit details"
+
+#. translators: %s: phone number.
+#: template-parts/contact.php:69
+#, php-format
+msgid "¿No se abre? Llámanos al %s o usa Telegram."
+msgstr "Not opening? Call us on %s or use Telegram."
+
+#: template-parts/contact.php:73
+msgid "Copia el mensaje y pégalo en Telegram"
+msgstr "Copy the message and paste it into Telegram"
+
+#: template-parts/contact.php:74
+msgid "Telegram no permite enviarnos tus datos automáticamente desde la web."
+msgstr ""
+"Telegram doesn't allow us to receive your details automatically from the "
+"website."
+
+#: template-parts/contact.php:75
+msgid "Mensaje para Telegram"
+msgstr "Message for Telegram"
+
+#: template-parts/contact.php:76
+msgid "Abrir Telegram"
+msgstr "Open Telegram"
+
+#: template-parts/contact.php:77
+msgid ""
+"No hemos podido copiarlo automáticamente. Selecciona el texto y cópialo a "
+"mano."
+msgstr ""
+"We couldn't copy it automatically. Select the text and copy it manually."
+
+#: template-parts/contact.php:81
+msgid ""
+"Usamos tus datos solo para responder a tu solicitud. El mensaje se gestiona "
+"en WhatsApp o Telegram según sus propias condiciones."
+msgstr ""
+"We only use your data to reply to your request. The message is handled in "
+"WhatsApp or Telegram under their own terms."
+
+#: template-parts/contact.php:81
+msgid "Política de privacidad"
+msgstr "Privacy policy"
+
+#: template-parts/zone-map.php:25
+msgid "Esquema de la Costa Blanca con las localidades donde trabajamos"
+msgstr "Diagram of the Costa Blanca with the towns where we work"
+
+#: template-parts/zone-map.php:41
+msgid "MEDITERRÁNEO"
+msgstr "MEDITERRANEAN"
+
+#: archive-osteza_project.php:44
+msgid "Nuestro trabajo en Instagram"
+msgstr "Our work on Instagram"
+
+#: inc/chat.php
+msgid "Hoy ya no podemos recibir más solicitudes desde el chat. Escríbenos por WhatsApp: %s"
+msgstr "We can't take any more requests from the chat today. Message us on WhatsApp: %s"
+
+#: inc/chat.php
+msgid "Estado del chat"
+msgstr "Chat status"
+
+#: inc/chat.php
+msgid "se muestra en la web"
+msgstr "shown on the website"
+
+#: inc/chat.php
+msgid "parado este mes: OpenAI rechazó la clave o no queda saldo"
+msgstr "stopped this month: OpenAI rejected the key or there is no credit left"
+
+#: inc/chat.php
+msgid "oculto: se ha gastado el límite del mes o del día"
+msgstr "hidden: the monthly or daily limit has been spent"
+
+#: inc/chat.php
+msgid "Gasto de este mes"
+msgstr "Spent this month"
+
+#: inc/chat.php
+msgid "Gasto de hoy"
+msgstr "Spent today"
+
+#: inc/chat.php
+msgid "%1$s de %2$s"
+msgstr "%1$s of %2$s"
+
+#: inc/chat.php
+msgid "Límites por visitante"
+msgstr "Limits per visitor"
+
+#: inc/chat.php
+msgid "%1$d mensajes y %2$d solicitudes al día por IP; %3$d solicitudes al día en total"
+msgstr "%1$d messages and %2$d requests a day per IP; %3$d requests a day in total"
+
+#: inc/chat.php
+msgid "Borrado automático"
+msgstr "Automatic deletion"
+
+#: inc/chat.php
+msgid "conversaciones sin solicitud tras %1$d días, con solicitud tras %2$d días"
+msgstr "conversations without a request after %1$d days, with a request after %2$d days"
+
+#: inc/chat.php
+msgid "Reanudar el chat (ya hay saldo)"
+msgstr "Resume the chat (credit topped up)"
+
+#: inc/chat.php
+msgid "Borrar ahora las conversaciones antiguas"
+msgstr "Delete old conversations now"
+
+#: inc/chat.php
+msgid "Límite de gasto"
+msgstr "Spending limit"
+
+#: inc/chat.php
+msgid "El gasto se calcula con los tokens de cada respuesta y estos precios. Cuando se llega al límite del mes, o a una quinta parte en un día, el chat deja de mostrarse hasta el mes o el día siguiente. Comprueba los precios de tu modelo en openai.com/api/pricing."
+msgstr "Spending is worked out from the tokens of each answer and these prices. When the monthly limit is reached, or a fifth of it in one day, the chat is no longer shown until the next month or day. Check your model's prices at openai.com/api/pricing."
+
+#: inc/chat.php
+msgid "Límite al mes, $"
+msgstr "Monthly limit, $"
+
+#: inc/chat.php
+msgid "Precio de entrada, $ por millón de tokens"
+msgstr "Input price, $ per million tokens"
+
+#: inc/chat.php
+msgid "Precio de salida, $ por millón de tokens"
+msgstr "Output price, $ per million tokens"
+
+#: inc/chat.php
+msgid "Guardar"
+msgstr "Save"
+
+#: inc/chat.php
+msgid "Guardado."
+msgstr "Saved."
+
+#: inc/chat.php
+msgid "El chat vuelve a mostrarse. Si OpenAI sigue sin saldo, se parará otra vez con el primer mensaje."
+msgstr "The chat is shown again. If OpenAI still has no credit, it will stop again with the first message."
+
+#: inc/chat.php
+msgid "Conversaciones borradas: %d."
+msgstr "Conversations deleted: %d."
+
+#: inc/seo.php inc/chat.php
+msgid "Título SEO"
+msgstr "SEO title"
+
+#: inc/seo.php inc/chat.php
+msgid "Descripción SEO"
+msgstr "SEO description"
+
+#: inc/seo.php inc/chat.php
+msgid "Revisa las fotos: hasta 5 imágenes JPG, PNG o WebP de un máximo de 10 MB cada una."
+msgstr "Check your photos: up to 5 JPG, PNG or WebP images, no more than 10 MB each."
+
+#: inc/seo.php template-parts/chat.php
+msgid "Asistente con IA: tus mensajes se envían a OpenAI y se guardan aquí. Las solicitudes y fotos llegan al equipo por Telegram. Consulta la <a href=\"{privacidad}\">política de privacidad</a>."
+msgstr "AI assistant: your messages are sent to OpenAI and stored here. Requests and photos reach the team through Telegram. Read the <a href=\"{privacidad}\">privacy policy</a>."
+
+#: inc/seo.php template-parts/chat.php
+msgid "Antes del lanzamiento: publica la información legal y una política de privacidad que explique el chat, OpenAI y Telegram."
+msgstr "Before launch: publish legal information and a privacy policy covering the chat, OpenAI and Telegram."
+
+#: template-parts/data-notice.php
+msgid "El equipo de OSTEZA utiliza tus datos para atender tu consulta y contactarte por el canal que elijas."
+msgstr "The OSTEZA team uses your details to handle your enquiry and contact you through your chosen channel."
+
+#: template-parts/data-notice.php
+msgid "Cómo usamos tus datos"
+msgstr "How we use your data"
+
+#: template-parts/data-notice.php
+msgid "Tus mensajes se envían a OpenAI para generar las respuestas del asistente y la conversación se guarda en esta web. Si envías una solicitud, sus datos, las fotos y la ubicación que decidas compartir llegan al equipo de OSTEZA a través de Telegram."
+msgstr "Your messages are sent to OpenAI to generate the assistant’s replies, and the conversation is stored on this website. If you submit a request, its details, photos and any location you choose to share reach the OSTEZA team through Telegram."
+
+#: template-parts/data-notice.php
+#, php-format
+msgid "Las conversaciones de esta web se eliminan automáticamente una vez superados %1$d días desde su creación si no hay solicitud, o %2$d días si hay una solicitud enviada."
+msgstr "Conversations on this website are automatically deleted after more than %1$d days from creation without a request, or %2$d days if a request has been sent."
+
+#: template-parts/data-notice.php
+msgid "Este borrado automático no elimina las copias en los servicios de mensajería."
+msgstr "This automatic deletion does not remove copies held in messaging services."
+
+#: template-parts/data-notice.php
+msgid "Este formulario prepara un mensaje en tu navegador. No guarda la solicitud en esta web: debes enviarla tú desde WhatsApp o Telegram. El servicio de mensajería que elijas procesa el mensaje según sus propias condiciones."
+msgstr "This form prepares a message in your browser. It does not store the request on this website: you must send it yourself through WhatsApp or Telegram. Your chosen messaging service processes the message under its own terms."
+
+#: template-parts/data-notice.php
+msgid "Para solicitar acceso, rectificación o eliminación de tus datos, escribe a:"
+msgstr "To request access to, correction or deletion of your data, email:"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Reseñas de ejemplo"
+msgstr "Sample reviews"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Así se verán las opiniones."
+msgstr "This is how reviews will look."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Textos ficticios para mostrar el diseño. No son opiniones de clientes reales."
+msgstr "Fictional text to demonstrate the design. These are not reviews from real customers."
+
+#: inc/review-examples.php blocks/review-examples.php
+#, php-format
+msgid "Ejemplo %02d"
+msgstr "Example %02d"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Ejemplo ficticio"
+msgstr "Fictional example"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Desliza para ver los 10 ejemplos."
+msgstr "Scroll to see all 10 examples."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Montaje de cocina"
+msgstr "Kitchen fitting"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Montaje de armario"
+msgstr "Wardrobe assembly"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Montaje de cama"
+msgstr "Bed assembly"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Transporte de muebles"
+msgstr "Furniture transport"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Mudanza"
+msgstr "Moving home"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Coordinación a distancia"
+msgstr "Remote coordination"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Reforma de baño"
+msgstr "Bathroom renovation"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Pintura interior"
+msgstr "Interior painting"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Instalación de estantes"
+msgstr "Shelf installation"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Búsqueda de profesional"
+msgstr "Finding a professional"
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Nos explicaron qué faltaba antes de empezar el montaje. Fue útil tener una lista clara y saber qué preparar."
+msgstr "They explained what was missing before the kitchen fitting began. A clear list helped us know what to prepare."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Lo que más valoramos fue que revisaran las puertas y los cajones al terminar. El armario quedó cómodo de usar."
+msgstr "We appreciated them checking the doors and drawers at the end. The wardrobe was easy to use afterwards."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Teníamos varias cajas y poco espacio para trabajar. Organizaron el montaje por partes y dejaron la habitación recogida."
+msgstr "We had several boxes and little working space. They assembled everything in stages and left the room tidy."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Antes de recoger los muebles preguntaron por las medidas y el acceso. Así pudimos preparar la entrega sin improvisar."
+msgstr "Before collecting the furniture, they asked about dimensions and access. That helped us prepare the delivery properly."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Nos ayudó tener un único contacto para coordinar la carga y la llegada. Sabíamos qué teníamos que tener listo ese día."
+msgstr "Having one contact for collection and arrival made coordination easier. We knew what needed to be ready that day."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "No podíamos estar en la vivienda durante el trabajo. Recibir fotos del avance nos ayudó a seguirlo desde fuera."
+msgstr "We could not be at the property during the work. Progress photos helped us follow it remotely."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Acordamos primero qué se cambiaba y qué se conservaba. Ese detalle nos permitió entender mejor el presupuesto."
+msgstr "We first agreed what would be replaced and what would stay. That made the quote much easier to understand."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Nos orientaron sobre la preparación de las paredes y la protección de los muebles. La comunicación fue sencilla durante el trabajo."
+msgstr "They explained wall preparation and protecting the furniture. Communication was straightforward throughout the work."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Consultamos dónde colocar las baldas antes de hacer los agujeros. Agradecimos poder revisar las alturas con calma."
+msgstr "We discussed shelf positions before any holes were drilled. We appreciated having time to check the heights."
+
+#: inc/review-examples.php blocks/review-examples.php
+msgid "Necesitábamos ayuda para encontrar a alguien para un trabajo concreto. Nos explicaron las opciones y pudimos decidir con más información."
+msgstr "We needed help finding someone for a specific job. They explained the options so we could make a better-informed decision."

@@ -24,6 +24,11 @@ services:
       WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
       WORDPRESS_DB_USER: ${MYSQL_USER}
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      # Live chat (wp-content/themes/osteza/inc/chat.php); values in .env
+      OSTEZA_OPENAI_KEY: ${OSTEZA_OPENAI_KEY:-}
+      OSTEZA_CHAT_MODEL: ${OSTEZA_CHAT_MODEL:-}
+      OSTEZA_TG_TOKEN: ${OSTEZA_TG_TOKEN:-}
+      OSTEZA_TG_CHAT: ${OSTEZA_TG_CHAT:-}
     volumes:
       - ./:/var/www/html
     depends_on:

@@ -8,6 +8,18 @@ $contact  = osteza_anchor( 'contacto' );
 $ig_label = __( 'Instagram de OSTEZA (abre una pestaña nueva)', 'osteza' );
 $fb_label = __( 'Facebook de OSTEZA (abre una pestaña nueva)', 'osteza' );
 $home     = osteza_home_url();
+$current  = '';
+if ( osteza_is_blog() ) {
+	$current = osteza_blog_url();
+} elseif ( is_page_template( 'page-templates/contact.php' ) ) {
+	$current = osteza_contact_url();
+} elseif ( is_post_type_archive( 'osteza_project' ) || is_singular( 'osteza_project' ) ) {
+	$current = osteza_projects_url();
+} elseif ( is_page_template( 'page-templates/about.php' ) ) {
+	$current = osteza_about_url();
+} elseif ( is_page_template( array( 'page-templates/zones.php', 'page-templates/zone.php' ) ) ) {
+	$current = osteza_zones_url();
+}
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -23,9 +35,9 @@ $home     = osteza_home_url();
 
 <div class="tbar dk">
 <div class="wrap tin">
-<span class="taddr"><?php echo osteza_icon( 'pin', 18, '#8FB8C4' ); ?><?php echo esc_html( osteza_contact( 'address' ) ); ?></span>
+<span class="taddr"><?php echo osteza_icon( 'pin', 18, '#EBA3AE' ); ?><?php echo esc_html( osteza_contact( 'address' ) ); ?></span>
 <span class="tsep" aria-hidden="true"></span>
-<a href="<?php echo esc_attr( osteza_phone_url() ); ?>"><?php echo osteza_icon( 'phone', 18, '#8FB8C4' ); ?><?php echo esc_html( osteza_contact( 'phone' ) ); ?></a>
+<a href="<?php echo esc_attr( osteza_phone_url() ); ?>"><?php echo osteza_icon( 'phone', 18, '#EBA3AE' ); ?><?php echo esc_html( osteza_contact( 'phone' ) ); ?></a>
 <nav class="tsoc" aria-label="<?php esc_attr_e( 'WhatsApp y redes sociales', 'osteza' ); ?>">
 <a href="<?php echo $contact; ?>" aria-label="<?php esc_attr_e( 'Escribir por WhatsApp', 'osteza' ); ?>"><?php echo osteza_icon( 'whatsapp', 19 ); ?></a>
 <a href="<?php echo osteza_social_url( 'instagram' ); ?>" aria-label="<?php echo esc_attr( $ig_label ); ?>"><?php echo osteza_icon( 'instagram', 18 ); ?></a>
@@ -36,11 +48,11 @@ $home     = osteza_home_url();
 
 <header class="hdr" data-header>
 <div class="wrap hin">
-<a class="logo" href="<?php echo esc_url( $home ); ?>" aria-label="<?php esc_attr_e( 'OSTEZA, ir al inicio', 'osteza' ); ?>"><img src="<?php echo osteza_img( 'logo-dark.svg' ); ?>" alt="OSTEZA" width="148" height="32"></a>
+<a class="logo" href="<?php echo esc_url( $home ); ?>" aria-label="<?php esc_attr_e( 'OSTEZA, ir al inicio', 'osteza' ); ?>"><img src="<?php echo osteza_img( 'logo-dark.svg' ); ?>" alt="OSTEZA" width="148" height="32"><img class="logo-l" src="<?php echo osteza_img( 'logo-light.svg' ); ?>" alt="" width="148" height="32"></a>
 <nav class="navd" aria-label="<?php esc_attr_e( 'Principal', 'osteza' ); ?>">
 <button class="nl nl-b" type="button" aria-expanded="false" aria-controls="mega" data-toggle="mega"><?php esc_html_e( 'Servicios', 'osteza' ); ?><?php echo osteza_chevron(); ?></button>
 <?php foreach ( osteza_nav() as $label => $href ) : ?>
-<a class="nl" href="<?php echo esc_attr( $href ); ?>"><?php echo esc_html( $label ); ?></a>
+<a class="nl" href="<?php echo esc_attr( $href ); ?>"<?php echo $href === $current ? ' aria-current="page"' : ''; ?>><?php echo esc_html( $label ); ?></a>
 <?php endforeach; ?>
 </nav>
 <div class="hact">
@@ -60,13 +72,15 @@ $home     = osteza_home_url();
 
 <div id="mega" class="mega" hidden>
 <div class="wrap megain">
+<div class="megacols">
 <?php foreach ( osteza_service_menu() as $heading => $links ) : ?>
-<div class="megacol"><p class="kick"><?php echo esc_html( $heading ); ?></p><?php foreach ( $links as $link => $key ) : ?><a class="nl" href="<?php echo osteza_service_url( $key ); ?>"><?php echo esc_html( $link ); ?></a><?php endforeach; ?></div>
+<div class="megacol"><p class="kick"><?php echo esc_html( $heading ); ?></p><?php foreach ( $links as $link => $url ) : ?><a class="nl" href="<?php echo $url; ?>"><?php echo esc_html( $link ); ?></a><?php endforeach; ?></div>
 <?php endforeach; ?>
+</div>
 <div class="megacta dk">
-<p class="disp"><?php esc_html_e( '¿No sabes qué servicio elegir?', 'osteza' ); ?></p>
-<p><?php esc_html_e( 'Descríbenos el trabajo y te orientamos.', 'osteza' ); ?></p>
-<a class="btn btn-p btn-sm" href="<?php echo $contact; ?>" data-close><?php esc_html_e( 'Cuéntanos qué necesitas', 'osteza' ); ?></a>
+<p class="disp"><?php echo esc_html( osteza_text( 'mega_title' ) ); ?></p>
+<p><?php echo esc_html( osteza_text( 'mega_text' ) ); ?></p>
+<a class="btn btn-p btn-sm" href="<?php echo $contact; ?>" data-close><?php echo esc_html( osteza_text( 'mega_button' ) ); ?></a>
 </div>
 </div>
 </div>
@@ -79,7 +93,7 @@ $home     = osteza_home_url();
 </div>
 <nav class="mnav" aria-label="<?php esc_attr_e( 'Principal', 'osteza' ); ?>">
 <details><summary class="disp"><?php esc_html_e( 'Servicios', 'osteza' ); ?><span aria-hidden="true">+</span></summary>
-<div><?php foreach ( osteza_main_services() as $link => $key ) : ?><a class="nl" href="<?php echo osteza_service_url( $key ); ?>"><?php echo esc_html( $link ); ?></a><?php endforeach; ?></div></details>
+<div><?php foreach ( osteza_main_services() as $link => $url ) : ?><a class="nl" href="<?php echo $url; ?>"><?php echo esc_html( $link ); ?></a><?php endforeach; ?></div></details>
 <?php foreach ( osteza_nav() as $label => $href ) : ?>
 <a class="disp" href="<?php echo esc_attr( $href ); ?>" data-nav-close><?php echo esc_html( $label ); ?></a>
 <?php endforeach; ?>

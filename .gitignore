@@ -5,3 +5,6 @@ wp-content/cache/
 .DS_Store
 wp-content/upgrade/
 *.log
+
+__pycache__/
+*.pyc
