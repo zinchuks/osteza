@@ -3961,3 +3961,35 @@ msgstr "%s na Costa Blanca"
 #, php-format
 msgid "Montaje de cocinas y mudanzas en %s"
 msgstr "Montaż kuchni i przeprowadzki: %s"
+
+#: inc/blocks.php
+msgid "Tu hogar, en buenas manos"
+msgstr "Twój dom w dobrych rękach"
+
+#: inc/blocks.php
+msgid "Montaje de cocinas, muebles y mudanzas <span>en la Costa Blanca</span>"
+msgstr "Montaż kuchni, mebli i przeprowadzki <span>na Costa Blanca</span>"
+
+#: inc/blocks.php
+msgid "Un solo contacto para montar, mudarte o encontrar al profesional adecuado. Del primer mensaje al trabajo terminado."
+msgstr "Jeden kontakt, by zmontować, przeprowadzić się lub znaleźć odpowiedniego fachowca. Od pierwszej wiadomości do skończonej pracy."
+
+#: inc/blocks.php
+msgid "Te atendemos en"
+msgstr "Obsługa w językach"
+
+#: inc/blocks.php
+msgid "Texto delante de los idiomas del sitio (vacío: no se muestran)"
+msgstr "Tekst przed językami strony (puste: nie są pokazywane)"
+
+#: inc/blocks.php
+msgid "Mudanza o transporte"
+msgstr "Przeprowadzka lub transport"
+
+#: inc/blocks.php
+msgid "Encontrar un profesional"
+msgstr "Znaleźć fachowca"
+
+#: inc/blocks.php
+msgid "Reforma o acabados"
+msgstr "Remont lub wykończenia"

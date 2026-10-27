@@ -20,6 +20,10 @@ $contact = osteza_anchor( 'contacto' );
 <a class="btn btn-p" href="<?php echo $contact; ?>"><?php echo esc_html( $a['button'] ); ?> <?php echo osteza_arrow(); ?></a>
 <a class="btn btn-ol" href="<?php echo $contact; ?>"><?php echo osteza_icon( 'whatsapp', 22 ); ?><?php echo esc_html( $a['button2'] ); ?></a>
 </div>
+<?php if ( $a['langs'] && count( osteza_languages() ) > 1 ) : ?>
+<p class="hlangs"><?php echo osteza_icon( 'chat', 20, '#EBA3AE' ); ?><span><?php echo esc_html( $a['langs'] ); ?></span>
+<?php foreach ( osteza_languages() as $l ) : ?><?php if ( $l['current'] ) : ?><strong lang="<?php echo esc_attr( $l['code'] ); ?>"><?php echo esc_html( $l['name'] ); ?></strong><?php else : ?><a href="<?php echo esc_url( $l['url'] ); ?>" lang="<?php echo esc_attr( $l['code'] ); ?>" hreflang="<?php echo esc_attr( $l['code'] ); ?>"><?php echo esc_html( $l['name'] ); ?></a><?php endif; ?><?php endforeach; ?></p>
+<?php endif; ?>
 </div>
 <nav class="qpanel" aria-label="<?php esc_attr_e( 'Accesos rápidos a servicios', 'osteza' ); ?>">
 <p class="disp"><?php echo esc_html( $a['quickTitle'] ); ?></p>

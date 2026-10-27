@@ -3797,3 +3797,35 @@ msgstr ""
 #, php-format
 msgid "Montaje de cocinas y mudanzas en %s"
 msgstr ""
+
+#: inc/blocks.php
+msgid "Tu hogar, en buenas manos"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Montaje de cocinas, muebles y mudanzas <span>en la Costa Blanca</span>"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Un solo contacto para montar, mudarte o encontrar al profesional adecuado. Del primer mensaje al trabajo terminado."
+msgstr ""
+
+#: inc/blocks.php
+msgid "Te atendemos en"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Texto delante de los idiomas del sitio (vacío: no se muestran)"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Mudanza o transporte"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Encontrar un profesional"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Reforma o acabados"
+msgstr ""

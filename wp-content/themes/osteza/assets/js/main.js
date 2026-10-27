@@ -413,25 +413,33 @@
 			if (open) { load(); input.focus(); } else if (openBtn.offsetParent) { openBtn.focus(); }
 		};
 
-		/* A few seconds after each page loads, a note by the button says the chat is live.
-		   Closing it hides it on this page; once the visitor has opened the chat, it is
-		   not shown again for the rest of the visit (the browser tab's session). */
+		/* Once the visitor has read a while or scrolled past the first screen, a note by
+		   the button says the chat is live. Opening the chat or closing the note hides it
+		   for the rest of the visit (the browser tab's session). */
 		const tease = $('[data-chat-tease]', chat);
 		const SEEN_KEY = 'osteza_chat_seen';
 		const seen = () => {
 			try { return window.sessionStorage.getItem(SEEN_KEY) === '1'; } catch { return false; }
 		};
-		const hideTease = (opened) => {
+		const hideTease = () => {
 			tease.hidden = true;
-			if (!opened) return;
 			try { window.sessionStorage.setItem(SEEN_KEY, '1'); } catch { /* private mode */ }
 		};
-		if (!seen()) setTimeout(() => { if (box.hidden && !seen()) tease.hidden = false; }, 5000);
-		$('[data-chat-tease-open]', tease).addEventListener('click', () => { hideTease(true); setOpen(true); });
-		$('[data-chat-tease-close]', tease).addEventListener('click', () => hideTease(false));
+		if (!seen()) {
+			const showTease = () => {
+				clearTimeout(timer);
+				window.removeEventListener('scroll', onScroll);
+				if (box.hidden && !seen()) tease.hidden = false;
+			};
+			const onScroll = () => { if (window.scrollY > window.innerHeight * 0.8) showTease(); };
+			const timer = setTimeout(showTease, 25000);
+			window.addEventListener('scroll', onScroll, { passive: true });
+		}
+		$('[data-chat-tease-open]', tease).addEventListener('click', () => { hideTease(); setOpen(true); });
+		$('[data-chat-tease-close]', tease).addEventListener('click', hideTease);
 
-		openBtn.addEventListener('click', () => { hideTease(true); setOpen(box.hidden); });
-		for (const btn of $$('[data-chat-trigger]')) btn.addEventListener('click', () => { hideTease(true); setOpen(true); });
+		openBtn.addEventListener('click', () => { hideTease(); setOpen(box.hidden); });
+		for (const btn of $$('[data-chat-trigger]')) btn.addEventListener('click', () => { hideTease(); setOpen(true); });
 		$('[data-chat-close]', chat).addEventListener('click', () => setOpen(false));
 		box.addEventListener('keydown', (ev) => { if (ev.key === 'Escape') setOpen(false); });
 
