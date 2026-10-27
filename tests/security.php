@@ -61,8 +61,23 @@ try {
 	$admin = get_users( array( 'role' => 'administrator', 'number' => 1, 'fields' => 'ID' ) )[0];
 	security_check( user_can( $admin, 'edit_post', $ids[0] ) && user_can( $admin, 'read_post', $ids[0] ), 'Administrator retains chat access' );
 	security_check( defined( 'DISALLOW_FILE_EDIT' ) && DISALLOW_FILE_EDIT, 'Dashboard PHP file editing disabled' );
-	$methods = apply_filters( 'xmlrpc_methods', array( 'pingback.ping' => 'test', 'pingback.extensions.getPingbacks' => 'test', 'system.listMethods' => 'test' ) );
-	security_check( ! isset( $methods['pingback.ping'] ) && isset( $methods['system.listMethods'] ), 'Pingback methods disabled without removing all XML-RPC' );
+	$methods = apply_filters( 'xmlrpc_methods', array( 'pingback.ping' => 'test', 'system.multicall' => 'test' ) );
+	security_check( ! apply_filters( 'xmlrpc_enabled', true ) && ! $methods, 'XML-RPC disabled with all its methods' );
+	security_check( ! wp_is_application_passwords_available(), 'Application passwords disabled' );
+	security_check( ! comments_open( get_posts( array( 'numberposts' => 1, 'fields' => 'ids' ) )[0] ?? 0 ), 'Comments closed' );
+	wp_set_current_user( 0 );
+	security_check( 404 === rest_do_request( new WP_REST_Request( 'GET', '/wp/v2/users' ) )->get_status(), 'Anonymous REST cannot list users' );
+	wp_set_current_user( 1 );
+	security_check( 200 === rest_do_request( new WP_REST_Request( 'GET', '/wp/v2/users/me' ) )->get_status(), 'Logged-in REST keeps the users endpoint for the editor' );
+	wp_set_current_user( $original_user );
+	$key = osteza_login_key(); delete_transient( $key );
+	for ( $n = 0; $n < OSTEZA_LOGIN_TRIES; $n++ ) { wp_authenticate( 'no-such-user-' . $n, 'wrong' ); }
+	$locked = wp_authenticate( 'no-such-user', 'wrong' );
+	delete_transient( $key );
+	security_check( is_wp_error( $locked ) && 'osteza_login_locked' === $locked->get_error_code(), 'Repeated failed logins lock the IP out' );
+	$wrong = wp_authenticate( 'no-such-user', 'wrong' );
+	delete_transient( $key );
+	security_check( is_wp_error( $wrong ) && 'osteza_login_failed' === $wrong->get_error_code(), 'Failed login does not reveal whether the user exists' );
 	$failed = false;
 } catch ( Throwable $e ) { fwrite( STDERR, 'FAIL ' . $e->getMessage() . "\n" ); $failed = true;
 } finally {

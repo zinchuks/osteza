@@ -8,6 +8,10 @@ Require all denied
 <Files "wp-config.php">
 Require all denied
 </Files>
+# Version disclosure and unused endpoints (XML-RPC, comments, trackbacks).
+<FilesMatch "^(?:readme\.html|license\.txt|wp-config-sample\.php|xmlrpc\.php|wp-comments-post\.php|wp-trackback\.php|wp-links-opml\.php)$">
+Require all denied
+</FilesMatch>
 </IfModule>
 <IfModule mod_rewrite.c>
 RewriteEngine On

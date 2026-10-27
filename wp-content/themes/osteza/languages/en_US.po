@@ -3939,3 +3939,13 @@ msgstr "We discussed shelf positions before any holes were drilled. We appreciat
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Necesitábamos ayuda para encontrar a alguien para un trabajo concreto. Nos explicaron las opciones y pudimos decidir con más información."
 msgstr "We needed help finding someone for a specific job. They explained the options so we could make a better-informed decision."
+
+#. translators: %d: minutes.
+#: ../../mu-plugins/osteza-security.php
+#, php-format
+msgid "Demasiados intentos fallidos. Vuelve a intentarlo dentro de %d minutos."
+msgstr "Too many failed attempts. Try again in %d minutes."
+
+#: ../../mu-plugins/osteza-security.php
+msgid "El usuario o la contraseña no son correctos."
+msgstr "The username or password is incorrect."

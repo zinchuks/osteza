@@ -3926,3 +3926,13 @@ msgstr "Расположение полок согласовали ещё до �
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Necesitábamos ayuda para encontrar a alguien para un trabajo concreto. Nos explicaron las opciones y pudimos decidir con más información."
 msgstr "Нужна была помощь с поиском мастера для конкретной работы. Нам объяснили варианты, и выбирать стало проще."
+
+#. translators: %d: minutes.
+#: ../../mu-plugins/osteza-security.php
+#, php-format
+msgid "Demasiados intentos fallidos. Vuelve a intentarlo dentro de %d minutos."
+msgstr "Слишком много неудачных попыток. Повторите через %d мин."
+
+#: ../../mu-plugins/osteza-security.php
+msgid "El usuario o la contraseña no son correctos."
+msgstr "Неверное имя пользователя или пароль."

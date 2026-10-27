@@ -17,7 +17,7 @@ def get(path):
  try:
   with urllib.request.urlopen('http://localhost:8080'+path,timeout=30) as r:return r.status,r.read().decode(errors='replace')
  except urllib.error.HTTPError as e:return e.code,''
-for path in ['/.env','/wp-config.php','/wp-content/uploads/security-probe.php','/wp-content/uploads/security-probe.phtml','/.git/config','/compose.yaml','/CLAUDE.md','/scripts/audit-content.php','/tests/launch-readiness.php','/docs/launch-readiness.md']:
+for path in ['/.env','/wp-config.php','/wp-content/uploads/security-probe.php','/wp-content/uploads/security-probe.phtml','/.git/config','/compose.yaml','/CLAUDE.md','/scripts/audit-content.php','/tests/launch-readiness.php','/docs/launch-readiness.md','/readme.html','/license.txt','/wp-config-sample.php','/xmlrpc.php','/wp-comments-post.php','/wp-trackback.php','/wp-json/wp/v2/users','/wp-sitemap-users-1.xml']:
  status,_=get(path);assert status in (403,404),(path,status);print('PASS private file blocked:',path,status)
 for path in ['/','/en/','/uk/','/ru/','/pl/','/blog/page/2/','/proyectos/']:
  status,html=get(path);assert status==200,(path,status);p=Head();p.feed(html)
@@ -46,4 +46,5 @@ with urllib.request.urlopen('http://localhost:8080/',timeout=20) as response:
  assert response.headers.get('X-Frame-Options')=='SAMEORIGIN'
  assert response.headers.get('Referrer-Policy')=='strict-origin-when-cross-origin'
  assert 'geolocation=(self)' in response.headers.get('Permissions-Policy','')
+ assert 'X-Powered-By' not in response.headers and "frame-ancestors 'self'" in response.headers.get('Content-Security-Policy','')
  print('PASS baseline security headers')
