@@ -1138,3 +1138,6 @@ html.chat-open{overflow:hidden}
 @media(max-width:1100px){.review-examples-track{grid-auto-columns:calc((100% - 20px)/2)}}
 @media(max-width:760px){.review-examples-head{display:block}.review-example-label{display:inline-block;margin-top:18px}.review-examples-track{grid-auto-columns:87%;gap:14px}.review-example-card{padding:24px}.review-example-card blockquote{font-size:16px}}
 .review-examples h2{scroll-margin-top:170px}
+
+/* Keep the floating shortcut distinct from the footer contact label. */
+.fab{width:60px;padding:0;justify-content:center}

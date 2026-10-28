@@ -155,6 +155,10 @@ function osteza_seo_description( $post ) {
 	return $text;
 }
 add_filter( 'wp_robots', function ( $robots ) {
+	if ( is_singular( 'page' ) && get_post_meta( get_queried_object_id(), '_osteza_legal_review_required', true ) ) {
+		$robots['noindex'] = true;
+		unset( $robots['index'] );
+	}
 	if ( osteza_seo_external() ) {
 		return $robots;
 	}
@@ -189,12 +193,17 @@ add_action( 'wp_head', function () {
 	$meta['og:image'] = $image[0];
 	$meta['og:image:width'] = $image[1];
 	$meta['og:image:height'] = $image[2];
-	$meta['og:image:alt'] = ( $own_image ? get_post_meta( get_post_thumbnail_id( $post ), '_wp_attachment_image_alt', true ) : '' ) ?: get_bloginfo( 'name' );
+	$meta['og:image:alt'] = $own_image
+		? ( get_post_meta( get_post_thumbnail_id( $post ), '_wp_attachment_image_alt', true ) ?: get_the_title( $post ) )
+		: __( 'Logotipo de OSTEZA sobre fondo violeta; Costa Blanca, España y Europa.', 'osteza' );
 	foreach ( $meta as $property => $value ) {
 		echo '<meta property="' . esc_attr( $property ) . '" content="' . esc_attr( $value ) . '">' . "\n";
 	}
 	if ( $post && function_exists( 'pll_get_post_translations' ) ) {
 		foreach ( array_keys( pll_get_post_translations( $post->ID ) ) as $slug ) {
+			if ( 'es' === pll_current_language() && 'pl' === $slug ) {
+				continue; // Requested OG cleanup only; keep valid Polish hreflang/navigation.
+			}
 			if ( pll_current_language() !== $slug ) {
 				echo '<meta property="og:locale:alternate" content="' . esc_attr( osteza_seo_locale( $slug ) ) . '">' . "\n";
 			}

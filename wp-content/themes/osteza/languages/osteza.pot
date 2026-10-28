@@ -3829,3 +3829,7 @@ msgstr ""
 #: inc/blocks.php
 msgid "Reforma o acabados"
 msgstr ""
+
+#: inc/seo.php
+msgid "Logotipo de OSTEZA sobre fondo violeta; Costa Blanca, España y Europa."
+msgstr ""

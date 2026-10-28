@@ -3993,3 +3993,7 @@ msgstr "Znaleźć fachowca"
 #: inc/blocks.php
 msgid "Reforma o acabados"
 msgstr "Remont lub wykończenia"
+
+#: inc/seo.php
+msgid "Logotipo de OSTEZA sobre fondo violeta; Costa Blanca, España y Europa."
+msgstr "Logo OSTEZA na fioletowym tle; Costa Blanca, Hiszpania i Europa."
