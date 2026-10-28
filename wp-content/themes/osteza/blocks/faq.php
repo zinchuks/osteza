@@ -24,7 +24,7 @@ $links = array_filter(
 </div>
 <div class="faq">
 <?php foreach ( array_values( (array) $a['items'] ) as $i => $item ) : ?>
-<details<?php echo 0 === $i ? ' open' : ''; ?>><summary><?php echo esc_html( $item['q'] ?? '' ); ?><span class="pm" aria-hidden="true">+</span></summary><p><?php echo osteza_html( $item['a'] ?? '' ); ?></p></details>
+<details<?php echo 0 === $i ? ' open' : ''; ?>><summary><?php echo esc_html( $item['q'] ?? '' ); ?><span class="pm" aria-hidden="true"><span></span><span></span></span></summary><p><?php echo osteza_html( $item['a'] ?? '' ); ?></p></details>
 <?php endforeach; ?>
 </div>
 </div>

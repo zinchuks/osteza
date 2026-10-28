@@ -1,5 +1,9 @@
 <?php
 /** Fictional review mockups, never presented as customer endorsements or ratings. */
+// Keep saved editor content, but never publish demonstration endorsements.
+if ( ! is_preview() || ! current_user_can( 'edit_theme_options' ) ) {
+	return;
+}
 $hid = osteza_uid( 'h-review-examples' );
 ?>
 <section class="sec review-examples" aria-labelledby="<?php echo esc_attr( $hid ); ?>">

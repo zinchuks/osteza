@@ -37,6 +37,31 @@ add_filter( 'pre_get_document_title', function ( $title ) {
 add_filter( 'document_title_separator', function () {
 	return '|';
 } );
+
+/** Reuse the actual zone heading instead of advertising a different service in search. */
+function osteza_seo_zone_heading( $post ) {
+	$find = function ( $blocks ) use ( &$find ) {
+		foreach ( $blocks as $block ) {
+			if ( 'osteza/zone-hero' === $block['blockName'] ) {
+				return trim( wp_strip_all_tags( $block['attrs']['title'] ?? '' ) );
+			}
+			$inner = $find( $block['innerBlocks'] ?? array() );
+			if ( $inner ) {
+				return $inner;
+			}
+		}
+		return '';
+	};
+	if ( has_blocks( $post->post_content ) ) {
+		return $find( parse_blocks( $post->post_content ) ) ?: get_the_title( $post );
+	}
+	foreach ( osteza_layout( 'zone', $post ) as $section ) {
+		if ( 'zone-hero' === $section[0] ) {
+			return trim( wp_strip_all_tags( $section[1]['title'] ?? '' ) ) ?: get_the_title( $post );
+		}
+	}
+	return get_the_title( $post );
+}
 // Services and zones without their own SEO title name the place, while the title fits in search results.
 add_filter( 'document_title_parts', function ( $parts ) {
 	if ( osteza_seo_external() || ! is_page() || ! isset( $parts['title'] ) ) {
@@ -47,10 +72,9 @@ add_filter( 'document_title_parts', function ( $parts ) {
 		/* translators: %s: service name. */
 		$title = sprintf( __( '%s en la Costa Blanca', 'osteza' ), $parts['title'] );
 	} elseif ( 'zone' === $type ) {
-		/* translators: %s: town name. */
-		$title = sprintf( __( 'Montaje de cocinas y mudanzas en %s', 'osteza' ), $parts['title'] );
+		$title = osteza_seo_zone_heading( get_queried_object() );
 	}
-	if ( isset( $title ) && mb_strlen( $title . ' | ' . ( $parts['site'] ?? '' ) ) <= 60 ) {
+	if ( isset( $title ) && ( 'zone' === $type || mb_strlen( $title . ' | ' . ( $parts['site'] ?? '' ) ) <= 60 ) ) {
 		$parts['title'] = $title;
 	}
 	return $parts;

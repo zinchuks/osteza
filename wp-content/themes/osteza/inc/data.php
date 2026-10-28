@@ -353,7 +353,7 @@ function osteza_all_services() {
 }
 
 /**
- * Services marked for the home page (cards, footer, mobile menu, contact form, zone pages).
+ * Services marked for the home page (cards, footer, mobile menu, zone pages).
  */
 function osteza_services() {
 	return array_values(
@@ -462,13 +462,13 @@ function osteza_main_services() {
  * Primary navigation: label => href.
  */
 function osteza_nav() {
-	return array(
-		__( 'Proyectos', 'osteza' )      => osteza_projects_url(),
+	$links = array(
 		__( 'Zonas', 'osteza' )          => osteza_zones_url(),
 		__( 'Sobre nosotros', 'osteza' ) => osteza_about_url(),
 		__( 'Blog', 'osteza' )           => osteza_blog_url(),
 		__( 'Contacto', 'osteza' )       => osteza_contact_url(),
 	);
+	return osteza_has_projects() ? array( __( 'Proyectos', 'osteza' ) => osteza_projects_url() ) + $links : $links;
 }
 
 /**

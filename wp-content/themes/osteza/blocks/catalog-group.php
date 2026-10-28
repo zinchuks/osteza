@@ -26,7 +26,7 @@ $icon = function ( $name, $size, $width, $stroke = 'currentColor' ) {
 <ul class="cgrid2">
 <?php foreach ( $g['items'] as $item ) : ?>
 <?php /* translators: %s: service name (screen-reader text). */ ?>
-<li class="rv" data-item><a class="dcard" href="<?php echo $item['url']; ?>"><?php echo $icon( $item['icon'], 44, '1.6', '#EBA3AE' ); ?><strong class="disp"><?php echo esc_html( $item['name'] ); ?></strong><span class="dd"><?php echo esc_html( $item['desc'] ); ?></span><span class="lnk"><?php esc_html_e( 'Ver servicio', 'osteza' ); ?><span class="sr"> <?php echo esc_html( sprintf( __( 'de %s', 'osteza' ), $item['name'] ) ); ?></span> <?php echo osteza_arrow(); ?></span></a></li>
+<li class="rv" data-item><a class="dcard" href="<?php echo $item['url']; ?>"><?php echo $icon( $item['icon'], 44, '1.6', '#EBA3AE' ); ?><strong class="disp"><?php echo esc_html( $item['name'] ); ?></strong><span class="dd"><?php echo esc_html( $item['desc'] ); ?></span><span class="lnk"><?php esc_html_e( 'Ver servicio', 'osteza' ); ?><span class="sr"> <?php echo esc_html( $item['name'] ); ?></span> <?php echo osteza_arrow(); ?></span></a></li>
 <?php endforeach; ?>
 </ul>
 </div>
