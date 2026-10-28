@@ -49,7 +49,8 @@ $fb_label = __( 'Facebook de OSTEZA (abre una pestaña nueva)', 'osteza' );
 </div>
 <div class="fbot">
 <div class="flang"><label for="flang"><?php esc_html_e( 'Idioma', 'osteza' ); ?></label><select id="flang" data-lang-select><?php osteza_language_options(); ?></select></div>
-<nav class="flegal" aria-label="<?php esc_attr_e( 'Legal', 'osteza' ); ?>"><?php foreach ( osteza_legal_pages() as $id ) : ?><?php $legal = osteza_localize_page( $id ); ?><a href="<?php echo $legal['url']; ?>"><?php echo esc_html( $legal['title'] ); ?></a><?php endforeach; ?></nav>
+<?php $legal_pages = osteza_legal_pages(); ?>
+<?php if ( $legal_pages ) : ?><nav class="flegal" aria-label="<?php esc_attr_e( 'Legal', 'osteza' ); ?>"><?php foreach ( $legal_pages as $id ) : ?><?php $legal = osteza_localize_page( $id ); ?><a href="<?php echo $legal['url']; ?>"><?php echo esc_html( $legal['title'] ); ?></a><?php endforeach; ?></nav><?php endif; ?>
 <span>© <?php echo esc_html( wp_date( 'Y' ) ); ?> <?php echo esc_html( osteza_contact( 'legal' ) ); ?></span>
 </div>
 </div>

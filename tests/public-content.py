@@ -1,5 +1,5 @@
 """Local public-content regressions. GET only; never submits forms or contacts providers."""
-import collections, concurrent.futures, json, re, subprocess, urllib.parse, urllib.request
+import collections, concurrent.futures, json, re, subprocess, urllib.parse, urllib.request, urllib.error
 from html.parser import HTMLParser
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
@@ -46,6 +46,11 @@ def fetch(url):
 
 run=subprocess.run(['docker','compose','exec','-T','wordpress','php','scripts/audit-content.php'],cwd=ROOT,capture_output=True,text=True,check=True)
 rows=json.loads(run.stdout)
+hidden_run=subprocess.run(['docker','compose','exec','-T','wordpress','php','scripts/hide-legal-pages.php'],cwd=ROOT,capture_output=True,text=True,check=True)
+hidden=json.loads(hidden_run.stdout)
+assert len(hidden['pages'])==15 and all(p['status']=='draft' and p['content_unchanged'] for p in hidden['pages'])
+assert not hidden['sitemap_legal_urls'] and not hidden['published_search_legal_ids']
+hidden_urls={p['url'] for p in hidden['pages']}
 def check(row):
     p,text=fetch(row['url']); errors=[]
     if not p.title.endswith('| OSTEZA'): errors.append('title suffix')
@@ -83,11 +88,20 @@ for row,p,text,e in checked:
         u=urllib.parse.urlsplit(urllib.parse.urljoin(row['url'],a.get('href','')))
         if u.netloc=='localhost:8080' and not u.path.startswith(('/wp-admin','/wp-json','/wp-login')):
             links.add(urllib.parse.urlunsplit((u.scheme,u.netloc,u.path,u.query,'')))
+assert not (hidden_urls & links), 'Public page still links to a hidden legal page'
 extra=sorted(links-set(pages))
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
     for url,(p,text) in zip(extra,pool.map(fetch,extra)): pages[url]=p
 legal_count=sum('[PENDIENTE DE REVISIÓN LEGAL]' in text for row,p,text,e in checked)
-assert legal_count==15, ('Expected 15 legal review placeholders',legal_count)
+assert legal_count==0, ('Legal content is still publicly visible',legal_count)
+for legal in hidden['pages']:
+    for url in (legal['url'],BASE+'/?page_id='+str(legal['id'])):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache'}),timeout=30) as response:
+                raise AssertionError(('Legal page unexpectedly public',url,response.status))
+        except urllib.error.HTTPError as response:
+            assert response.code==404,(url,response.code)
+            assert '[PENDIENTE DE REVISIÓN LEGAL]' not in response.read().decode(errors='replace')
 for lang in ['es','en','uk','ru','pl']:
     home=BASE+('/' if lang=='es' else '/'+lang+'/'); hp=pages[home]
     blog=next(row['url'] for row in rows if row['lang']==lang and row['template']=='page-templates/blog.php')
@@ -97,7 +111,7 @@ for lang in ['es','en','uk','ru','pl']:
     expected=sum(row['lang']==lang and row['type']=='post' for row in rows)
     assert len(listed)==expected,('Blog listing/pagination count',lang,len(listed),expected)
     if lang=='en': assert hp.meta['description'].endswith('.') and '…' not in hp.meta['description']
-report={'published_pages':len(rows),'languages':dict(collections.Counter(row['lang'] for row in rows)),'forms':forms,'linked_local_urls_checked':len(links),'legal_review_pages':legal_count,'blog':'All three homepage articles found among 12 listed articles per language, including pagination','robots':'Local noindex preserved','number_locations':[{'url':row['url'],'call_links':sum(a.get('href')=='tel:+34614886743' for a in p.anchors),'whatsapp_links':sum(a.get('href')=='https://wa.me/34666737139' for a in p.anchors)} for row,p,t,e in checked],'errors':errors}
+report={'published_pages':len(rows),'languages':dict(collections.Counter(row['lang'] for row in rows)),'forms':forms,'linked_local_urls_checked':len(links),'public_legal_pages':legal_count,'hidden_legal_pages':len(hidden['pages']),'blog':'All three homepage articles found among 12 listed articles per language, including pagination','robots':'Local noindex preserved','number_locations':[{'url':row['url'],'call_links':sum(a.get('href')=='tel:+34614886743' for a in p.anchors),'whatsapp_links':sum(a.get('href')=='https://wa.me/34666737139' for a in p.anchors)} for row,p,t,e in checked],'errors':errors}
 Path('/private/tmp/osteza-launch-verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print(json.dumps({k:v for k,v in report.items() if k!='number_locations'},ensure_ascii=False,indent=2))
 assert not errors,'See /private/tmp/osteza-launch-verification.json'
