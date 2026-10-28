@@ -25,7 +25,7 @@ $hid      = osteza_uid( 'h-serv' );
 <?php foreach ( $services as $i => $s ) : ?>
 <li class="card <?php echo esc_attr( $s['cls'] ); ?><?php echo $s['image'] ? ' card-img' : ''; ?>">
 <?php if ( $s['image'] ) : ?>
-<div class="cimg"><?php echo wp_get_attachment_image( $s['image'], 'large', false, array( 'alt' => '', 'loading' => 'lazy', 'sizes' => '(max-width:760px) 84vw, 420px' ) ); ?><span class="cnum"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span></div>
+<div class="cimg"><?php echo wp_get_attachment_image( $s['image'], 'large', false, array( 'alt' => get_post_meta( $s['image'], '_wp_attachment_image_alt', true ) ?: $s['name'], 'loading' => 'lazy', 'sizes' => '(max-width:760px) 84vw, 420px' ) ); ?><span class="cnum"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span></div>
 <?php else : ?>
 <img class="cbg" src="<?php echo osteza_img( 'c-w' === $s['cls'] || 'c-s' === $s['cls'] ? 'mark-dark.svg' : 'mark-light.svg' ); ?>" alt="" aria-hidden="true">
 <div class="ctop"><?php echo osteza_art( osteza_art_inner( $s['icon'] ), 56 ); ?><span class="cnum"><?php echo esc_html( sprintf( '%02d', $i + 1 ) ); ?></span></div>

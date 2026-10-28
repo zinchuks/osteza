@@ -3862,7 +3862,7 @@ msgstr "Scroll to see all 10 examples."
 
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Montaje de cocina"
-msgstr "Kitchen fitting"
+msgstr "Kitchen assembly"
 
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Montaje de armario"
@@ -3902,7 +3902,7 @@ msgstr "Finding a professional"
 
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Nos explicaron qué faltaba antes de empezar el montaje. Fue útil tener una lista clara y saber qué preparar."
-msgstr "They explained what was missing before the kitchen fitting began. A clear list helped us know what to prepare."
+msgstr "They explained what was missing before the kitchen assembly began. A clear list helped us know what to prepare."
 
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Lo que más valoramos fue que revisaran las puertas y los cajones al terminar. El armario quedó cómodo de usar."
@@ -3960,7 +3960,7 @@ msgstr "%s on the Costa Blanca"
 #: inc/seo.php
 #, php-format
 msgid "Montaje de cocinas y mudanzas en %s"
-msgstr "Kitchen fitting and moving in %s"
+msgstr "Kitchen assembly and moving in %s"
 
 #: inc/blocks.php
 msgid "Tu hogar, en buenas manos"
@@ -3968,7 +3968,7 @@ msgstr "Your home, in safe hands"
 
 #: inc/blocks.php
 msgid "Montaje de cocinas, muebles y mudanzas <span>en la Costa Blanca</span>"
-msgstr "Kitchen fitting, furniture assembly and moving <span>on the Costa Blanca</span>"
+msgstr "Kitchen assembly, furniture assembly and moving <span>on the Costa Blanca</span>"
 
 #: inc/blocks.php
 msgid "Un solo contacto para montar, mudarte o encontrar al profesional adecuado. Del primer mensaje al trabajo terminado."
@@ -3993,3 +3993,7 @@ msgstr "Find a professional"
 #: inc/blocks.php
 msgid "Reforma o acabados"
 msgstr "Renovation or finishes"
+
+#: inc/seo.php
+msgid "Logotipo de OSTEZA sobre fondo violeta; Costa Blanca, España y Europa."
+msgstr "OSTEZA logo on a violet background; Costa Blanca, Spain and Europe."

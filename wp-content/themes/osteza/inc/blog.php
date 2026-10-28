@@ -54,7 +54,10 @@ function osteza_cover( $post = null ) {
 }
 
 function osteza_cover_text_html( $text ) {
-	return nl2br( esc_html( $text ) );
+	$lines = preg_split( '/\R/u', trim( $text ) );
+	return implode( '<br>', array_map( function ( $line ) {
+		return esc_html( preg_replace( '/[ \t]+/u', ' ', trim( $line ) ) );
+	}, $lines ) );
 }
 
 /**

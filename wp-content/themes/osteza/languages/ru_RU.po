@@ -3980,3 +3980,7 @@ msgstr "Найти мастера"
 #: inc/blocks.php
 msgid "Reforma o acabados"
 msgstr "Ремонт или отделка"
+
+#: inc/seo.php
+msgid "Logotipo de OSTEZA sobre fondo violeta; Costa Blanca, España y Europa."
+msgstr "Логотип OSTEZA на фиолетовом фоне; Коста-Бланка, Испания и Европа."

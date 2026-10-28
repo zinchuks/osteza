@@ -28,7 +28,12 @@ $contact = osteza_anchor( 'contacto' );
 <nav class="qpanel" aria-label="<?php esc_attr_e( 'Accesos rápidos a servicios', 'osteza' ); ?>">
 <p class="disp"><?php echo esc_html( $a['quickTitle'] ); ?></p>
 <?php foreach ( (array) $a['quick'] as $item ) : ?>
-<a class="qlink" href="<?php echo osteza_link( $item['page'] ?? 0 ); ?>"><?php echo esc_html( $item['label'] ?? '' ); ?> <?php echo osteza_arrow(); ?></a>
+<?php
+$linked_id = (int) ( $item['page'] ?? 0 );
+$base_id = function_exists( 'pll_get_post' ) ? ( pll_get_post( $linked_id, osteza_default_lang() ) ?: $linked_id ) : $linked_id;
+$linked_service = osteza_service_by( $base_id );
+?>
+<a class="qlink" href="<?php echo osteza_link( $linked_id ); ?>"><?php echo esc_html( $linked_service ? $linked_service['name'] : ( $item['label'] ?? '' ) ); ?> <?php echo osteza_arrow(); ?></a>
 <?php endforeach; ?>
 <?php if ( $a['quickOther'] ) : ?><a class="qlink qlink-x" href="<?php echo $contact; ?>"><?php echo esc_html( $a['quickOther'] ); ?> <?php echo osteza_arrow(); ?></a><?php endif; ?>
 </nav>

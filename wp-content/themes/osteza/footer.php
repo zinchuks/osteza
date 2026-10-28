@@ -56,7 +56,7 @@ $fb_label = __( 'Facebook de OSTEZA (abre una pestaña nueva)', 'osteza' );
 <div class="mbar-sp"></div>
 </footer>
 
-<a class="fab" href="<?php echo esc_url( osteza_whatsapp_url() ); ?>" target="_blank" rel="noopener"><?php echo osteza_icon( 'whatsapp', 22 ); ?>WhatsApp</a>
+<a class="fab" aria-label="WhatsApp" href="<?php echo esc_url( osteza_whatsapp_url() ); ?>" target="_blank" rel="noopener"><?php echo osteza_icon( 'whatsapp', 22 ); ?></a>
 <?php if ( osteza_chat_enabled() ) : ?>
 <?php get_template_part( 'template-parts/chat' ); ?>
 <?php endif; ?>
