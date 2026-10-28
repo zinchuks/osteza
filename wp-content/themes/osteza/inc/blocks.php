@@ -141,7 +141,8 @@ function osteza_breadcrumb( $extra = array() ) {
 	foreach ( $items as $item ) {
 		echo '<li><a href="' . esc_url( $item[1] ) . '">' . esc_html( $item[0] ) . '</a></li>';
 	}
-	echo '<li aria-current="page">' . esc_html( $post ? get_the_title( $post ) : '' ) . '</li></ol></nav>';
+	$current = $post ? get_the_title( $post ) : '';
+	echo '<li aria-current="page"><span data-breadcrumb-label title="' . esc_attr( $current ) . '">' . esc_html( $current ) . '</span></li></ol></nav>';
 }
 
 /**

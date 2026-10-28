@@ -25,11 +25,17 @@ add_action( 'save_post', function ( $id ) {
 		}
 	}
 } );
+/** Keep explicit SEO titles branded without changing the page's visible heading. */
+function osteza_seo_branded_title( $title, $zone = false ) {
+	$title = preg_replace( '/\s*\|\s*(?:OSTEZA|osteza\.es|[a-z0-9.-]*hostingersite\.com)\s*$/iu', '', $title );
+	$title = $zone ? rtrim( $title, ". \t\n\r\0\x0B" ) : trim( $title );
+	return $title . ' | OSTEZA';
+}
 add_filter( 'pre_get_document_title', function ( $title ) {
 	if ( ! osteza_seo_external() && is_singular() ) {
 		$custom = get_post_meta( get_queried_object_id(), '_osteza_seo_title', true );
 		if ( $custom ) {
-			return $custom;
+			return osteza_seo_branded_title( $custom, is_page() && 'zone' === osteza_page_type( get_queried_object() ) );
 		}
 	}
 	return $title;
@@ -64,6 +70,9 @@ function osteza_seo_zone_heading( $post ) {
 }
 // Services and zones without their own SEO title name the place, while the title fits in search results.
 add_filter( 'document_title_parts', function ( $parts ) {
+	if ( ! osteza_seo_external() && isset( $parts['site'] ) ) {
+		$parts['site'] = 'OSTEZA';
+	}
 	if ( osteza_seo_external() || ! is_page() || ! isset( $parts['title'] ) ) {
 		return $parts;
 	}
@@ -72,7 +81,7 @@ add_filter( 'document_title_parts', function ( $parts ) {
 		/* translators: %s: service name. */
 		$title = sprintf( __( '%s en la Costa Blanca', 'osteza' ), $parts['title'] );
 	} elseif ( 'zone' === $type ) {
-		$title = osteza_seo_zone_heading( get_queried_object() );
+		$title = rtrim( osteza_seo_zone_heading( get_queried_object() ), ". \t\n\r\0\x0B" );
 	}
 	if ( isset( $title ) && ( 'zone' === $type || mb_strlen( $title . ' | ' . ( $parts['site'] ?? '' ) ) <= 60 ) ) {
 		$parts['title'] = $title;

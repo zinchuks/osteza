@@ -6,14 +6,14 @@
 $contact = osteza_anchor( 'contacto' );
 $service = osteza_current_service();
 $group   = $service ? osteza_group( $service['group'] ) : null;
-$crumbs  = $group ? array( array( $group['title'], osteza_catalog_url( $group['key'] ) ) ) : array();
+$crumbs  = $group && 0 !== strcasecmp( trim( $group['title'] ), trim( get_the_title() ) ) ? array( array( $group['title'], osteza_catalog_url( $group['key'] ) ) ) : array();
 ?>
 <section class="svc-hero" aria-labelledby="h1">
 <div class="wrap">
 <?php osteza_breadcrumb( $crumbs ); ?>
 <div class="shero">
 <div class="sherocopy">
-<?php if ( $group ) : ?><p class="kick"><?php echo esc_html( $group['title'] ); ?></p><?php endif; ?>
+<p class="kick"><?php esc_html_e( 'Servicios', 'osteza' ); ?></p>
 <h1 id="h1" class="disp"><?php echo osteza_html( $a['title'] ?: get_the_title() ); ?></h1>
 <?php if ( $a['lead'] ) : ?><p class="lead"><?php echo esc_html( $a['lead'] ); ?></p><?php endif; ?>
 <div class="hbtns">

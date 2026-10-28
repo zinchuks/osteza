@@ -5,6 +5,21 @@
 	const $ = (sel, root = document) => root.querySelector(sel);
 	const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
+	/* Reserve the dock's real height even when translated labels or text zoom wrap. */
+	const mobileDock = $('.mbar');
+	if (mobileDock) {
+		const syncDockHeight = () => document.documentElement.style.setProperty('--osteza-dock-height', `${Math.ceil(mobileDock.getBoundingClientRect().height)}px`);
+		syncDockHeight();
+		if ('ResizeObserver' in window) new ResizeObserver(syncDockHeight).observe(mobileDock);
+		else window.addEventListener('resize', syncDockHeight, { passive: true });
+	}
+	const footer = $('footer');
+	if (footer && 'IntersectionObserver' in window) {
+		new IntersectionObserver(([entry]) => {
+			document.documentElement.classList.toggle('footer-in-view', entry.isIntersecting);
+		}).observe(footer);
+	}
+
 	/* Compact header with a shadow once the page is scrolled. The header gets
 	   shorter, which moves the page up, so it turns back only well below the
 	   threshold: a single cut-off would flip it back and forth near the top. */

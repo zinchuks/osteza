@@ -1141,3 +1141,23 @@ html.chat-open{overflow:hidden}
 
 /* Keep the floating shortcut distinct from the footer contact label. */
 .fab{width:60px;padding:0;justify-content:center}
+
+/* Fixed controls must leave the final footer line reachable on small screens. */
+.footer-in-view .chat-tease{display:none!important}
+@media (min-width:761px){.ftr{padding-bottom:120px}}
+@media (max-width:760px){
+html{scroll-padding-bottom:calc(var(--osteza-dock-height,72px) + 28px + env(safe-area-inset-bottom,0px))}
+.ftr{padding-bottom:calc(var(--osteza-dock-height,72px) + 28px + env(safe-area-inset-bottom,0px))}
+.mbar-sp{display:none}
+.chat-tease,.totop{display:none!important}
+.cfollow{flex-direction:column;align-items:flex-start}
+.cfollow>span{margin-right:0}
+}
+
+/* Keep separators attached to their item; only labels may truncate. */
+.svc-hero .bc ol{flex-wrap:nowrap;min-width:0;overflow:hidden}
+.svc-hero .bc li{min-width:0;white-space:nowrap;flex:0 1 auto}
+.svc-hero .bc li:first-child{flex-shrink:0}
+.svc-hero .bc li+li::before{flex:none}
+.svc-hero .bc a{display:block;line-height:32px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.svc-hero .bc [data-breadcrumb-label]{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:32px}
