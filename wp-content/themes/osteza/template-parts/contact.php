@@ -64,7 +64,7 @@ $services[] = __( 'Otro trabajo', 'osteza' );
 <p><strong><?php esc_html_e( 'No se envía hasta que pulses «Enviar» en WhatsApp.', 'osteza' ); ?></strong> <?php esc_html_e( 'Todavía no hemos recibido nada.', 'osteza' ); ?></p>
 <div class="fdbtns"><a class="btn btn-p" href="#" target="_blank" rel="noopener" data-wa-link><?php esc_html_e( 'Abrir WhatsApp', 'osteza' ); ?> <span aria-hidden="true">↗</span><?php echo $new_tab; ?></a><button type="button" class="btn btn-o" data-edit><?php esc_html_e( 'Editar datos', 'osteza' ); ?></button></div>
 <?php /* translators: %s: phone number. */ ?>
-<p class="fsmall"><?php echo esc_html( sprintf( __( '¿No se abre? Llámanos al %s o usa Telegram.', 'osteza' ), osteza_contact( 'phone' ) ) ); ?></p>
+<p class="fsmall"><?php echo wp_kses( sprintf( __( '¿No se abre? Llámanos al %s o usa Telegram.', 'osteza' ), '<a href="' . esc_attr( osteza_phone_url() ) . '">' . esc_html( osteza_contact( 'phone' ) ) . '</a>' ), array( 'a' => array( 'href' => true ) ) ); ?></p>
 </div>
 
 <div class="fdone" role="status" data-state="tg" hidden>

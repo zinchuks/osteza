@@ -6,9 +6,10 @@ ROOT = Path(__file__).resolve().parent.parent
 BASE = 'http://localhost:8080'
 class Page(HTMLParser):
     def __init__(self):
-        super().__init__(); self.title=''; self.h1=''; self.meta={}; self.alternates=[]; self.anchors=[]; self.anchor=None; self.options=[]; self.mode=''; self.option=False; self.select=False; self.card=None; self.card_links=set(); self.footer=False; self.footer_text=''; self.legal=[]
+        super().__init__(); self.title=''; self.h1=''; self.meta={}; self.alternates=[]; self.anchors=[]; self.anchor=None; self.options=[]; self.mode=''; self.option=False; self.select=False; self.card=None; self.card_links=set(); self.footer=False; self.footer_text=''; self.legal=[]; self.headings=[]; self.heading_tag=None
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
+        if tag in ('h1','h2','h3','h4','h5','h6'): self.headings.append(''); self.heading_tag=tag
         if tag=='h1' or (tag=='title' and not self.title): self.mode=tag
         if tag=='footer': self.footer=True
         if tag=='meta':
@@ -20,6 +21,7 @@ class Page(HTMLParser):
         if tag=='option' and self.select: self.option=True; self.options.append('')
     def handle_endtag(self,tag):
         if tag==self.mode: self.mode=''
+        if tag==self.heading_tag: self.heading_tag=None
         if tag=='footer': self.footer=False
         if tag=='a' and self.anchor:
             self.anchors.append(self.anchor)
@@ -29,6 +31,7 @@ class Page(HTMLParser):
         if tag=='select': self.select=False
         if tag=='option': self.option=False
     def handle_data(self,data):
+        if self.heading_tag: self.headings[-1]+=data
         if self.mode=='title': self.title+=data
         if self.mode=='h1': self.h1+=data
         if self.anchor: self.anchor['text']+=data
@@ -53,6 +56,7 @@ def check(row):
     if not p.meta.get('og:image:alt') or p.meta['og:image:alt']=='OSTEZA': errors.append('OG image description')
     if 'noindex' not in p.meta.get('robots',''): errors.append('local indexing changed')
     if not p.h1 or re.search('Fatal error|Warning:|Notice:',text): errors.append('heading/PHP error')
+    if any(re.search(r'[ \t]{2,}',heading.strip()) for heading in p.headings): errors.append('double spaces in heading')
     if row['lang']=='en' and re.search('kitchen fitting',p.title+' '+p.h1,re.I): errors.append('English terminology')
     if 'hostingersite.com@gmail.com' in text: errors.append('placeholder email')
     for a in p.anchors:
@@ -82,7 +86,7 @@ for row,p,text,e in checked:
 extra=sorted(links-set(pages))
 with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
     for url,(p,text) in zip(extra,pool.map(fetch,extra)): pages[url]=p
-legal_count=sum('[TO BE REVIEWED BY LAWYER]' in text for row,p,text,e in checked)
+legal_count=sum('[PENDIENTE DE REVISIÓN LEGAL]' in text for row,p,text,e in checked)
 assert legal_count==15, ('Expected 15 legal review placeholders',legal_count)
 for lang in ['es','en','uk','ru','pl']:
     home=BASE+('/' if lang=='es' else '/'+lang+'/'); hp=pages[home]

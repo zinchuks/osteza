@@ -6,6 +6,23 @@ if ( ! in_array( wp_parse_url( home_url(), PHP_URL_HOST ), array( 'localhost', '
 	fwrite( STDERR, "This maintenance script is restricted to local WordPress.\n" ); exit( 1 );
 }
 $apply = in_array( '--apply', $argv, true );
+// Narrow, revisioned update for existing placeholders; never touches contact settings.
+if ( in_array( '--legal-marker-only', $argv, true ) ) {
+	$updated = 0;
+	foreach ( get_posts( array( 'post_type' => 'page', 'post_status' => 'publish', 'numberposts' => -1, 'lang' => '', 'meta_key' => '_osteza_legal_review_required', 'meta_value' => '1' ) ) as $page ) {
+		$content = str_replace( '[TO BE REVIEWED BY LAWYER]', '[PENDIENTE DE REVISIÓN LEGAL]', $page->post_content );
+		if ( $content !== $page->post_content ) {
+			if ( $apply ) {
+				wp_save_post_revision( $page->ID );
+				$result = wp_update_post( wp_slash( array( 'ID' => $page->ID, 'post_content' => $content ) ), true );
+				if ( is_wp_error( $result ) ) { throw new RuntimeException( 'Legal marker update failed' ); }
+			}
+			$updated++;
+		}
+	}
+	echo json_encode( array( 'apply' => $apply, 'legal_markers' => $updated, 'contact_settings_changed' => false, 'indexing_changed' => false ) ), "\n";
+	exit;
+}
 $locales = array(
 	'es' => array( 'Aviso legal', 'Política de privacidad', 'Política de cookies' ),
 	'en' => array( 'Legal notice', 'Privacy policy', 'Cookie policy' ),
@@ -32,7 +49,7 @@ foreach ( $roots as $kind => $root ) {
 		// Never replace already-published editorial legal text. Existing drafts are backed up and revisioned.
 		if ( $id && 'publish' === get_post_status( $id ) ) { continue; }
 		if ( $id ) { wp_save_post_revision( $id ); }
-		$content = '<!-- wp:paragraph --><p><strong>[TO BE REVIEWED BY LAWYER]</strong></p><!-- /wp:paragraph -->' . "\n" . '<!-- wp:paragraph --><p>OSTEZA · <a href="mailto:osteza.es@gmail.com">osteza.es@gmail.com</a></p><!-- /wp:paragraph -->';
+		$content = '<!-- wp:paragraph --><p><strong>[PENDIENTE DE REVISIÓN LEGAL]</strong></p><!-- /wp:paragraph -->' . "\n" . '<!-- wp:paragraph --><p>OSTEZA · <a href="mailto:osteza.es@gmail.com">osteza.es@gmail.com</a></p><!-- /wp:paragraph -->';
 		$data = array( 'post_type' => 'page', 'post_title' => $titles[ $kind ], 'post_status' => 'publish', 'post_content' => $content );
 		if ( $id ) { $data['ID'] = $id; $id = wp_update_post( wp_slash( $data ), true ); }
 		else { $data['post_name'] = $slugs[ $lang ][ $kind ]; $id = wp_insert_post( wp_slash( $data ), true ); }
