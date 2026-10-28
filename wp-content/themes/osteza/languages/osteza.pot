@@ -3775,3 +3775,57 @@ msgstr ""
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Necesitábamos ayuda para encontrar a alguien para un trabajo concreto. Nos explicaron las opciones y pudimos decidir con más información."
 msgstr ""
+
+#. translators: %d: minutes.
+#: ../../mu-plugins/osteza-security.php
+#, php-format
+msgid "Demasiados intentos fallidos. Vuelve a intentarlo dentro de %d minutos."
+msgstr ""
+
+#: ../../mu-plugins/osteza-security.php
+msgid "El usuario o la contraseña no son correctos."
+msgstr ""
+
+#. translators: %s: service name.
+#: inc/seo.php
+#, php-format
+msgid "%s en la Costa Blanca"
+msgstr ""
+
+#. translators: %s: town name.
+#: inc/seo.php
+#, php-format
+msgid "Montaje de cocinas y mudanzas en %s"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Tu hogar, en buenas manos"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Montaje de cocinas, muebles y mudanzas <span>en la Costa Blanca</span>"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Un solo contacto para montar, mudarte o encontrar al profesional adecuado. Del primer mensaje al trabajo terminado."
+msgstr ""
+
+#: inc/blocks.php
+msgid "Te atendemos en"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Texto delante de los idiomas del sitio (vacío: no se muestran)"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Mudanza o transporte"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Encontrar un profesional"
+msgstr ""
+
+#: inc/blocks.php
+msgid "Reforma o acabados"
+msgstr ""

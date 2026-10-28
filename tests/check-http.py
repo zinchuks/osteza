@@ -1,5 +1,5 @@
 """Focused HTTP checks after launch-related code changes. Never prints response bodies."""
-import json,urllib.request,urllib.error
+import json,re,urllib.request,urllib.error
 from html.parser import HTMLParser
 class Head(HTMLParser):
  def __init__(self): super().__init__();self.meta={};self.canonical=[];self.langs=[];self.jsonld=[];self.in_json=False
@@ -17,7 +17,7 @@ def get(path):
  try:
   with urllib.request.urlopen('http://localhost:8080'+path,timeout=30) as r:return r.status,r.read().decode(errors='replace')
  except urllib.error.HTTPError as e:return e.code,''
-for path in ['/.env','/wp-config.php','/wp-content/uploads/security-probe.php','/wp-content/uploads/security-probe.phtml','/.git/config','/compose.yaml','/CLAUDE.md','/scripts/audit-content.php','/tests/launch-readiness.php','/docs/launch-readiness.md']:
+for path in ['/.env','/wp-config.php','/wp-content/uploads/security-probe.php','/wp-content/uploads/security-probe.phtml','/.git/config','/compose.yaml','/CLAUDE.md','/scripts/audit-content.php','/tests/launch-readiness.php','/docs/launch-readiness.md','/readme.html','/license.txt','/wp-config-sample.php','/xmlrpc.php','/wp-comments-post.php','/wp-trackback.php','/wp-json/wp/v2/users','/wp-sitemap-users-1.xml']:
  status,_=get(path);assert status in (403,404),(path,status);print('PASS private file blocked:',path,status)
 for path in ['/','/en/','/uk/','/ru/','/pl/','/blog/page/2/','/proyectos/']:
  status,html=get(path);assert status==200,(path,status);p=Head();p.feed(html)
@@ -29,6 +29,11 @@ for path in ['/','/en/','/uk/','/ru/','/pl/','/blog/page/2/','/proyectos/']:
  assert 'noindex' in p.meta.get('robots',''),(path,'local indexing unexpectedly enabled')
  if path in ['/','/en/','/uk/','/ru/','/pl/']:assert 'x-default' in p.langs,(path,'x-default missing')
  print('PASS metadata:',path)
+for path,types in [('/servicios/montaje-de-cocinas/',['HomeAndConstructionBusiness','Service','FAQPage']),('/uk/zony/benidorm/',['HomeAndConstructionBusiness','FAQPage'])]:
+ status,html=get(path);assert status==200,(path,status)
+ assert all('"%s"'%t in html for t in types),(path,'structured data missing')
+ assert re.search(r'<title>[^<]*(Costa Blanca|Бенідорм)[^<]*\| OSTEZA</title>',html),(path,'title without place or brand')
+ print('PASS local business, service and FAQ data:',path)
 assert get('/osteza-test-page-does-not-exist/')[0]==404
 print('PASS missing page returns HTTP 404')
 
@@ -46,4 +51,5 @@ with urllib.request.urlopen('http://localhost:8080/',timeout=20) as response:
  assert response.headers.get('X-Frame-Options')=='SAMEORIGIN'
  assert response.headers.get('Referrer-Policy')=='strict-origin-when-cross-origin'
  assert 'geolocation=(self)' in response.headers.get('Permissions-Policy','')
+ assert 'X-Powered-By' not in response.headers and "frame-ancestors 'self'" in response.headers.get('Content-Security-Policy','')
  print('PASS baseline security headers')

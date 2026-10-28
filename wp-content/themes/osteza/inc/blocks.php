@@ -196,11 +196,12 @@ function osteza_blocks() {
 			'fields' => array(
 				'image'      => osteza_f( 'image', __( 'Imagen de fondo', 'osteza' ) ),
 				'overlay'    => osteza_f( 'number', __( 'Oscurecer el fondo (0–100 %)', 'osteza' ), 70 ),
-				'kicker'     => $kicker( __( 'Costa Blanca · Montaje de cocinas y muebles', 'osteza' ) ),
-				'title'      => $title( __( 'Tu cocina nueva, <span>montada como debe ser.</span>', 'osteza' ), true ),
-				'lead'       => $lead( __( 'Montaje de cocinas y muebles en la Costa Blanca: nivelado, alineado y bien anclado. Y si la casa pide más, también reformas y acabados.', 'osteza' ) ),
+				'kicker'     => $kicker( __( 'Tu hogar, en buenas manos', 'osteza' ) ),
+				'title'      => $title( __( 'Montaje de cocinas, muebles y mudanzas <span>en la Costa Blanca</span>', 'osteza' ), true ),
+				'lead'       => $lead( __( 'Un solo contacto para montar, mudarte o encontrar al profesional adecuado. Del primer mensaje al trabajo terminado.', 'osteza' ) ),
 				'button'     => osteza_f( 'text', __( 'Botón principal', 'osteza' ), __( 'Solicitar presupuesto', 'osteza' ) ),
 				'button2'    => osteza_f( 'text', __( 'Botón de WhatsApp', 'osteza' ), __( 'Hablar por WhatsApp', 'osteza' ) ),
+				'langs'      => osteza_f( 'text', __( 'Texto delante de los idiomas del sitio (vacío: no se muestran)', 'osteza' ), __( 'Te atendemos en', 'osteza' ) ),
 				'quickTitle' => osteza_f( 'text', __( 'Título de los accesos rápidos', 'osteza' ), __( '¿Qué necesitas hoy?', 'osteza' ) ),
 				'quick'      => osteza_list(
 					__( 'Accesos rápidos', 'osteza' ),
@@ -211,9 +212,9 @@ function osteza_blocks() {
 					array(
 						array( 'label' => __( 'Montar mi cocina', 'osteza' ), 'page' => osteza_pid( 'montaje-de-cocinas' ) ),
 						array( 'label' => __( 'Montar muebles o armarios', 'osteza' ), 'page' => osteza_pid( 'montaje-de-muebles' ) ),
-						array( 'label' => __( 'Mudanza por España y Europa', 'osteza' ), 'page' => osteza_pid( 'mudanzas-y-transporte' ) ),
-						array( 'label' => __( 'Reforma integral', 'osteza' ), 'page' => osteza_pid( 'reformas-integrales' ) ),
-						array( 'label' => __( 'Baño o cocina', 'osteza' ), 'page' => osteza_pid( 'reformas-de-banos' ) ),
+						array( 'label' => __( 'Mudanza o transporte', 'osteza' ), 'page' => osteza_pid( 'mudanzas-y-transporte' ) ),
+						array( 'label' => __( 'Encontrar un profesional', 'osteza' ), 'page' => osteza_pid( 'buscamos-tu-profesional' ) ),
+						array( 'label' => __( 'Reforma o acabados', 'osteza' ), 'page' => osteza_pid( 'reformas-integrales' ) ),
 					)
 				),
 				'quickOther' => osteza_f( 'text', __( 'Último acceso (al formulario)', 'osteza' ), __( 'Otro trabajo: cuéntanoslo', 'osteza' ) ),

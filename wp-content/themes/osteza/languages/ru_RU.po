@@ -3926,3 +3926,57 @@ msgstr "Расположение полок согласовали ещё до �
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Necesitábamos ayuda para encontrar a alguien para un trabajo concreto. Nos explicaron las opciones y pudimos decidir con más información."
 msgstr "Нужна была помощь с поиском мастера для конкретной работы. Нам объяснили варианты, и выбирать стало проще."
+
+#. translators: %d: minutes.
+#: ../../mu-plugins/osteza-security.php
+#, php-format
+msgid "Demasiados intentos fallidos. Vuelve a intentarlo dentro de %d minutos."
+msgstr "Слишком много неудачных попыток. Повторите через %d мин."
+
+#: ../../mu-plugins/osteza-security.php
+msgid "El usuario o la contraseña no son correctos."
+msgstr "Неверное имя пользователя или пароль."
+
+#. translators: %s: service name.
+#: inc/seo.php
+#, php-format
+msgid "%s en la Costa Blanca"
+msgstr "%s на Коста-Бланке"
+
+#. translators: %s: town name.
+#: inc/seo.php
+#, php-format
+msgid "Montaje de cocinas y mudanzas en %s"
+msgstr "Монтаж кухонь и переезды: %s"
+
+#: inc/blocks.php
+msgid "Tu hogar, en buenas manos"
+msgstr "Ваш дом в надёжных руках"
+
+#: inc/blocks.php
+msgid "Montaje de cocinas, muebles y mudanzas <span>en la Costa Blanca</span>"
+msgstr "Монтаж кухонь, сборка мебели и переезды <span>на Коста-Бланке</span>"
+
+#: inc/blocks.php
+msgid "Un solo contacto para montar, mudarte o encontrar al profesional adecuado. Del primer mensaje al trabajo terminado."
+msgstr "Один контакт, чтобы собрать, переехать или найти нужного мастера. От первого сообщения до готовой работы."
+
+#: inc/blocks.php
+msgid "Te atendemos en"
+msgstr "Отвечаем на языках"
+
+#: inc/blocks.php
+msgid "Texto delante de los idiomas del sitio (vacío: no se muestran)"
+msgstr "Текст перед языками сайта (пусто — не показываются)"
+
+#: inc/blocks.php
+msgid "Mudanza o transporte"
+msgstr "Переезд или перевозка"
+
+#: inc/blocks.php
+msgid "Encontrar un profesional"
+msgstr "Найти мастера"
+
+#: inc/blocks.php
+msgid "Reforma o acabados"
+msgstr "Ремонт или отделка"

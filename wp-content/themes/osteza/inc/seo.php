@@ -34,6 +34,29 @@ add_filter( 'pre_get_document_title', function ( $title ) {
 	}
 	return $title;
 } );
+add_filter( 'document_title_separator', function () {
+	return '|';
+} );
+// Services and zones without their own SEO title name the place, while the title fits in search results.
+add_filter( 'document_title_parts', function ( $parts ) {
+	if ( osteza_seo_external() || ! is_page() || ! isset( $parts['title'] ) ) {
+		return $parts;
+	}
+	$type = osteza_page_type( get_queried_object() );
+	if ( 'service' === $type ) {
+		/* translators: %s: service name. */
+		$title = sprintf( __( '%s en la Costa Blanca', 'osteza' ), $parts['title'] );
+	} elseif ( 'zone' === $type ) {
+		/* translators: %s: town name. */
+		$title = sprintf( __( 'Montaje de cocinas y mudanzas en %s', 'osteza' ), $parts['title'] );
+	}
+	if ( isset( $title ) && mb_strlen( $title . ' | ' . ( $parts['site'] ?? '' ) ) <= 60 ) {
+		$parts['title'] = $title;
+	}
+	return $parts;
+} );
+remove_action( 'wp_head', 'wp_shortlink_wp_head' );
+remove_action( 'template_redirect', 'wp_shortlink_header', 11 );
 
 /** Extract introductory copy without rendering blocks, forms or shortcodes. */
 function osteza_seo_intro( $blocks ) {
@@ -54,6 +77,46 @@ function osteza_seo_intro( $blocks ) {
 	}
 	return '';
 }
+/** Questions and answers of the visible FAQ sections of a page: ( q, a ). */
+function osteza_seo_faq( $post ) {
+	$sections = array();
+	if ( has_blocks( $post->post_content ) ) {
+		$walk = function ( $blocks ) use ( &$walk, &$sections ) {
+			foreach ( $blocks as $block ) {
+				if ( 'osteza/faq' === $block['blockName'] && false !== ( $block['attrs']['metadata']['blockVisibility'] ?? true ) ) {
+					$sections[] = $block['attrs'];
+				}
+				$walk( $block['innerBlocks'] );
+			}
+		};
+		$walk( parse_blocks( $post->post_content ) );
+	} else {
+		foreach ( osteza_layout( is_front_page() ? 'home' : osteza_page_type( $post ), $post ) as $section ) {
+			if ( 'faq' === $section[0] ) {
+				$sections[] = $section[1];
+			}
+		}
+	}
+	$default = osteza_blocks()['faq']['fields']['items']['default'];
+	$faq     = array();
+	foreach ( $sections as $attrs ) {
+		foreach ( (array) ( $attrs['items'] ?? $default ) as $item ) {
+			$q = trim( wp_strip_all_tags( $item['q'] ?? '' ) );
+			$a = trim( wp_strip_all_tags( osteza_html( $item['a'] ?? '' ) ) );
+			if ( $q && $a && ! preg_match( '/\[[^\]]+\]/u', $q . $a ) ) {
+				$faq[] = array( 'q' => $q, 'a' => $a );
+			}
+		}
+	}
+	return $faq;
+}
+
+/** Facebook locale (ll_CC) of a Polylang language slug, or of the site. */
+function osteza_seo_locale( $slug = '' ) {
+	$lang = function_exists( 'PLL' ) && $slug ? PLL()->model->get_language( $slug ) : null;
+	return $lang && $lang->facebook ? $lang->facebook : get_locale();
+}
+
 function osteza_seo_description( $post ) {
 	$text = get_post_meta( $post->ID, '_osteza_seo_description', true );
 	if ( ! $text ) {
@@ -89,28 +152,46 @@ add_action( 'wp_head', function () {
 	if ( ! is_singular() ) {
 		echo '<link rel="canonical" href="' . esc_url( $url ) . '">' . "\n";
 	}
-	$meta = array( 'og:type' => is_singular( 'post' ) ? 'article' : 'website', 'og:title' => $title, 'og:url' => $url, 'og:site_name' => get_bloginfo( 'name' ), 'og:locale' => get_locale() );
+	$meta = array( 'og:type' => is_singular( 'post' ) ? 'article' : 'website', 'og:title' => $title, 'og:url' => $url, 'og:site_name' => get_bloginfo( 'name' ), 'og:locale' => osteza_seo_locale( function_exists( 'pll_current_language' ) ? pll_current_language() : '' ) );
 	if ( $desc ) {
 		echo '<meta name="description" content="' . esc_attr( $desc ) . '">' . "\n";
 		$meta['og:description'] = $desc;
 	}
 	$image = $post ? wp_get_attachment_image_src( get_post_thumbnail_id( $post ), 'full' ) : false;
-	$large_image = (bool) $image;
+	$own_image = (bool) $image;
 	if ( ! $image ) {
-		$image = array( osteza_img( 'icons/icon-512.png' ), 512, 512 );
+		$image = array( osteza_img( 'og-default.jpg' ), 1200, 630 );
 	}
-	if ( $image ) {
-		$meta['og:image'] = $image[0];
-		$meta['og:image:width'] = $image[1];
-		$meta['og:image:height'] = $image[2];
-		$meta['og:image:alt'] = $large_image ? get_post_meta( get_post_thumbnail_id( $post ), '_wp_attachment_image_alt', true ) : 'OSTEZA';
-	}
+	$meta['og:image'] = $image[0];
+	$meta['og:image:width'] = $image[1];
+	$meta['og:image:height'] = $image[2];
+	$meta['og:image:alt'] = ( $own_image ? get_post_meta( get_post_thumbnail_id( $post ), '_wp_attachment_image_alt', true ) : '' ) ?: get_bloginfo( 'name' );
 	foreach ( $meta as $property => $value ) {
 		echo '<meta property="' . esc_attr( $property ) . '" content="' . esc_attr( $value ) . '">' . "\n";
 	}
-	echo '<meta name="twitter:card" content="' . ( $large_image ? 'summary_large_image' : 'summary' ) . '">' . "\n";
+	if ( $post && function_exists( 'pll_get_post_translations' ) ) {
+		foreach ( array_keys( pll_get_post_translations( $post->ID ) ) as $slug ) {
+			if ( pll_current_language() !== $slug ) {
+				echo '<meta property="og:locale:alternate" content="' . esc_attr( osteza_seo_locale( $slug ) ) . '">' . "\n";
+			}
+		}
+	}
+	echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
 	$home = osteza_home_url();
-	$org  = array( '@type' => 'Organization', '@id' => home_url( '/#organization' ), 'name' => get_bloginfo( 'name' ), 'url' => home_url( '/' ), 'logo' => osteza_img( 'logo-dark.svg' ) );
+	$area = array_values( array_map( function ( $zone ) {
+		return array( '@type' => 'City', 'name' => $zone['name'] );
+	}, osteza_zones() ) );
+	// A service-area business: the base town without a street address, and the zones it covers.
+	$org  = array(
+		'@type'      => array( 'Organization', 'HomeAndConstructionBusiness' ),
+		'@id'        => home_url( '/#organization' ),
+		'name'       => get_bloginfo( 'name' ),
+		'url'        => home_url( '/' ),
+		'logo'       => osteza_img( 'logo-dark.svg' ),
+		'image'      => osteza_img( 'og-default.jpg' ),
+		'address'    => array( '@type' => 'PostalAddress', 'addressLocality' => 'Benidorm', 'addressRegion' => 'Alicante', 'addressCountry' => 'ES' ),
+		'areaServed' => $area,
+	);
 	foreach ( array( 'phone' => 'telephone', 'email' => 'email' ) as $key => $property ) {
 		if ( osteza_has_contact( $key ) ) {
 			$org[ $property ] = get_theme_mod( 'osteza_' . $key );
@@ -126,9 +207,21 @@ add_action( 'wp_head', function () {
 		$crumbs[] = array( '@type' => 'ListItem', 'position' => count( $crumbs ) + 1, 'name' => get_the_title( $post ), 'item' => $url );
 		$graph[] = array( '@type' => 'BreadcrumbList', 'itemListElement' => $crumbs );
 	}
+	if ( $post && is_page() && 'service' === osteza_page_type( $post ) ) {
+		$service = osteza_service_by( function_exists( 'pll_get_post' ) ? ( pll_get_post( $post->ID, osteza_default_lang() ) ?: $post->ID ) : $post->ID );
+		$group   = $service ? osteza_group( $service['group'] ) : null;
+		$graph[] = array_filter( array( '@type' => 'Service', '@id' => $url . '#service', 'name' => get_the_title( $post ), 'url' => $url, 'description' => $desc, 'serviceType' => $group ? $group['title'] : '', 'provider' => array( '@id' => $org['@id'] ), 'areaServed' => $area ) );
+	}
+	$faq = $post && is_page() ? osteza_seo_faq( $post ) : array();
+	if ( $faq ) {
+		$graph[] = array( '@type' => 'FAQPage', '@id' => $url . '#faq', 'mainEntity' => array_map( function ( $item ) {
+			return array( '@type' => 'Question', 'name' => $item['q'], 'acceptedAnswer' => array( '@type' => 'Answer', 'text' => $item['a'] ) );
+		}, $faq ) );
+	}
 	if ( is_singular( 'post' ) ) {
-		$article = array( '@type' => 'BlogPosting', '@id' => $url . '#article', 'headline' => get_the_title( $post ), 'mainEntityOfPage' => $url, 'datePublished' => get_the_date( DATE_W3C, $post ), 'dateModified' => get_the_modified_date( DATE_W3C, $post ), 'inLanguage' => get_bloginfo( 'language' ), 'author' => array( '@type' => 'Person', 'name' => get_the_author_meta( 'display_name', $post->post_author ) ), 'publisher' => array( '@id' => $org['@id'] ) );
-		if ( $large_image ) {
+		$author  = array_filter( array( '@type' => 'Person', 'name' => get_the_author_meta( 'display_name', $post->post_author ), 'description' => get_the_author_meta( 'description', $post->post_author ), 'url' => osteza_about_url(), 'worksFor' => array( '@id' => $org['@id'] ) ) );
+		$article = array( '@type' => 'BlogPosting', '@id' => $url . '#article', 'headline' => get_the_title( $post ), 'mainEntityOfPage' => $url, 'datePublished' => get_the_date( DATE_W3C, $post ), 'dateModified' => get_the_modified_date( DATE_W3C, $post ), 'inLanguage' => get_bloginfo( 'language' ), 'author' => $author, 'publisher' => array( '@id' => $org['@id'] ) );
+		if ( $own_image ) {
 			$article['image'] = $image[0];
 		}
 		$graph[] = $article;

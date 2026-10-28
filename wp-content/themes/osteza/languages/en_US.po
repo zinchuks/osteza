@@ -3939,3 +3939,57 @@ msgstr "We discussed shelf positions before any holes were drilled. We appreciat
 #: inc/review-examples.php blocks/review-examples.php
 msgid "Necesitábamos ayuda para encontrar a alguien para un trabajo concreto. Nos explicaron las opciones y pudimos decidir con más información."
 msgstr "We needed help finding someone for a specific job. They explained the options so we could make a better-informed decision."
+
+#. translators: %d: minutes.
+#: ../../mu-plugins/osteza-security.php
+#, php-format
+msgid "Demasiados intentos fallidos. Vuelve a intentarlo dentro de %d minutos."
+msgstr "Too many failed attempts. Try again in %d minutes."
+
+#: ../../mu-plugins/osteza-security.php
+msgid "El usuario o la contraseña no son correctos."
+msgstr "The username or password is incorrect."
+
+#. translators: %s: service name.
+#: inc/seo.php
+#, php-format
+msgid "%s en la Costa Blanca"
+msgstr "%s on the Costa Blanca"
+
+#. translators: %s: town name.
+#: inc/seo.php
+#, php-format
+msgid "Montaje de cocinas y mudanzas en %s"
+msgstr "Kitchen fitting and moving in %s"
+
+#: inc/blocks.php
+msgid "Tu hogar, en buenas manos"
+msgstr "Your home, in safe hands"
+
+#: inc/blocks.php
+msgid "Montaje de cocinas, muebles y mudanzas <span>en la Costa Blanca</span>"
+msgstr "Kitchen fitting, furniture assembly and moving <span>on the Costa Blanca</span>"
+
+#: inc/blocks.php
+msgid "Un solo contacto para montar, mudarte o encontrar al profesional adecuado. Del primer mensaje al trabajo terminado."
+msgstr "One contact to assemble, move or find the right professional. From the first message to the finished job."
+
+#: inc/blocks.php
+msgid "Te atendemos en"
+msgstr "We speak"
+
+#: inc/blocks.php
+msgid "Texto delante de los idiomas del sitio (vacío: no se muestran)"
+msgstr "Text before the site languages (empty: not shown)"
+
+#: inc/blocks.php
+msgid "Mudanza o transporte"
+msgstr "Moving or transport"
+
+#: inc/blocks.php
+msgid "Encontrar un profesional"
+msgstr "Find a professional"
+
+#: inc/blocks.php
+msgid "Reforma o acabados"
+msgstr "Renovation or finishes"
