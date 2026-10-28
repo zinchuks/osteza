@@ -27,7 +27,7 @@ $name    = ! empty( $card['name'] ) ? $card['name'] : ( $id ? get_the_title( $id
 <?php endforeach; ?>
 </div>
 <?php endif; ?>
-<?php if ( $a['note'] ) : ?>
+<?php if ( $a['note'] && osteza_has_projects() ) : ?>
 <div class="pnote rv">
 <p><?php echo osteza_html( $a['note'] ); ?></p>
 <?php if ( $a['noteLink'] ) : ?><a class="lnk" href="<?php echo osteza_projects_url(); ?>"><?php echo esc_html( $a['noteLink'] ); ?> <?php echo osteza_arrow(); ?></a><?php endif; ?>

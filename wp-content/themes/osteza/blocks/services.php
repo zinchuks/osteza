@@ -34,7 +34,7 @@ $hid      = osteza_uid( 'h-serv' );
 <p><?php echo esc_html( $s['desc'] ); ?></p>
 <?php if ( $s['tags'] ) : ?><ul class="ctags"><?php foreach ( $s['tags'] as $tag ) : ?><li><?php echo esc_html( $tag ); ?></li><?php endforeach; ?></ul><?php endif; ?>
 <?php /* translators: %s: service name (screen-reader text). */ ?>
-<a class="lnk" href="<?php echo $s['url']; ?>"><?php esc_html_e( 'Ver servicio', 'osteza' ); ?><span class="sr"> <?php echo esc_html( sprintf( __( 'de %s', 'osteza' ), $s['name'] ) ); ?></span> <?php echo osteza_arrow(); ?></a>
+<a class="lnk" href="<?php echo $s['url']; ?>"><?php esc_html_e( 'Ver servicio', 'osteza' ); ?><span class="sr"> <?php echo esc_html( $s['name'] ); ?></span> <?php echo osteza_arrow(); ?></a>
 </li>
 <?php endforeach; ?>
 </ul>

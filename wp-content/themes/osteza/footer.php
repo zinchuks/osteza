@@ -28,7 +28,7 @@ $fb_label = __( 'Facebook de OSTEZA (abre una pestaña nueva)', 'osteza' );
 </nav>
 <nav class="fcol" aria-labelledby="f-comp"><h2 id="f-comp">OSTEZA</h2>
 <a href="<?php echo osteza_about_url(); ?>"><?php esc_html_e( 'Sobre nosotros', 'osteza' ); ?></a>
-<a href="<?php echo osteza_projects_url(); ?>"><?php esc_html_e( 'Proyectos', 'osteza' ); ?></a>
+<?php if ( osteza_has_projects() ) : ?><a href="<?php echo osteza_projects_url(); ?>"><?php esc_html_e( 'Proyectos', 'osteza' ); ?></a><?php endif; ?>
 <a href="<?php echo osteza_blog_url(); ?>"><?php esc_html_e( 'Blog', 'osteza' ); ?></a>
 <a href="<?php echo osteza_contact_url(); ?>"><?php esc_html_e( 'Contacto', 'osteza' ); ?></a>
 </nav>
@@ -56,7 +56,7 @@ $fb_label = __( 'Facebook de OSTEZA (abre una pestaña nueva)', 'osteza' );
 <div class="mbar-sp"></div>
 </footer>
 
-<a class="fab" href="<?php echo $contact; ?>"><?php echo osteza_icon( 'whatsapp', 22 ); ?>WhatsApp</a>
+<a class="fab" href="<?php echo esc_url( osteza_whatsapp_url() ); ?>" target="_blank" rel="noopener"><?php echo osteza_icon( 'whatsapp', 22 ); ?>WhatsApp</a>
 <?php if ( osteza_chat_enabled() ) : ?>
 <?php get_template_part( 'template-parts/chat' ); ?>
 <?php endif; ?>
@@ -69,7 +69,7 @@ $fb_label = __( 'Facebook de OSTEZA (abre una pestaña nueva)', 'osteza' );
 <?php if ( osteza_chat_enabled() ) : ?>
 <button class="mbar-chat" type="button" data-chat-trigger><?php echo osteza_icon( 'chat', 22 ); ?><?php esc_html_e( 'Chat en línea', 'osteza' ); ?><i class="chat-on" aria-hidden="true"></i></button>
 <?php endif; ?>
-<a class="mbar-wa" href="<?php echo $contact; ?>"><?php echo osteza_icon( 'whatsapp', 22 ); ?><span>WhatsApp</span></a>
+<a class="mbar-wa" href="<?php echo esc_url( osteza_whatsapp_url() ); ?>" target="_blank" rel="noopener"><?php echo osteza_icon( 'whatsapp', 22 ); ?><span>WhatsApp</span></a>
 <a class="mbar-call" href="<?php echo esc_attr( osteza_phone_url() ); ?>"><?php echo osteza_icon( 'phone', 22 ); ?><span><?php esc_html_e( 'Llamar', 'osteza' ); ?></span></a>
 </nav>
 </div>

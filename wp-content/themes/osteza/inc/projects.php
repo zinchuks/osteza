@@ -5,6 +5,28 @@
 
 const OSTEZA_PROJECT = 'osteza_project';
 
+/** Only advertise the portfolio once real projects exist in the current language. */
+function osteza_has_projects() {
+	static $available = array();
+	$lang = function_exists( 'pll_current_language' ) ? (string) pll_current_language() : '';
+	if ( ! array_key_exists( $lang, $available ) ) {
+		$available[ $lang ] = (bool) get_posts( array(
+			'post_type' => OSTEZA_PROJECT,
+			'post_status' => 'publish',
+			'numberposts' => 1,
+			'fields' => 'ids',
+			'lang' => $lang,
+			'suppress_filters' => false,
+			'meta_query' => array(
+				'relation' => 'OR',
+				array( 'key' => 'osteza_sample', 'compare' => 'NOT EXISTS' ),
+				array( 'key' => 'osteza_sample', 'value' => array( '', '0' ), 'compare' => 'IN' ),
+			),
+		) );
+	}
+	return $available[ $lang ];
+}
+
 add_action(
 	'init',
 	function () {

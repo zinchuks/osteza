@@ -13,11 +13,8 @@ $channels = $args['channels'] ?? true;
 $selected = $args['service'] ?? '';
 $new_tab  = '<span class="sr"> ' . esc_html__( '(abre una pestaña nueva)', 'osteza' ) . '</span>';
 $tg_user  = ltrim( osteza_contact( 'telegram' ), '@' );
-// Options of the "Servicio" field: the home page services, the one of this page, and "other".
-$services = wp_list_pluck( osteza_services(), 'name' );
-if ( $selected && ! in_array( $selected, $services, true ) ) {
-	$services[] = $selected;
-}
+// Every form uses the same complete, localized catalogue.
+$services = array_values( array_unique( wp_list_pluck( osteza_all_services(), 'name' ) ) );
 $services[] = __( 'Otro trabajo', 'osteza' );
 ?>
 <section id="contacto" class="sec contact dk" aria-labelledby="h-contact">

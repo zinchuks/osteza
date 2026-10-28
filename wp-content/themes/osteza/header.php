@@ -39,7 +39,7 @@ if ( osteza_is_blog() ) {
 <span class="tsep" aria-hidden="true"></span>
 <a href="<?php echo esc_attr( osteza_phone_url() ); ?>"><?php echo osteza_icon( 'phone', 18, '#EBA3AE' ); ?><?php echo esc_html( osteza_contact( 'phone' ) ); ?></a>
 <nav class="tsoc" aria-label="<?php esc_attr_e( 'WhatsApp y redes sociales', 'osteza' ); ?>">
-<a href="<?php echo $contact; ?>" aria-label="<?php esc_attr_e( 'Escribir por WhatsApp', 'osteza' ); ?>"><?php echo osteza_icon( 'whatsapp', 19 ); ?></a>
+<a href="<?php echo esc_url( osteza_whatsapp_url() ); ?>" target="_blank" rel="noopener" aria-label="<?php esc_attr_e( 'Escribir por WhatsApp', 'osteza' ); ?>"><?php echo osteza_icon( 'whatsapp', 19 ); ?></a>
 <a href="<?php echo osteza_social_url( 'instagram' ); ?>" aria-label="<?php echo esc_attr( $ig_label ); ?>"><?php echo osteza_icon( 'instagram', 18 ); ?></a>
 <a href="<?php echo osteza_social_url( 'facebook' ); ?>" aria-label="<?php echo esc_attr( $fb_label ); ?>"><?php echo osteza_icon( 'facebook', 18 ); ?></a>
 </nav>

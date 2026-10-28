@@ -20,7 +20,7 @@ foreach ( (array) $a['near'] as $item ) {
 <?php if ( $a['kicker'] ) : ?><p class="kick"><?php echo esc_html( $a['kicker'] ); ?></p><?php endif; ?>
 <h1 id="h1" class="disp"><?php echo osteza_html( $a['title'] ?: get_the_title() ); ?></h1>
 <?php if ( $a['lead'] ) : ?><p class="lead"><?php echo esc_html( $a['lead'] ); ?></p><?php endif; ?>
-<div class="hbtns"><a class="btn btn-p" href="<?php echo $contact; ?>"><?php echo esc_html( $a['button'] ); ?> <?php echo osteza_arrow(); ?></a><a class="btn btn-o" href="<?php echo $contact; ?>"><?php echo esc_html( $a['button2'] ); ?></a></div>
+<div class="hbtns"><a class="btn btn-p" href="<?php echo $contact; ?>"><?php echo esc_html( $a['button'] ); ?> <?php echo osteza_arrow(); ?></a><a class="btn btn-o" href="<?php echo esc_url( osteza_whatsapp_url() ); ?>" target="_blank" rel="noopener"><?php echo esc_html( $a['button2'] ); ?></a></div>
 </div>
 <aside class="scard dk" aria-label="<?php esc_attr_e( 'Resumen de la zona', 'osteza' ); ?>">
 <img class="scardbg" src="<?php echo osteza_img( 'mark-light.svg' ); ?>" alt="" aria-hidden="true">

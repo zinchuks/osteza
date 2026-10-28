@@ -9,13 +9,7 @@ $sample   = false;
 foreach ( $projects as $project ) {
 	$sample = $sample || get_post_meta( $project->ID, 'osteza_sample', true );
 }
-$will = array(
-	__( 'Fotos propias de antes y después', 'osteza' ),
-	__( 'Localidad y tipo de vivienda', 'osteza' ),
-	__( 'Punto de partida y alcance acordado', 'osteza' ),
-	__( 'Materiales y forma de ejecución', 'osteza' ),
-	__( 'Duración, solo si está documentada', 'osteza' ),
-);
+
 
 get_header();
 ?>
@@ -26,31 +20,14 @@ get_header();
 <div class="prhead">
 <div class="prheadcopy">
 <p class="kick"><?php esc_html_e( 'Proyectos', 'osteza' ); ?></p>
-<h1 id="h1" class="disp"><?php echo wp_kses( __( 'Trabajo real, <span>contado con detalle.</span>', 'osteza' ), array( 'span' => array() ) ); ?></h1>
-<p class="lead"><?php esc_html_e( 'Cada proyecto muestra fotos propias, el punto de partida, lo que acordamos y el resultado. Nada de imágenes de catálogo.', 'osteza' ); ?></p>
+<h1 id="h1" class="disp"><?php echo wp_kses( ( $projects ? __( 'Trabajo real, <span>contado con detalle.</span>', 'osteza' ) : __( 'Cuéntanos qué necesitas.', 'osteza' ) ), array( 'span' => array() ) ); ?></h1>
+<p class="lead"><?php echo esc_html( $projects ? __( 'Cada proyecto muestra fotos propias, el punto de partida, lo que acordamos y el resultado. Nada de imágenes de catálogo.', 'osteza' ) : __( 'Cuéntanos qué necesitas y te ayudamos a definir el siguiente paso.', 'osteza' ) ); ?></p>
 </div>
 </div>
 </div>
 </section>
 
-<?php if ( ! $projects ) : ?>
-<section class="sec sec-empty" aria-labelledby="h-empty">
-<div class="wrap">
-<div class="empty rv">
-<div class="emptycopy">
-<span class="eic" aria-hidden="true"><img src="<?php echo osteza_img( 'mark-light.svg' ); ?>" alt=""></span>
-<h2 id="h-empty" class="disp"><?php esc_html_e( 'Estamos documentando nuestros primeros proyectos.', 'osteza' ); ?></h2>
-<p><?php esc_html_e( 'Preferimos esperar a tener fotos reales antes que enseñarte imágenes que no son nuestras. Mientras tanto, cuéntanos tu proyecto.', 'osteza' ); ?></p>
-<div class="otherbtns"><a class="btn btn-p" href="<?php echo $contact; ?>"><?php esc_html_e( 'Solicitar presupuesto', 'osteza' ); ?> <?php echo osteza_arrow(); ?></a><a class="btn btn-ol" href="<?php echo osteza_catalog_url(); ?>"><?php esc_html_e( 'Ver servicios', 'osteza' ); ?></a><?php if ( '#' !== osteza_social_url( 'instagram' ) ) : ?><a class="btn btn-ol" href="<?php echo osteza_social_url( 'instagram' ); ?>" target="_blank" rel="noopener"><?php echo osteza_icon( 'instagram', 20 ); ?><?php esc_html_e( 'Nuestro trabajo en Instagram', 'osteza' ); ?><span class="sr"> <?php esc_html_e( '(abre una pestaña nueva)', 'osteza' ); ?></span></a><?php endif; ?></div>
-</div>
-<div class="willbox">
-<p class="kick"><?php esc_html_e( 'Cada proyecto incluirá', 'osteza' ); ?></p>
-<ul class="chk no"><?php foreach ( $will as $item ) : ?><li><?php echo esc_html( $item ); ?></li><?php endforeach; ?></ul>
-</div>
-</div>
-</div>
-</section>
-<?php else : ?>
+<?php if ( $projects ) : ?>
 <section class="prlist" aria-labelledby="h-list">
 <div class="wrap stack40">
 <div class="chips" role="group" aria-label="<?php esc_attr_e( 'Filtrar por servicio', 'osteza' ); ?>"><button type="button" class="chip" aria-pressed="true" data-project-filter=""><?php esc_html_e( 'Todos', 'osteza' ); ?></button><?php foreach ( osteza_project_groups() as $key => $label ) : ?><button type="button" class="chip" aria-pressed="false" data-project-filter="<?php echo esc_attr( $key ); ?>"><?php echo esc_html( $label ); ?></button><?php endforeach; ?></div>

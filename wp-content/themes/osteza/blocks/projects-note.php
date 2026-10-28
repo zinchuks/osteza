@@ -3,6 +3,9 @@
  * Note pointing to the projects archive. $a: block attributes.
  */
 
+if ( ! osteza_has_projects() ) {
+	return;
+}
 $hid = osteza_uid( 'h-proj' );
 ?>
 <section class="sec" aria-labelledby="<?php echo esc_attr( $hid ); ?>">

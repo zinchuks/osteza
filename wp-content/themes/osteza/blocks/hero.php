@@ -18,7 +18,7 @@ $contact = osteza_anchor( 'contacto' );
 <?php if ( $a['lead'] ) : ?><p class="hsub"><?php echo esc_html( $a['lead'] ); ?></p><?php endif; ?>
 <div class="hbtns">
 <a class="btn btn-p" href="<?php echo $contact; ?>"><?php echo esc_html( $a['button'] ); ?> <?php echo osteza_arrow(); ?></a>
-<a class="btn btn-ol" href="<?php echo $contact; ?>"><?php echo osteza_icon( 'whatsapp', 22 ); ?><?php echo esc_html( $a['button2'] ); ?></a>
+<a class="btn btn-ol" href="<?php echo esc_url( osteza_whatsapp_url() ); ?>" target="_blank" rel="noopener"><?php echo osteza_icon( 'whatsapp', 22 ); ?><?php echo esc_html( $a['button2'] ); ?></a>
 </div>
 <?php if ( $a['langs'] && count( osteza_languages() ) > 1 ) : ?>
 <p class="hlangs"><?php echo osteza_icon( 'chat', 20, '#EBA3AE' ); ?><span><?php echo esc_html( $a['langs'] ); ?></span>
