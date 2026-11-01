@@ -3,6 +3,11 @@
  * Team teaser with photo. $a: block attributes.
  */
 
+// Keep the saved content and photo, but withhold this section until publication is approved.
+if ( ! apply_filters( 'osteza_show_team_teaser', false ) ) {
+	return;
+}
+
 $hid = osteza_uid( 'h-team' );
 ?>
 <section id="equipo" class="sec teamsec dk" aria-labelledby="<?php echo esc_attr( $hid ); ?>">

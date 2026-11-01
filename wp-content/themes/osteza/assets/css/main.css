@@ -111,7 +111,7 @@ a:hover .ar,button:hover .ar{transform:translateX(4px)}
 .tsoc a:hover{background:#2C2550}
 .tsep{width:1px;height:20px;background:#3D3464}
 @media (max-width:760px){.taddr,.tsep{display:none}.tsoc a{width:40px}.tin{gap:8px}.tin{font-size:14px}}
-.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr));gap:12px}
+.cgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .citem{display:flex;gap:16px;align-items:center;padding:18px 20px;border-radius:14px;background:#241E44;box-shadow:inset 0 0 0 1px #352D5C;color:#F8F5F3;text-decoration:none;min-height:84px;transition:background .18s,box-shadow .18s}
 a.citem:hover{background:#2C2550;box-shadow:inset 0 0 0 1px #EBA3AE;color:#FFFFFF}
 .cic{flex:none;width:48px;height:48px;border-radius:50%;background:#2C2550;color:#EBA3AE;display:grid;place-items:center}
@@ -677,7 +677,16 @@ a.citem:hover{background:#2C2550;box-shadow:inset 0 0 0 1px #EBA3AE;color:#FFFFF
 .contact{position:relative;overflow:hidden}
 .contactbg{position:absolute;left:-180px;bottom:-200px;width:640px;opacity:.04}
 .contactgrid,.zlocgrid{position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));gap:64px 88px;align-items:start}
-.contactcopy{display:flex;flex-direction:column;gap:32px}
+.contactcopy{display:flex;flex-direction:column;gap:32px;min-width:0;container-type:inline-size}
+/* Size the contact cards for their column, rather than the viewport. */
+@container (max-width:640px){
+.cgrid .citem{min-width:0;padding:16px;gap:12px}
+.cgrid .cic{width:40px;height:40px}
+.cgrid a[href^="mailto:"],.cgrid a[href^="https://t.me/"]{grid-column:1/-1}
+}
+@container (max-width:420px){
+.cgrid{grid-template-columns:minmax(0,1fr)}
+}
 .contactcopy h2{margin:0;font-size:clamp(40px,5vw,72px);line-height:1.02}
 .cfollow{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .cfollow>span{color:#BDB7CE;font-size:16px;margin-right:6px}
