@@ -36,6 +36,7 @@ if ( osteza_is_blog() ) {
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TR5VM5WZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="os">
 <a href="#contenido" class="sr"><?php esc_html_e( 'Saltar al contenido', 'osteza' ); ?></a>
 

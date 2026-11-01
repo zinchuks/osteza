@@ -23,11 +23,14 @@ add_action( 'send_headers', function () {
 remove_action( 'wp_head', 'wp_generator' );
 add_filter( 'the_generator', '__return_empty_string' );
 
-// XML-RPC and application passwords are unused; both accept password logins outside wp-login.php.
+// XML-RPC is unused. Application passwords stay off except on the production domain, where the
+// content-editing assistant authenticates with a dedicated Editor user (see docs/security-audit.md).
 add_filter( 'xmlrpc_enabled', '__return_false' );
 add_filter( 'xmlrpc_methods', function () { return array(); } );
 add_filter( 'wp_headers', function ( $headers ) { unset( $headers['X-Pingback'] ); return $headers; } );
-add_filter( 'wp_is_application_passwords_available', '__return_false' );
+add_filter( 'wp_is_application_passwords_available', function () {
+	return false !== strpos( home_url(), 'osteza.es' );
+} );
 
 // Comments are not part of the site: nothing is shown, so nothing may be posted.
 add_filter( 'comments_open', '__return_false' );
